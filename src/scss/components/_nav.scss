@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+
+  &__item {
+    line-height: 1;
+    margin: 0 29px;
+   }
+  &__link {
+    padding: 10px 0;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+      color: #019bdd;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,11 @@
+.modal {
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+
+  }
+}

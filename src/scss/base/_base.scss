@@ -1,0 +1,171 @@
+body {
+  font: 400 16px/1.2 $main-font;
+  background-color: #ffffff;
+  color: #7e7e7e;
+
+  &.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.d-flex {
+  display: flex;
+}
+.text_blue{
+  color: #019bdd;
+}
+
+
+.text_uppercase{
+  text-transform: uppercase;
+}
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.bg-blue{
+  background: linear-gradient(180deg, #42BDFF 0%, #0695F3 100%);
+}
+
+.bg-gray{
+  position: relative;
+  background-color: rgba(200, 200, 200, 0.12);
+  padding-top: 252px;
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/line.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% 100%;
+    width: 100%;
+    min-height: 530px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  @media screen and (min-width: 1920px) {
+    &:before{
+      min-height: 615px;
+    }
+  }
+}
+
+.main{
+  padding-top: 108px;
+}
+.section {
+  &__title {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.2;
+    color: #c2c2c2;
+  }
+}
+
+.text_white{
+  color: #ffffff;
+}
+
+.text_black{
+  color: #000000;
+}
+
+.btn-consultation,
+
+.btn-help{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 337px;
+  background-color: transparent;
+  border: 1px solid #019bdd;
+  font-weight: 500;
+  font-size: 18px;
+  color: #999999;
+  transition: background .35s;
+
+  &:hover,
+  &:focus {
+    background-color: #019bdd;
+    color: #ffffff;
+
+    svg path {
+      fill: #ffffff;
+    }
+  }
+  &__icon{
+    display: inline-block;
+    margin-bottom: 45px;
+    width: 60px;
+    height: 60px;
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.btn-consultation{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  background-image: url(..assets/img/heart.svg);
+  background-position: center;
+  background-size: 86px 71px;
+  border:none;
+  .img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+
+@include respond-to($lg) {
+  .section {
+
+  }
+}
+
+@include respond-to($md) {
+  .section {
+
+
+    &__title {
+
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .section__title {
+
+  }
+}
+
+

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>CMA</title>
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Raleway:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./dist/main.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <button type="button" class="btn_burger" aria-label="button burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <a href="#" class="header__logo">
+                <img src="assets/img/logo-CMA.svg" alt="СМА" class="header__logo">
+            </a>
+            <nav class="header__nav">
+                <button class="btn_close" id="closeMenu" aria-label="Close"></button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Про проєкт</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Діти</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Лікарі</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Про хворобу</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Як допомогти</a>
+                    </li>
+                </ul>
+                <div class="header__info-bar">
+                    <a href="#children" class="btn btn">Допомогти дитині</a>
+                    <div class="social-bar">
+                        <a target="_blank" href="#" class="social-bar__link">
+                            <span class="hide">Instagram</span>
+                            <span class="social-bar__icon">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.83686 24.1629C4.60253 24.4812 5.411 24.594 6.23973 24.5934C10.1694 24.5904 14.0991 24.5993 18.0288 24.5893C20.4276 24.5832 22.2527 23.5426 23.4748 21.499C24.0159 20.5943 24.2495 19.5916 24.2499 18.5398C24.2517 14.5567 24.2584 10.5736 24.2479 6.59053C24.241 3.93022 22.5742 1.6689 20.0282 0.83109C19.6543 0.708033 19.268 0.628498 18.8749 0.587252C18.8323 0.582781 18.7773 0.606361 18.7564 0.542969C14.3041 0.542969 9.85184 0.542969 5.39956 0.542969C5.0895 0.674984 4.74862 0.673802 4.42825 0.770663C2.52486 1.34605 1.19387 2.54311 0.427345 4.3601C0.235186 4.8156 0.125046 5.29408 0.0521974 5.78152C0.0459008 5.82366 0.062523 5.87911 0 5.89765C0 10.3442 0 14.7908 0 19.2374C0.132942 19.5454 0.132309 19.8839 0.229947 20.2021C0.807695 22.0848 2.0121 23.4041 3.83686 24.1629ZM18.6955 4.55088C19.5261 4.55364 20.2268 5.25602 20.209 6.06807C20.1906 6.90607 19.5041 7.56626 18.6677 7.55028C17.8242 7.53416 17.1633 6.85072 17.185 6.01698C17.2061 5.20525 17.8831 4.54817 18.6955 4.55088ZM12.1087 7.55592C14.864 7.52144 17.156 9.78212 17.179 12.5569C17.2016 15.2963 14.9165 17.5693 12.1298 17.5791C9.35816 17.5888 7.06855 15.3196 7.07174 12.5661C7.07494 9.81299 9.30885 7.59096 12.1087 7.55592Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a target="_blank" href="#" class="social-bar__link">
+                            <span class="hide">Facebook</span>
+                            <span class="social-bar__icon">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1721 21.8154C24.1908 21.7398 24.1614 21.6398 24.2536 21.5879C24.2536 15.5907 24.2536 9.59364 24.2536 3.59653C24.1244 3.23512 24.0687 2.85115 23.8829 2.5062C23.2363 1.30537 22.2323 0.653472 20.8655 0.548583C20.779 0.541953 20.6919 0.543386 20.6051 0.543382C14.9528 0.543164 9.30049 0.54244 3.6482 0.543655C2.02022 0.544006 0.703156 1.46585 0.184854 2.96202C0.0556293 3.33506 0.000306345 3.72004 0.000344639 4.11419C0.00087624 9.75075 -0.00166014 15.3873 0.00212642 21.0239C0.00328649 22.7469 1.12984 24.1283 2.8257 24.5196C2.89406 24.5353 2.98908 24.5025 3.03229 24.5942C5.59022 24.5942 8.14815 24.5942 10.7061 24.5942C10.7061 21.8386 10.7038 19.083 10.711 16.3275C10.7115 16.1332 10.6674 16.0834 10.4693 16.0865C9.66434 16.0992 8.85898 16.0875 8.05386 16.0955C7.8995 16.0971 7.85947 16.0571 7.86025 15.9037C7.86674 14.6199 7.86674 13.336 7.86025 12.0522C7.85947 11.8988 7.89954 11.8589 8.05387 11.8604C8.87478 11.8683 9.69585 11.8598 10.5168 11.8679C10.6723 11.8694 10.7111 11.8277 10.7098 11.6754C10.7021 10.8143 10.7046 9.95315 10.7064 9.09203C10.7113 6.62921 12.5794 4.77568 15.0624 4.77133C16.3965 4.76898 17.7306 4.77441 19.0647 4.7666C19.2381 4.76559 19.286 4.80183 19.2847 4.98089C19.2756 6.24903 19.2762 7.51729 19.2843 8.78543C19.2854 8.95791 19.248 9.00462 19.0679 9.00338C17.7733 8.99448 16.4786 9.00231 15.184 8.99425C15.0096 8.99317 14.962 9.03079 14.9644 9.20911C14.9755 10.0231 14.975 10.8374 14.9647 11.6515C14.9625 11.8253 15.003 11.87 15.1819 11.8688C16.4607 11.86 17.7395 11.8641 19.0184 11.8641C19.0968 11.8641 19.1753 11.8641 19.2776 11.8641C19.1764 12.4756 19.0783 13.0725 18.9786 13.6691C18.8575 14.3939 18.7321 15.118 18.6155 15.8434C18.588 16.0142 18.5512 16.1029 18.3319 16.0994C17.2822 16.0825 16.2321 16.0966 15.1823 16.0871C15.0042 16.0855 14.9645 16.1297 14.9649 16.304C14.9711 19.0674 14.9693 21.8308 14.9693 24.5942C17.022 24.5942 19.0746 24.5942 21.1273 24.5942C21.3493 24.5361 21.5767 24.4928 21.7926 24.4174C23.0572 23.9763 23.8512 23.1091 24.1721 21.8154Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <a href="#" class="logo">
+                        <img src="assets/img/logo-farmak.svg" alt="Фармак">
+                    </a>
+                    <a href="mailto:mailexample@gmail.com" class="link-mail">mailexample@gmail.com</a>
+                    <div class="description">
+                        У разі виникнення питань стосовно роботи
+                        сервісу, звертайтесь в службу підтримки
+                    </div>
+                </div>
+            </nav>
+            <div class="hashtag">#врятуєдок_сма</div>
+        </div>
+        <div class="backdrop"></div>
+    </header>
+
+    <main class="main">
+        <section class="section-intro">
+            <div class="container">
+                <div class="part part_left">
+                    <div class="wrap-img"><img src="assets/img/logo-CMA-big.svg" alt=""></div>
+                    <div class="section__text">
+                        Давно ви рятували життя людині?<br>
+                        А зовсім крихітці? Яка кожну хвилину бореться
+                        з болем,страхом та безвихіддю?
+                    </div>
+                    <a href="#children" class="btn btn_main">Допомогти дитині</a>
+                </div>
+                <div class="part part_right">
+                    <div class="section-intro__thumb" style="background-image: url(assets/img/img-banner-2.jpg);"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-about">
+            <div class="container d-flex">
+                <div class="section__content">
+                    <h2 class="section__title">Про <span class="text_blue">хворобу</span></h2>
+                    <div class="section__text">
+                        Хвороба СМА – по-простому хвороба слабких, бездієвих м‘язів
+                        (скелетних, дихальних, УСІХ),знерухомлює, відбирає мову, дихання, життя…
+                    </div>
+                </div>
+                <button class="btn btn_border">Дізнатись більше</button>
+            </div>
+            <div class="section-about__bg" style="background-image: url(assets/img/wave.svg);"></div>
+            <div class="container">
+                <ul class="about-disease">
+                    <li class="about-disease__item">
+                        <div class="part about-disease__info">ЛІКУВАННЯ ІСНУЄ</div>
+                        <div class="part part_right about-disease__description">Це всього лиш
+                            <span class="text_uppercase">ОДНА ІН‘ЄКЦІЯ</span> препарату,
+                            який коштує «всього лиш» майже 2,3 млн долларів.
+
+                        </div>
+                    </li>
+                    <li class="about-disease__item">
+                        <div class="part about-disease__info">зробимо добро РАЗОМ</div>
+                        <div class="part part_right about-disease__description">Але часу мало (таймер життя працює
+                            в зворотньому відліку).
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <div class="infinity-line"></div>
+            <div class="section-video__slogan">Ін‘єкція препарату Zolgensma лікує та дарує життя дитині</div>
+            <div class="container">
+                <div class="section-video__wrap">
+                    <iframe class="section-video__video" width="560" height="315"
+                            src="https://www.youtube.com/embed/pxOQwkdpdGY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="children" class="section-children">
+            <div class="container">
+                <h2 class="section__title">Діти, яким потрібна допомога
+                    у боротьбі з <span class="text_blue">СМА</span>
+                </h2>
+
+                <ul class="list-children">
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%203.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Дмитро Басов</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Дмитру</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 22.11.2019
+                                Діагноз: СМА 1 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%207.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Павло Мотичка</h3>
+                            <div class="wrap-btn part  part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Павлу</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part_small">
+                                Дата народження: 22.11.2019
+                                Діагноз: СМА 1 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%208.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Матвій Данилюк</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Матвію</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 12.09.2020
+                                Діагноз: СМА 1 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%206.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Дмитро Жадан </h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Дмитру</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,052 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 13.01.2020
+                                Діагноз: СМА 1 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%209.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Дана Прадунець</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Дані</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 13.01.2019
+                                Діагноз: СМА 1 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%2010.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Маріанна Михайлова</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Маріанні</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 13.01.2020
+                                Діагноз: СМА 2 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%204.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Олексій Савостяник</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Олексію</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 13.01.2020
+                                Діагноз: СМА 2 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-card">
+                        <div class="children-card__thumb">
+                            <img src="assets/img/children/image%205.jpg" alt="" class="children-card__img">
+                        </div>
+                        <div class="children-card__body">
+                            <h3 class="children-card__title part">Софія Коваль</h3>
+                            <div class="wrap-btn part part_small">
+                                <a href="#" target="_blank" class="btn btn_main">Допомогти Софії</a>
+                            </div>
+                            <div class="children-card__text part">
+                                Потребує уколу Zolgensma
+                                вартістю 2,3 млн USD
+                            </div>
+                            <div class="children-card__info part part_small">
+                                Дата народження: 13.01.2019
+                                Діагноз: СМА 1-2 типу
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="children-add  children-card">
+                        <a href="#" class="children-add__thumb children-card__thumb">
+                            <span class="children-add__icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M60 24.8466V35.1534H36.0772V60H23.9228V35.1534H0V24.8466H23.9228V0H36.0772V24.8466H60Z"
+                                          fill="#019BDD"/>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="children-add__body">
+                            <h3 class="children-add__title children-card__title">Додати дитину на сайт</h3>
+                            <div class="children-add__text children-card__info">
+                                Якщо допомоги потребує ваш малюк з діагнозом СМА
+                                - заповніть дані і додайте дитину на сайт
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="bg-blue">
+            <section class="how-works">
+                <div class="container">
+                    <h2 class="section__title text_white">Три простих кроки</h2>
+                    <ul class="list-step">
+                        <li class="step-content">
+                            <div class="step-content__thumb">
+                                <div class="step-content__icon"
+                                     style="background-image: url(assets/img/svg/contribution.svg);"></div>
+                            </div>
+                            <h3 class="step-content__title">Благодійний внесок</h3>
+                            <div class="step-content__text">
+                                Переведіть будь-яку суму, яку вважаєте потрібним/можливим,
+                                на карту хворої дитини,
+                                та зробіть скрін квитанції
+                            </div>
+                        </li>
+                        <li class="step-content">
+                            <div class="step-content__thumb">
+                                <div class="step-content__icon"
+                                     style="background-image: url(assets/img/svg/doctor.svg);"></div>
+                            </div>
+                            <h3 class="step-content__title">Оберіть лікаря</h3>
+                            <div class="step-content__text">
+                                Оберіть на даному сайті
+                                лікаря, онлайн консультацію
+                                якого Ви хотіли б отримати
+                            </div>
+                        </li>
+                        <li class="step-content">
+                            <div class="step-content__thumb">
+                                <div class="step-content__icon"
+                                     style="background-image: url(assets/img/svg/on-line.svg);"></div>
+                            </div>
+                            <h3 class="step-content__title">On-line консультація</h3>
+                            <div class="step-content__text">
+                                <p>Замовте онлайн консультацію - клік біля фото лікаря - заповніть форму зв‘язку. Після
+                                    перевірки даних Вам буде надано контакт лікаря для узгодження часу консультацї</p>
+
+                                <P>Час та тривалість консультації узгоджуєте з лікарем.<br>
+                                    <span class="bold">1 консультація - 1 внесок</span></P>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="how-help">
+                <div class="container d-flex">
+                    <div class="part part_left">
+                        <h2 class="section__title text_white">Допомогти дитині просто</h2>
+                        <div class="slide__text" id="slideText">
+
+                        </div>
+                        <button type="button" class="btn btn_border">Приєднатись</button>
+                    </div>
+                    <div class="part part_right">
+                        <div class="slider-wrap">
+                            <!-- Swiper -->
+                            <div class="swiper slider-activity">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slider-activity__slide">
+                                        <div class="slider-activity__thumb"
+                                             style="background-image: url(assets/img/slide-thumb-1.jpg);">
+                                            <h4 class="slider-activity__heading">Пацієнт</h4>
+                                        </div>
+                                        <template class="text-template">
+                                            <p>
+                                                Ви вносите благодійну суму на карту
+                                                дитини та отримуєте безкоштовну
+                                                онлайн-консультацію лікаря-спеціаліста
+                                            </p>
+                                        </template>
+                                    </div>
+                                    <div class="swiper-slide slider-activity__slide">
+                                        <div class="slider-activity__thumb"
+                                             style="background-image: url(assets/img/slide-thumb-2.jpg);">
+                                            <h4 class="slider-activity__heading">Лікар</h4>
+                                        </div>
+                                        <template class="text-template">
+                                            <p>
+                                                Ви консультуєте онлайн взамін
+                                                на благодійний внесок пацієнта
+                                                на карту дитини
+                                            </p>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="achievements">
+            <div class="container">
+                <h2 class="section__title">Через <span class="text_blue">сайт</span> надано </h2>
+                <div class="achievements__list">
+                    <div class="achievements__item">
+                        <div class="achievements__value">142</div>
+                        <div class="achievements__text">консультацій</div>
+                    </div>
+                    <div class="achievements__item">
+                        <div class="achievements__value">85,843<sup>грн</sup></div>
+                        <div class="achievements__text">сума допомоги діткам</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-doctors">
+            <div class="container">
+                <h2 class="section__title text_black"><span class="text_blue">Лікарі,</span> які долучились до проєкту
+                </h2>
+                <h3 class="heading">Для дорослих:</h3>
+                <ul class="doctors-list doctors-list_adult">
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image6.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Хоменко Анжеліка Олександрівна</h4>
+                            <div class="specialization">Терапевт</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image8.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Нагорнюк Олена Миколаївна</h4>
+                            <div class="specialization">Терапевт</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image4.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Забейда Анастасія</h4>
+                            <div class="specialization">Терапевт</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image5.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Писаренко Лариса</h4>
+                            <div class="specialization">Терапевт</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image16.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Войтко Володимир Олександрович</h4>
+                            <div class="specialization">Торакальний хірург, Онкохірург</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="heading">Для дітей:</h3>
+                <ul class="doctors-list doctors-list_children">
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image21.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Юлія Сворень</h4>
+                            <div class="specialization">Ендокринолог дитячий</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image22.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Полянська Лілія Георгіївна</h4>
+                            <div class="specialization">Педіатр, консультант з грудного вигодовування</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                    <li class="card-doctor">
+                        <div class="card-doctor__thumb">
+                            <img src="assets/img/doctors/image23.jpg" alt="">
+                        </div>
+                        <div class="card-doctor__body">
+                            <h4 class="card-doctor__title">Власій Пилипко</h4>
+                            <div class="specialization">Ортопед-травматолог дитячий</div>
+                            <button type="button" class="btn btn_border">Запис на консультацію</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="bg-gray">
+            <section class="help-children">
+                <div class="container d-flex">
+                    <div class="wrap-btn">
+                        <button type="button" class="btn-help">
+                     <span class="btn-help__icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M60 24.8466V35.1534H36.0772V60H23.9228V35.1534H0V24.8466H23.9228V0H36.0772V24.8466H60Z"
+                                          fill="#019BDD"/>
+                                </svg>
+                            </span>
+                            Додати інформацію
+                        </button>
+                    </div>
+                    <div class="section__content">
+                        <h3 class="section__title text_black">
+                            Якщо допомоги потребує
+                            <span class="text_blue">Ваша Дитина</span><br>
+                            з діагнозом СМА
+                        </h3>
+                        <div class="section__text">
+                            Якщо Ваш малюк хворіє на SMA 1 го чи 2го типу - напишіть нам
+                            і ми додамо інформацію про збір коштів на наш сайт.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consultation">
+                <div class="container">
+                    <div class="section__content">
+                        <button type="button" class="btn-consultation">
+                            <span class="wrap-img-written">
+                                 <img src="assets/img/consultation.svg" alt="" class="img">
+                            </span>
+                        </button>
+                        <h3 class="section__title text_black">
+                            <span class="text_blue">Online</span> консультація
+                        </h3>
+
+                        <div class="section__text">
+                            По телефону, відео-зв’язку, будь-які питання по здоров‘ю вашому/рідних, розробка схеми
+                            вакцинації,
+                            обстеження, лікування та профілактики, враховуючи сімейні хвороби, питання по Ковід-19 і
+                            т.д).
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="bg-blue">
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_top">
+                    <div class="social-bar">
+                        <a target="_blank" href="#" class="social-bar__link">
+                            <span class="hide">Instagram</span>
+                            <span class="social-bar__icon">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.83686 24.1629C4.60253 24.4812 5.411 24.594 6.23973 24.5934C10.1694 24.5904 14.0991 24.5993 18.0288 24.5893C20.4276 24.5832 22.2527 23.5426 23.4748 21.499C24.0159 20.5943 24.2495 19.5916 24.2499 18.5398C24.2517 14.5567 24.2584 10.5736 24.2479 6.59053C24.241 3.93022 22.5742 1.6689 20.0282 0.83109C19.6543 0.708033 19.268 0.628498 18.8749 0.587252C18.8323 0.582781 18.7773 0.606361 18.7564 0.542969C14.3041 0.542969 9.85184 0.542969 5.39956 0.542969C5.0895 0.674984 4.74862 0.673802 4.42825 0.770663C2.52486 1.34605 1.19387 2.54311 0.427345 4.3601C0.235186 4.8156 0.125046 5.29408 0.0521974 5.78152C0.0459008 5.82366 0.062523 5.87911 0 5.89765C0 10.3442 0 14.7908 0 19.2374C0.132942 19.5454 0.132309 19.8839 0.229947 20.2021C0.807695 22.0848 2.0121 23.4041 3.83686 24.1629ZM18.6955 4.55088C19.5261 4.55364 20.2268 5.25602 20.209 6.06807C20.1906 6.90607 19.5041 7.56626 18.6677 7.55028C17.8242 7.53416 17.1633 6.85072 17.185 6.01698C17.2061 5.20525 17.8831 4.54817 18.6955 4.55088ZM12.1087 7.55592C14.864 7.52144 17.156 9.78212 17.179 12.5569C17.2016 15.2963 14.9165 17.5693 12.1298 17.5791C9.35816 17.5888 7.06855 15.3196 7.07174 12.5661C7.07494 9.81299 9.30885 7.59096 12.1087 7.55592Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a target="_blank" href="#" class="social-bar__link">
+                            <span class="hide">Facebook</span>
+                            <span class="social-bar__icon">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1721 21.8154C24.1908 21.7398 24.1614 21.6398 24.2536 21.5879C24.2536 15.5907 24.2536 9.59364 24.2536 3.59653C24.1244 3.23512 24.0687 2.85115 23.8829 2.5062C23.2363 1.30537 22.2323 0.653472 20.8655 0.548583C20.779 0.541953 20.6919 0.543386 20.6051 0.543382C14.9528 0.543164 9.30049 0.54244 3.6482 0.543655C2.02022 0.544006 0.703156 1.46585 0.184854 2.96202C0.0556293 3.33506 0.000306345 3.72004 0.000344639 4.11419C0.00087624 9.75075 -0.00166014 15.3873 0.00212642 21.0239C0.00328649 22.7469 1.12984 24.1283 2.8257 24.5196C2.89406 24.5353 2.98908 24.5025 3.03229 24.5942C5.59022 24.5942 8.14815 24.5942 10.7061 24.5942C10.7061 21.8386 10.7038 19.083 10.711 16.3275C10.7115 16.1332 10.6674 16.0834 10.4693 16.0865C9.66434 16.0992 8.85898 16.0875 8.05386 16.0955C7.8995 16.0971 7.85947 16.0571 7.86025 15.9037C7.86674 14.6199 7.86674 13.336 7.86025 12.0522C7.85947 11.8988 7.89954 11.8589 8.05387 11.8604C8.87478 11.8683 9.69585 11.8598 10.5168 11.8679C10.6723 11.8694 10.7111 11.8277 10.7098 11.6754C10.7021 10.8143 10.7046 9.95315 10.7064 9.09203C10.7113 6.62921 12.5794 4.77568 15.0624 4.77133C16.3965 4.76898 17.7306 4.77441 19.0647 4.7666C19.2381 4.76559 19.286 4.80183 19.2847 4.98089C19.2756 6.24903 19.2762 7.51729 19.2843 8.78543C19.2854 8.95791 19.248 9.00462 19.0679 9.00338C17.7733 8.99448 16.4786 9.00231 15.184 8.99425C15.0096 8.99317 14.962 9.03079 14.9644 9.20911C14.9755 10.0231 14.975 10.8374 14.9647 11.6515C14.9625 11.8253 15.003 11.87 15.1819 11.8688C16.4607 11.86 17.7395 11.8641 19.0184 11.8641C19.0968 11.8641 19.1753 11.8641 19.2776 11.8641C19.1764 12.4756 19.0783 13.0725 18.9786 13.6691C18.8575 14.3939 18.7321 15.118 18.6155 15.8434C18.588 16.0142 18.5512 16.1029 18.3319 16.0994C17.2822 16.0825 16.2321 16.0966 15.1823 16.0871C15.0042 16.0855 14.9645 16.1297 14.9649 16.304C14.9711 19.0674 14.9693 21.8308 14.9693 24.5942C17.022 24.5942 19.0746 24.5942 21.1273 24.5942C21.3493 24.5361 21.5767 24.4928 21.7926 24.4174C23.0572 23.9763 23.8512 23.1091 24.1721 21.8154Z"
+                                          fill="white"/>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="social-bar__text">Проєкт в соціальних мережах</div>
+                    </div>
+                    <div class="footer__copyright">© 2021 #врятуєдок_сма</div>
+                    <div class="footer__logo-wrap">
+                        <a href="#" class="footer__logo">
+                            <img src="assets/img/logo-farmak.svg" alt="Фармак">
+                        </a>
+                        <div>Інформаційний спонсор</div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="description">
+                        У разі виникнення питань стосовно роботи
+                        сервісу, звертайтесь в службу підтримки
+                    </div>
+                    <a href="mailto:mailexample@gmail.com" class="link-mail">mailexample@gmail.com</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+
+</div>
+
+<script src="lib/swiper@7/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>

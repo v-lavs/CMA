@@ -1,0 +1,30 @@
+.help-children {
+  padding-top: 170px;
+  padding-bottom: 276px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #989898;
+
+  .section__title {
+    margin-bottom: 56px;
+    line-height: 1.14;
+  }
+  .section__text{
+    max-width: 610px;
+    width: 100%;
+  }
+
+  .section__content {
+    width: 82%;
+    padding-left: 88px;
+  }
+
+  .wrap-btn {
+    width: 18%;
+  }
+
+  .d-flex {
+    align-items: center;
+  }
+}

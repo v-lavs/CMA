@@ -1,0 +1,20 @@
+.tabs__content {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+
+  .tab {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      transition: opacity .5s ease-in;
+      z-index: 2;
+    }
+  }
+}

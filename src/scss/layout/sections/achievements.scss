@@ -1,0 +1,35 @@
+.achievements{
+  padding-bottom: 270px;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 50%;
+  }
+  &__value{
+    position: relative;
+    font-size: 150px;
+    line-height: .8;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #019bdd;
+    margin-bottom: 38px;
+    display: inline-block;
+    sup{
+      font-size: 30px;
+      font-weight: 500;
+      position: absolute;
+      right: -70px;
+      vertical-align: super;
+      z-index: 1;
+    }
+  }
+  &__text{
+    font-size: 27px;
+    line-height: .8;
+     color: #000000;
+  }
+  .section__title{
+    margin-bottom: 76px;
+  }
+}

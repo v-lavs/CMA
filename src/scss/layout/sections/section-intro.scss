@@ -1,0 +1,51 @@
+.section-intro {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  &__thumb {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    max-width: 1024px;
+    width: 55vw;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .part {
+    &_left {
+      width: 45%;
+      padding-top: 165px;
+      flex-shrink: 0;
+    }
+
+    &_right {
+      position: relative;
+      width: 55%;
+      height: 100%;
+      padding-top: 62%;
+    }
+  }
+
+  .section__text {
+    max-width: 490px;
+    margin-bottom: 76px;
+    font-size: 21px;
+    line-height: 1.5;
+  }
+
+  .wrap-img {
+    max-width: 515px;
+    height: auto;
+    margin-bottom: 110px;
+  }
+}

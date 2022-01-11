@@ -1,0 +1,57 @@
+.section-video{
+  padding-top: 45px;
+  padding-bottom: 26.75%;
+  background-image: url(../assets/img/line1.svg);
+  background-repeat: no-repeat;
+  background-position:  0 40%;
+  background-size: 100%;
+  &__slogan{
+    font-size: 17px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #8e8e8e;
+    margin-bottom: 132px;
+  }
+  &__wrap{
+    position: relative;
+    padding-top: 43.25%;
+    margin: 0 auto;
+    max-width: 1048px;
+    width: 90%;
+    border-radius: 37px;
+    overflow: hidden;
+  }
+  &__video{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.infinity-line{
+  background: url(../assets/img/infinity-line.png) repeat-x;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 17px;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 570px 0;
+  }
+}
+
+
+

@@ -1,0 +1,36 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  min-width: 207px;
+  padding: 15px 12px;
+  transition: .35s;
+  border-radius: 4px;
+
+  &_main {
+    color: #ffffff;
+    background-color: #019bdd;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 50px rgba(1, 155, 221, 0.5);
+    }
+  }
+  &_border{
+    background-color: #ffffff;
+    color: #019bdd;
+    border: 1px solid #019bdd;
+    &:hover,
+    &:focus {
+      background-color: #019bdd;
+      color: #ffffff;
+    }
+  }
+}
+
+
+
+

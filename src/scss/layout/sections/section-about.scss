@@ -1,0 +1,75 @@
+.section-about {
+  padding-bottom: 290px;
+  &__bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 280px;
+  }
+  .section__title {
+    font-size: 80px;
+    margin-bottom: 26px;
+    color: #a5a5a5;
+  }
+  .section__text{
+    font-size: 19px;
+    line-height: 1.4;
+    color: #616161;
+  }
+  .d-flex{
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .section__content{
+    max-width: 834px;
+    margin-bottom: 77px;
+  }
+  .btn_border{
+    margin-top: 32px;
+  }
+}
+
+.about-disease{
+  &__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding: 25px 0 15px;
+    margin-bottom: 40px;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 150vw;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 1px;
+      background-color: #d0d0d0;
+      z-index: 1;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__info{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    line-height:.8;
+    color: #888888;
+  }
+  &__description{
+    font-size: 18px;
+    line-height: 1.28;
+    color: #616161;
+  }
+  .part{
+    width: 50%;
+    &_right{
+      padding-left: 13%;
+    }
+  }
+}
+

@@ -1,0 +1,161 @@
+.section-children {
+  padding-bottom: 280px;
+
+  .section__title {
+    max-width: 1005px;
+    width: 100%;
+    margin-bottom: 115px;
+  }
+
+  .text_blue {
+    font-size: 100px;
+    line-height: .8;
+  }
+
+  .container{
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url(../assets/img/hearts.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 8.25%;
+      max-width: 500px;
+      width: 36%;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      transform: translateY(100%);
+    }
+  }
+}
+
+.children-card {
+  position: relative;
+  display: flex;
+  padding: 30px 0;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    content: '';
+    display: block;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: #d3d3d3;
+    z-index: 1;
+  }
+
+  &__thumb {
+    position: relative;
+    max-width: 450px;
+    width: 32%;
+    padding-top: 17.75%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 68%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+
+  }
+
+  &__title {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__text {
+    max-width: 385px;
+  }
+
+  .part {
+    padding-left: 104px;
+    width: 60%;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding-bottom: 15px;
+      margin-top: auto;
+    }
+
+    &_small {
+      width: 40%;
+    }
+  }
+}
+
+.children-add {
+  &__thumb {
+    position: relative;
+    border: 1px solid #019bdd;
+    transition: background .35s;
+
+    &:hover,
+    &:focus {
+      background-color: #019bdd;
+
+      svg path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 104px;
+    color: #019bdd;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__text {
+    padding-bottom: 15px;
+    max-width: 420px;
+  }
+}
