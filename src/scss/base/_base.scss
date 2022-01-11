@@ -127,11 +127,12 @@ body {
   top: 0;
   width: 250px;
   height: 250px;
-  background-image: url(..assets/img/heart.svg);
+  background-image: url(../assets/img/heart.svg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 86px 71px;
   border:none;
-  .img{
+  .wrap-img{
     position: absolute;
     left: 0;
     right: 0;
@@ -139,12 +140,31 @@ body {
     bottom: 0;
     z-index: 1;
   }
+  .img{
+    animation: spin 5s linear infinite;
+    width: 100%;
+    height: auto;
+  }
   &:hover,
   &:focus {
     background-color: transparent;
   }
 }
+.img_written {
+  vertical-align: middle;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  width: 100%;
+  height: auto;
 
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 @include respond-to($lg) {
   .section {

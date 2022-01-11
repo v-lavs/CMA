@@ -253,13 +253,14 @@ body.modal-open {
   top: 0;
   width: 250px;
   height: 250px;
-  background-image: url(..assets/img/heart.svg);
+  background-image: url(../assets/img/heart.svg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 86px 71px;
   border: none;
 }
 
-.btn-consultation .img {
+.btn-consultation .wrap-img {
   position: absolute;
   left: 0;
   right: 0;
@@ -268,9 +269,31 @@ body.modal-open {
   z-index: 1;
 }
 
+.btn-consultation .img {
+  animation: spin 5s linear infinite;
+  width: 100%;
+  height: auto;
+}
+
 .btn-consultation:hover,
 .btn-consultation:focus {
   background-color: transparent;
+}
+
+.img_written {
+  vertical-align: middle;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .btn {
@@ -305,6 +328,12 @@ body.modal-open {
 .btn_border:hover,
 .btn_border:focus {
   background-color: #019bdd;
+  color: #ffffff;
+}
+
+.btn_white {
+  border: 1px solid #ffffff;
+  background-color: transparent;
   color: #ffffff;
 }
 
@@ -467,6 +496,7 @@ body.modal-open {
 }
 
 .footer {
+  background-color: #0695F3;
   color: #ffffff;
   font-weight: 500;
   font-size: 15px;
@@ -1262,19 +1292,68 @@ body.modal-open {
 }
 
 .consultation {
-  padding-top: 100px;
   font-size: 20px;
   line-height: 1.4;
+  padding-bottom: 230px;
 }
 
 .consultation .section__title {
   margin-bottom: 36px;
 }
 
+.consultation .section__text {
+  margin-bottom: 105px;
+}
+
 .consultation .section__content {
   position: relative;
   padding-right: 26%;
-  background-color: rosybrown;
+  padding-top: 100px;
+}
+
+.conditions {
+  display: flex;
+}
+
+.conditions__item {
+  position: relative;
+  max-width: 300px;
+  margin-right: 178px;
+  padding-bottom: 17px;
+}
+
+.conditions__item:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #e4e4e4;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+}
+
+.conditions__item:last-child {
+  margin-right: 0;
+}
+
+.section-join {
+  padding-top: 110px;
+  padding-bottom: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.section-join .section__title {
+  margin-bottom: 24px;
+}
+
+.section-join .section__text {
+  margin-bottom: 88px;
+}
+
+.section-join .part_left {
+  width: 60%;
 }
 
 @media screen and (min-width: 1920px) {
