@@ -1,15 +1,34 @@
 .section-join{
-  padding-top: 110px;
+  padding-top: 77px;
   padding-bottom: 50px;
   font-size: 20px;
   font-weight: 500;
   .section__title{
+    font-size: 60px;
+    line-height: 1.17;
     margin-bottom: 24px;
   }
   .section__text{
-    margin-bottom: 88px;
+    margin-bottom: 40px;
   }
-  .part_left{
-    width: 60%;
+  .part{
+    &_left{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 33px;
+      width: 60%;
+      padding-bottom: 40px;
+      .btn_white{
+        margin-top: auto;
+      }
+    }
+    &_right{
+      width: 40%;
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      background-size: contain;
+      min-height: 488px;
+    }
   }
 }

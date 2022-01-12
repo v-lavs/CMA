@@ -1,11 +1,162 @@
 .modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 860px;
+  max-height: 730px;
+  height: 100%;
+  overflow-y: auto;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
 
   &.active {
     opacity: 1;
     visibility: visible;
+    transition: .5s;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000000;
+
   }
 
   &__close {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    top: 25px;
+    right: 10px;
+    z-index: 20;
 
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.modal-info {
+  max-width: 903px;
+  max-height: 906px;
+  padding: 70px 93px 90px;
+  font-size: 17px;
+  line-height: 1.47;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #616161;
+
+  &__content {
+    padding-bottom: 56px;
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.07;
+    margin-bottom: 65px;
+  }
+  .btn_main{
+    width: 100%;
+  }
+}
+
+.modal-add-child {
+  padding: 50px 84px 58px;
+  .modal__title {
+    margin-bottom: 30px;
+  }
+  .modal__body{
+    max-height: 540px;
+    overflow-y: auto;
+  }
+}
+
+.modal-add-doctor{
+  padding: 72px 84px;
+
+  .modal__title {
+    margin-bottom: 78px;
+  }
+  .form__body{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+}
+
+.thank-you {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 33px;
+  text-align: center;
+
+  color: #019bdd;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  &.show-thanks{
+    display: flex;
+  }
+  .wrap-img{
+    max-width: 313px;
+    width: 40%;
+    margin-bottom: 55px;
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+  }
+  .decor-line{
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 1px;
+      background-color: #019bdd;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__text {
+    padding-bottom: 34px;
+    text-align: center;
+    max-width: 513px;
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 }

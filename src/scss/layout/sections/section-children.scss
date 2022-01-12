@@ -114,6 +114,7 @@
   &__thumb {
     position: relative;
     border: 1px solid #019bdd;
+    background-color: transparent;
     transition: background .35s;
 
     &:hover,

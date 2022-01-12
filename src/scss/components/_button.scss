@@ -16,24 +16,34 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0px 0px 50px rgba(1, 155, 221, 0.5);
+      box-shadow: 0 0 50px rgba(1, 155, 221, 0.5);
     }
   }
-  &_border{
+
+  &_border {
     background-color: #ffffff;
     color: #019bdd;
     border: 1px solid #019bdd;
+
     &:hover,
     &:focus {
       background-color: #019bdd;
       color: #ffffff;
     }
   }
-  &_white{
-    border:  1px solid #ffffff;
+
+  &_glass {
+    border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
+    &:hover,
+    &:focus {
+      color: #019bdd;
+      background-color: #ffffff;
+    }
   }
+
+
 }
 
 

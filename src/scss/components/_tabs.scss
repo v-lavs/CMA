@@ -1,0 +1,94 @@
+.modal-tabs{
+  padding-bottom: 24px;
+  &__content {
+    position: relative;
+    overflow: hidden;
+    min-height: 356px;
+     }
+  &__link{
+    display: inline-block;
+    min-width: 121px;
+    padding: 6px 10px 7px;
+    text-align: center;
+    color: #c2c2c2;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1;
+    border: 1px solid #c2c2c2;
+    border-radius: 6px;
+    margin-right: 42px;
+    &:last-child{
+      margin-right: 0;
+    }
+    &.active{
+      border-color: #019dbb;
+      color: #019dbb;
+    }
+    &:hover,
+    &:focus{
+      border-color: #019dbb;
+      color: #019dbb;
+    }
+  }
+
+}
+.modal-tab {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  &.active {
+    position: relative;
+    opacity: 1;
+    transition: opacity .5s ease-in;
+    z-index: 2;
+  }
+}
+
+.link-list{
+  padding-top: 25px;
+  font-size: 17px;
+  li:before {
+    counter-increment: list;
+    content: counter(list) ". ";
+    position: absolute;
+    left: 6px;
+  }
+
+  &__item{
+    display: flex;
+    margin-bottom: 22px;
+  }
+  .name-item{
+    padding-left: 38px;
+    width: 25.25%;
+  }
+  .url-item{
+    padding-left: 34px;
+    flex-grow: 1;
+  }
+}
+
+.add-link{
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #019bdd;
+  padding: 0;
+  &__icon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 40px;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
