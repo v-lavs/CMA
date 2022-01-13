@@ -1,21 +1,19 @@
-.achievements{
+.achievements {
   padding-bottom: 270px;
-  &__list{
+
+  &__list {
     display: flex;
     flex-wrap: wrap;
   }
-  &__item{
+
+  &__item {
     width: 50%;
   }
-  &__value{
+
+  .wrap-value {
     position: relative;
-    font-size: 150px;
-    line-height: .8;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #019bdd;
-    margin-bottom: 38px;
-    display: inline-block;
-    sup{
+    width: max-content;
+    .sup {
       font-size: 30px;
       font-weight: 500;
       position: absolute;
@@ -24,19 +22,32 @@
       z-index: 1;
     }
   }
-  &__text{
+
+  &__value {
+    position: relative;
+    font-size: 150px;
+    line-height: .8;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #019bdd;
+    margin-bottom: 38px;
+    display: inline-block;
+
+  }
+
+  &__text {
     font-size: 27px;
     line-height: .8;
-     color: #000000;
+    color: #000000;
   }
-  .section__title{
+
+  .section__title {
     margin-bottom: 76px;
   }
 }
 
-@include respond-to($laptop-md){
-  .achievements{
-    &__value{
+@include respond-to($laptop-md) {
+  .achievements {
+    &__value {
       font-size: 125px;
     }
   }

@@ -11,27 +11,6 @@
     font-size: 100px;
     line-height: .8;
   }
-
-  .container {
-    position: relative;
-
-    &:after {
-      position: absolute;
-      content: '';
-      display: block;
-      background-image: url(../assets/img/hearts.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      height: 8.25%;
-      max-width: 500px;
-      width: 36%;
-      bottom: 0;
-      right: 0;
-      z-index: 0;
-      transform: translateY(100%);
-    }
-  }
 }
 
 .children-card {

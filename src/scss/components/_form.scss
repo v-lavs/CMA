@@ -58,6 +58,7 @@
   padding: 18px;
   margin-bottom: 12px;
   margin-top: 20px;
+  color: #ababab;
   .icon-upload{
     display: inline-flex;
     justify-content: center;
@@ -67,7 +68,18 @@
     border-radius: 50%;
     border: 1px solid #ababab;
     background-color: transparent;
+  }
+}
 
+.has-file{
+  .file-upload{
+    color: #000;
+  }
+  .icon-upload {
+    border: 1px solid #019bdd;
+  }
+  path {
+    fill: #019bdd;
   }
 }
 

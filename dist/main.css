@@ -290,6 +290,26 @@ body.modal-open {
   }
 }
 
+.sl-left {
+  animation: slideInLeft ease-in 0.5s forwards;
+}
+
+.sl-left:nth-of-type(1) {
+  animation-delay: 1000s;
+}
+
+.sl-left:nth-of-type(2) {
+  animation-delay: 2000s;
+}
+
+.sl-left:nth-of-type(3) {
+  animation-delay: 3000s;
+}
+
+.sl-left:nth-of-type(4) {
+  animation-delay: 4000s;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -652,6 +672,7 @@ body.modal-open {
   padding: 18px;
   margin-bottom: 12px;
   margin-top: 20px;
+  color: #ababab;
 }
 
 .file-upload .icon-upload {
@@ -663,6 +684,18 @@ body.modal-open {
   border-radius: 50%;
   border: 1px solid #ababab;
   background-color: transparent;
+}
+
+.has-file .file-upload {
+  color: #000;
+}
+
+.has-file .icon-upload {
+  border: 1px solid #019bdd;
+}
+
+.has-file path {
+  fill: #019bdd;
 }
 
 .label-checkmark {
@@ -1250,27 +1283,6 @@ body.modal-open {
   line-height: .8;
 }
 
-.section-children .container {
-  position: relative;
-}
-
-.section-children .container:after {
-  position: absolute;
-  content: '';
-  display: block;
-  background-image: url(../assets/img/hearts.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 8.25%;
-  max-width: 500px;
-  width: 36%;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-  transform: translateY(100%);
-}
-
 .children-card {
   position: relative;
   display: flex;
@@ -1409,14 +1421,17 @@ body.modal-open {
   position: absolute;
   content: '';
   display: block;
-  width: 100%;
-  height: 60%;
-  background-image: url(../assets/img/line-2.svg);
+  width: 2825px;
+  height: 1014px;
+  background-image: url(../assets/img/loop.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 120% 100%;
+  background-size: 2825px 1014px;
   z-index: -1;
-  top: -18%;
+  top: -456px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -1%;
 }
 
 .how-works .bold {
@@ -1607,6 +1622,20 @@ body.modal-open {
   width: 50%;
 }
 
+.achievements .wrap-value {
+  position: relative;
+  width: max-content;
+}
+
+.achievements .wrap-value .sup {
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  right: -70px;
+  vertical-align: super;
+  z-index: 1;
+}
+
 .achievements__value {
   position: relative;
   font-size: 150px;
@@ -1615,15 +1644,6 @@ body.modal-open {
   color: #019bdd;
   margin-bottom: 38px;
   display: inline-block;
-}
-
-.achievements__value sup {
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  right: -70px;
-  vertical-align: super;
-  z-index: 1;
 }
 
 .achievements__text {

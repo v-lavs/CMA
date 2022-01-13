@@ -9,14 +9,18 @@
     position: absolute;
     content: '';
     display: block;
-    width: 100%;
-    height: 60%;
-    background-image: url(../assets/img/line-2.svg);
+    width: 2825px;
+    height: 1014px;
+    background-image: url(../assets/img/loop.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 120% 100%;
+    background-size: 2825px 1014px;
     z-index: -1;
-    top: -18%;
+    top:-456px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -1%;
+
   }
 
   .bold {
@@ -93,6 +97,11 @@
 }
 
 @include respond-to($lg) {
+  .how-works{
+    .section__header{
+      //background-color: #ffffff;
+    }
+  }
   .list-step {
     flex-wrap: wrap;
   }
