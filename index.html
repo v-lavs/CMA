@@ -116,7 +116,7 @@
                     <a href="#children" class="btn btn_main">Допомогти дитині</a>
                 </div>
                 <div class="part part_right">
-                    <div class="section-intro__thumb" style="background-image: url(assets/img/baby-1.jpg);" ></div>
+                    <div class="section-intro__thumb" style="background-image: url(assets/img/baby-1.jpg);"></div>
                 </div>
             </div>
         </section>
@@ -376,7 +376,9 @@
         <div class="bg-blue">
             <section class="how-works">
                 <div class="container">
-                    <h2 class="section__title text_white">Три простих кроки</h2>
+                    <div class="section__header">
+                        <h2 class="section__title text_white">Три простих кроки</h2>
+                    </div>
                     <ul class="list-step">
                         <li class="step-content">
                             <div class="step-content__thumb">
@@ -427,7 +429,9 @@
                         <div class="slide__text" id="slideText">
 
                         </div>
-                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle" data-modal="">Приєднатись</button>
+                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle" data-modal="">
+                            Приєднатись
+                        </button>
                     </div>
                     <div class="part part_right">
                         <div class="slider-wrap">
@@ -968,6 +972,16 @@
                         Добавити
                     </button>
                 </div>
+                <template id="rowTemplate">
+                    <li class="link-list__item">
+                        <div class="name-item">
+                            <input type="text" class="input" placeholder="Назва">
+                        </div>
+                        <div class="url-item">
+                            <input type="text" class="input" placeholder="URL">
+                        </div>
+                    </li>
+                </template>
             </div>
             <div class="form-footer">
                 <div class="wrap-btn-submit">

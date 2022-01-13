@@ -758,6 +758,7 @@ body.modal-open {
 .link-list {
   padding-top: 25px;
   font-size: 17px;
+  counter-reset: list;
 }
 
 .link-list li:before {
@@ -765,10 +766,11 @@ body.modal-open {
   content: counter(list) ". ";
   position: absolute;
   left: 6px;
-  top: 32px;
+  top: 6px;
 }
 
 .link-list__item {
+  position: relative;
   display: flex;
   margin-bottom: 22px;
 }
@@ -2294,6 +2296,10 @@ body.modal-open {
 @media only screen and (max-width: 576px) {
   .container {
     max-width: 540px;
+  }
+
+  .section-video__wrap {
+    padding-top: 75.25%;
   }
 
   .section-children .section__title {

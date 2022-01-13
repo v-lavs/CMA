@@ -52,15 +52,17 @@
 .link-list{
   padding-top: 25px;
   font-size: 17px;
+  counter-reset: list;
   li:before {
     counter-increment: list;
     content: counter(list) ". ";
     position: absolute;
     left: 6px;
-    top: 32px;
+    top: 6px;
   }
 
   &__item{
+    position: relative;
     display: flex;
     margin-bottom: 22px;
   }

@@ -1,11 +1,12 @@
-.section-video{
+.section-video {
   padding-top: 45px;
   padding-bottom: 26.75%;
   background-image: url(../assets/img/line1.svg);
   background-repeat: no-repeat;
-  background-position:  0 40%;
+  background-position: 0 40%;
   background-size: 100%;
-  &__slogan{
+
+  &__slogan {
     font-size: 17px;
     line-height: 1.2;
     text-align: center;
@@ -14,7 +15,8 @@
     color: #8e8e8e;
     margin-bottom: 132px;
   }
-  &__wrap{
+
+  &__wrap {
     position: relative;
     padding-top: 43.25%;
     margin: 0 auto;
@@ -23,7 +25,8 @@
     border-radius: 37px;
     overflow: hidden;
   }
-  &__video{
+
+  &__video {
     position: absolute;
     left: 0;
     right: 0;
@@ -34,6 +37,7 @@
     object-fit: cover;
     z-index: 1;
   }
+
   &__poster {
     img {
       position: absolute;
@@ -49,7 +53,7 @@
   }
 }
 
-.infinity-line{
+.infinity-line {
   background: url(../assets/img/infinity-line.png) repeat-x;
   width: 100%;
   height: 35px;
@@ -57,7 +61,7 @@
   animation: animate 5s linear infinite;
 }
 
-.btn-play{
+.btn-play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -72,7 +76,8 @@
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px #ffffff;
   z-index: 2;
-  &__icon{
+
+  &__icon {
     width: 32px;
     height: 36px;
     margin-left: 6px;
@@ -91,31 +96,38 @@
 
 
 @include respond-to($laptop-large) {
-  .section-video{
-   &__wrap{
-     padding-top: 50.25%;
-   }
+  .section-video {
+    &__wrap {
+      padding-top: 50.25%;
+    }
   }
 }
 
 @include respond-to($md) {
-  .section-video{
+  .section-video {
     background-position: center right -30px;
     background-size: 250%;
   }
 
-  .btn-play{
+  .btn-play {
     width: 64px;
     height: 64px;
-    &__icon{
+
+    &__icon {
       width: 23px;
       height: 26px;
     }
   }
 }
 
+@include respond-to($sm) {
+  .section-video__wrap {
+    padding-top: 75.25%;
+  }
+}
+
 @include respond-to($xs) {
-  .section-video{
+  .section-video {
     padding-bottom: 200px;
   }
 }

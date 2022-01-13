@@ -73,7 +73,7 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
-});
+    });
 
     sliderActivity.on('slideChange', function () {
         const currSlide = this.slides[this.activeIndex];
@@ -128,8 +128,6 @@ $(document).ready(function () {
     });
 
 
-
-
     //CHANGE COLOR LABEL
 
     jQuery('input:checkbox').click(function () {
@@ -141,17 +139,18 @@ $(document).ready(function () {
     });
 
     //CHANGE BG-COLOR INPUT
-    $('.input').on('change', function() {
-       let $this = $(this);
+    $(document).on('change', '.input', function () {
+        let $this = $(this);
         let value = $.trim($this.val());
         $this.toggleClass('filled-background', value.length !== 0);
-    }).change();
+    });
 
-    // document.getElementById("addLink").onclick = function() {
-    //    let container = document.getElementById("linkList");
-    //     let section = document.getElementById("linkListItem");
-    //     container.appendChild(section.cloneNode(true));
-    // }
+
+    $('#addLink').click(function (e) {
+        e.preventDefault();
+        const row = $('#rowTemplate').html();
+        $('#linkList').append(row);
+    });
 
 });
 
