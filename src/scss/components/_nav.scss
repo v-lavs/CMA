@@ -22,10 +22,19 @@
 }
 
 @include respond-to($laptop-md){
-  .menu{
-   &__item{
-     margin: 0 18px;
-   }
+  .menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 30px;
+    margin-bottom: 60px;
+
+    &__item {
+      margin: 0 0 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

@@ -27,16 +27,18 @@
 <div class="wrapper">
     <header class="header">
         <div class="container">
-            <button type="button" class="btn_burger" aria-label="button burger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+            <button type="button" class="btn_burger" aria-label="button burger"></button>
             <a href="#" class="header__logo">
-                <img src="assets/img/logo-CMA.svg" alt="СМА" class="header__logo">
+                <img src="assets/img/logo-CMA.svg" alt="СМА" class="img">
             </a>
             <nav class="header__nav">
-                <button class="btn_close" id="closeMenu" aria-label="Close"></button>
+                <div class="header__nav-header">
+                    <a href="#" class="header__logo">
+                        <img src="assets/img/logo-CMA.svg" alt="СМА" class="img">
+                    </a>
+
+                    <button class="btn_close" id="closeMenu" aria-label="Close"></button>
+                </div>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#" class="menu__link">Про проєкт</a>
@@ -55,33 +57,35 @@
                     </li>
                 </ul>
                 <div class="header__info-bar">
-                    <a href="#children" class="btn btn">Допомогти дитині</a>
-                    <div class="social-bar">
-                        <a target="_blank" href="#" class="social-bar__link">
-                            <span class="hide">Instagram</span>
-                            <span class="social-bar__icon">
+                    <a href="#children" class="btn btn_main">Допомогти дитині</a>
+                    <div class="d-flex">
+                        <div class="social-bar">
+                            <a target="_blank" href="#" class="social-bar__link">
+                                <span class="hide">Instagram</span>
+                                <span class="social-bar__icon">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.83686 24.1629C4.60253 24.4812 5.411 24.594 6.23973 24.5934C10.1694 24.5904 14.0991 24.5993 18.0288 24.5893C20.4276 24.5832 22.2527 23.5426 23.4748 21.499C24.0159 20.5943 24.2495 19.5916 24.2499 18.5398C24.2517 14.5567 24.2584 10.5736 24.2479 6.59053C24.241 3.93022 22.5742 1.6689 20.0282 0.83109C19.6543 0.708033 19.268 0.628498 18.8749 0.587252C18.8323 0.582781 18.7773 0.606361 18.7564 0.542969C14.3041 0.542969 9.85184 0.542969 5.39956 0.542969C5.0895 0.674984 4.74862 0.673802 4.42825 0.770663C2.52486 1.34605 1.19387 2.54311 0.427345 4.3601C0.235186 4.8156 0.125046 5.29408 0.0521974 5.78152C0.0459008 5.82366 0.062523 5.87911 0 5.89765C0 10.3442 0 14.7908 0 19.2374C0.132942 19.5454 0.132309 19.8839 0.229947 20.2021C0.807695 22.0848 2.0121 23.4041 3.83686 24.1629ZM18.6955 4.55088C19.5261 4.55364 20.2268 5.25602 20.209 6.06807C20.1906 6.90607 19.5041 7.56626 18.6677 7.55028C17.8242 7.53416 17.1633 6.85072 17.185 6.01698C17.2061 5.20525 17.8831 4.54817 18.6955 4.55088ZM12.1087 7.55592C14.864 7.52144 17.156 9.78212 17.179 12.5569C17.2016 15.2963 14.9165 17.5693 12.1298 17.5791C9.35816 17.5888 7.06855 15.3196 7.07174 12.5661C7.07494 9.81299 9.30885 7.59096 12.1087 7.55592Z"
-                                          fill="white"/>
+                                          fill="#019bdd"/>
                                 </svg>
                             </span>
-                        </a>
+                            </a>
 
-                        <a target="_blank" href="#" class="social-bar__link">
-                            <span class="hide">Facebook</span>
-                            <span class="social-bar__icon">
+                            <a target="_blank" href="#" class="social-bar__link">
+                                <span class="hide">Facebook</span>
+                                <span class="social-bar__icon">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24.1721 21.8154C24.1908 21.7398 24.1614 21.6398 24.2536 21.5879C24.2536 15.5907 24.2536 9.59364 24.2536 3.59653C24.1244 3.23512 24.0687 2.85115 23.8829 2.5062C23.2363 1.30537 22.2323 0.653472 20.8655 0.548583C20.779 0.541953 20.6919 0.543386 20.6051 0.543382C14.9528 0.543164 9.30049 0.54244 3.6482 0.543655C2.02022 0.544006 0.703156 1.46585 0.184854 2.96202C0.0556293 3.33506 0.000306345 3.72004 0.000344639 4.11419C0.00087624 9.75075 -0.00166014 15.3873 0.00212642 21.0239C0.00328649 22.7469 1.12984 24.1283 2.8257 24.5196C2.89406 24.5353 2.98908 24.5025 3.03229 24.5942C5.59022 24.5942 8.14815 24.5942 10.7061 24.5942C10.7061 21.8386 10.7038 19.083 10.711 16.3275C10.7115 16.1332 10.6674 16.0834 10.4693 16.0865C9.66434 16.0992 8.85898 16.0875 8.05386 16.0955C7.8995 16.0971 7.85947 16.0571 7.86025 15.9037C7.86674 14.6199 7.86674 13.336 7.86025 12.0522C7.85947 11.8988 7.89954 11.8589 8.05387 11.8604C8.87478 11.8683 9.69585 11.8598 10.5168 11.8679C10.6723 11.8694 10.7111 11.8277 10.7098 11.6754C10.7021 10.8143 10.7046 9.95315 10.7064 9.09203C10.7113 6.62921 12.5794 4.77568 15.0624 4.77133C16.3965 4.76898 17.7306 4.77441 19.0647 4.7666C19.2381 4.76559 19.286 4.80183 19.2847 4.98089C19.2756 6.24903 19.2762 7.51729 19.2843 8.78543C19.2854 8.95791 19.248 9.00462 19.0679 9.00338C17.7733 8.99448 16.4786 9.00231 15.184 8.99425C15.0096 8.99317 14.962 9.03079 14.9644 9.20911C14.9755 10.0231 14.975 10.8374 14.9647 11.6515C14.9625 11.8253 15.003 11.87 15.1819 11.8688C16.4607 11.86 17.7395 11.8641 19.0184 11.8641C19.0968 11.8641 19.1753 11.8641 19.2776 11.8641C19.1764 12.4756 19.0783 13.0725 18.9786 13.6691C18.8575 14.3939 18.7321 15.118 18.6155 15.8434C18.588 16.0142 18.5512 16.1029 18.3319 16.0994C17.2822 16.0825 16.2321 16.0966 15.1823 16.0871C15.0042 16.0855 14.9645 16.1297 14.9649 16.304C14.9711 19.0674 14.9693 21.8308 14.9693 24.5942C17.022 24.5942 19.0746 24.5942 21.1273 24.5942C21.3493 24.5361 21.5767 24.4928 21.7926 24.4174C23.0572 23.9763 23.8512 23.1091 24.1721 21.8154Z"
-                                          fill="white"/>
+                                          fill="#019bdd"/>
                                 </svg>
                             </span>
+                            </a>
+                        </div>
+                        <a href="#" class="logo">
+                            <img src="assets/img/logo-farmak-blue.svg" alt="Фармак">
                         </a>
                     </div>
-                    <a href="#" class="logo">
-                        <img src="assets/img/logo-farmak.svg" alt="Фармак">
-                    </a>
                     <a href="mailto:mailexample@gmail.com" class="link-mail">mailexample@gmail.com</a>
                     <div class="description">
                         У разі виникнення питань стосовно роботи
@@ -151,7 +155,8 @@
                 <div class="section-video__wrap">
                     <div class="section-video__poster">
                         <img src="assets/img/poster.jpg" alt="" class="video__media">
-                        <button id="customPlaybtn" data-iframe="https://www.youtube.com/embed/pxOQwkdpdGY?autoplay=1" type="button"
+                        <button id="customPlaybtn" data-iframe="https://www.youtube.com/embed/pxOQwkdpdGY?autoplay=1"
+                                type="button"
                                 class="btn-play">
                             <svg class="btn-play__icon" width="32" height="36" viewBox="0 0 32 36" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
