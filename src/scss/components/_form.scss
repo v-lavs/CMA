@@ -20,7 +20,9 @@
     color: #ababab;
   }
 
-
+.filled-background{
+  background-color: #effbff;
+}
   .textarea{
     width: 100%;
     max-width: 100%;
@@ -44,7 +46,7 @@
 
   .fieldbox {
     max-width: 284px;
-    width: 49%;
+    width: 45%;
   }
 }
 
@@ -53,7 +55,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 18px 11px;
+  padding: 18px;
   margin-bottom: 12px;
   margin-top: 20px;
   .icon-upload{

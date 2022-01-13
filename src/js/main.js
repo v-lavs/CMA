@@ -7,9 +7,17 @@
 
 
 // CUSTOM SCRIPTS
+function youtubeVideo() {
+    $('#customPlaybtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.section-video__poster').fadeOut(700);
+
+        $('#youtube-video').attr({src: $(this).data('iframe')})
+    })
+}
 
 $(document).ready(function () {
-
+    youtubeVideo();
     //MOBILE MENU
     const nav = $('.header__nav');
 
@@ -125,13 +133,19 @@ $(document).ready(function () {
         }
     });
 
-    // $('.add-link').click(function () {
-    //     let
-    //         formGroup = $(this).closest('.link-list__item'),
-    //         product = formGroup.clone(true, true);
-    //
-    //     formGroup.after(product);
-    // });
+    //CHANGE BG-COLOR INPUT
+    $('.input').on('change', function() {
+       let $this = $(this);
+        let value = $.trim($this.val());
+        $this.toggleClass('filled-background', value.length !== 0);
+    }).change();
+
+    // document.getElementById("addLink").onclick = function() {
+    //    let container = document.getElementById("linkList");
+    //     let section = document.getElementById("linkListItem");
+    //     container.appendChild(section.cloneNode(true));
+    // }
+
 });
 
 

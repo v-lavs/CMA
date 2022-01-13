@@ -34,6 +34,19 @@
     object-fit: cover;
     z-index: 1;
   }
+  &__poster {
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+  }
 }
 
 .infinity-line{
@@ -43,6 +56,29 @@
   margin-bottom: 17px;
   animation: animate 5s linear infinite;
 }
+
+.btn-play{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px #ffffff;
+  z-index: 2;
+  &__icon{
+    width: 32px;
+    height: 36px;
+    margin-left: 6px;
+  }
+}
+
 @keyframes animate {
   0% {
     background-position: 0 0;
