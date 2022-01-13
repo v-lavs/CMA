@@ -69,3 +69,12 @@ padding-bottom: 158px;
 
   }
 }
+
+@include respond-to($laptop){
+  .step-content{
+    &__thumb{
+      width: 125px;
+      height: 125px;
+    }
+  }
+}

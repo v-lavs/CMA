@@ -43,7 +43,7 @@ $(document).ready(function () {
 
                 $('html, body').animate({
                     scrollTop: $($.attr(this, 'href')).offset().top
-                }, 1000);
+                }, 1500);
                 nav.removeClass('open');
                 jQuery('.backdrop').fadeOut();
                 $('body').removeClass('modal_open');
@@ -79,6 +79,7 @@ $(document).ready(function () {
 
 
     function showActivityText(currSlide) {
+        const contentId = $(this).data('content-id');
         const textHolder = $('#slideText');
         if (textHolder && textHolder.length > 0) {
             const text = $(currSlide).find('.text-template').html();
@@ -113,7 +114,7 @@ $(document).ready(function () {
         $("body").addClass("modal-open");
     });
 
-    $('.modal__close, .backdrop').on('click', function (e) {
+    $('.modal__close, .backdrop, .btn_scroll').on('click', function (e) {
         e.preventDefault();
         $('.modal').removeClass('active');
         jQuery('.backdrop').fadeOut();

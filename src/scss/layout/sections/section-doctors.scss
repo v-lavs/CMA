@@ -89,3 +89,19 @@
     margin-top: auto;
   }
 }
+
+@include respond-to($laptop-md){
+  .card-doctor{
+    width: 48%;
+    &__body{
+      padding-left: 50px;
+    }
+  }
+}
+@include respond-to($laptop){
+  .card-doctor{
+   &__title{
+     font-size: 23px;
+   }
+  }
+}

@@ -74,7 +74,16 @@
   z-index: 500;
 }
 
-
+@include respond-to($laptop-md){
+ .header{
+   &__logo{
+     max-width: 176px;
+   }
+   .hashtag{
+     font-size: 30px;
+   }
+ }
+}
 @media screen and (max-width: 1180px) {
 
 }

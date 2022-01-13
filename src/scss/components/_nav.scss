@@ -21,5 +21,13 @@
   }
 }
 
+@include respond-to($laptop-md){
+  .menu{
+   &__item{
+     margin: 0 18px;
+   }
+  }
+}
+
 
 

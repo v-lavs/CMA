@@ -21,10 +21,24 @@
   }
 
   .wrap-btn {
-    width: 18%;
+    width: 250px;
   }
 
   .d-flex {
     align-items: center;
+  }
+}
+
+@include respond-to($laptop) {
+  .help-children{
+    .section__content {
+      padding-left: 58px;
+    }
+    .section__title {
+      font-size: 52px;
+    }
+    .btn-help{
+      height: 285px;
+    }
   }
 }

@@ -160,3 +160,17 @@
     max-width: 420px;
   }
 }
+
+@include respond-to($laptop-md){
+  .children-card .part {
+    padding-left: 50px;
+  }
+}
+
+@include respond-to($laptop) {
+  .children-card{
+    &__title{
+      font-size: 30px;
+    }
+  }
+}
