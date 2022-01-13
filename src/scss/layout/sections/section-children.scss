@@ -12,9 +12,10 @@
     line-height: .8;
   }
 
-  .container{
+  .container {
     position: relative;
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       display: block;
@@ -161,16 +162,153 @@
   }
 }
 
-@include respond-to($laptop-md){
+@include respond-to($laptop-md) {
   .children-card .part {
     padding-left: 50px;
+  }
+  .children-add__body {
+    width: 68%;
+    padding-left: 50px;
+    flex-grow: 1;
   }
 }
 
 @include respond-to($laptop) {
-  .children-card{
-    &__title{
-      font-size: 30px;
+  .section-children {
+    .text_blue {
+      font-size: 83px;
+    }
+  }
+  .children-card {
+    &__thumb {
+      width: 35%;
+      padding-top: 19.5%;
+    }
+
+    &__body {
+      font-size: 13px;
+      flex-grow: 1;
+    }
+
+    &__title {
+      font-size: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .children-card {
+    .wrap-btn {
+      order: 1;
+    }
+
+    .wrap-btn,
+    &__title {
+      width: 100%;
+    }
+
+    &__text,
+    &__info {
+      width: 50%;
+    }
+
+    &__thumb {
+      width: 50%;
+      padding-top: 23%;
+    }
+
+    .part {
+      margin-top: 0;
+      padding-left: 60px;
+      flex-grow: 1;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        padding-bottom: 0;
+        margin-bottom: auto;
+        margin-top: 0;
+      }
+    }
+  }
+  .children-add__text {
+    width: 100%;
+  }
+}
+
+@include respond-to($lg) {
+  .children-card {
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    .wrap-btn {
+      padding-top: 10px;
+    }
+
+    .part {
+      padding-left: 30px;
+    }
+  }
+  .children-add__body {
+    padding-left: 30px;
+  }
+}
+
+@include respond-to($md) {
+  .children-card {
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    &:before {
+      display: none;
+    }
+
+    &__thumb {
+      width: 100%;
+      max-width: 100%;
+      padding-top: 55%;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      padding-right: 40px;
+    }
+
+    .wrap-btn {
+      padding-top: 10px;
+    }
+
+    &__body {
+      width: 100%;
+    }
+
+    .part {
+      padding-left: 0;
+    }
+  }
+  .children-add__body {
+    padding-left: 0;
+  }
+
+}
+
+@include respond-to($sm) {
+  .section-children {
+
+    .section__title {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-children {
+    .text_blue {
+      font-size: 50px;
     }
   }
 }

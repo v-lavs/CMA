@@ -64,6 +64,8 @@ $(document).ready(function () {
         on: {
             afterInit: function () {
                 const currSlide = this.slides[this.activeIndex];
+                const modalId = $(currSlide).attr('data-modal-id');
+                $('#help-modal-btn').data('modal', modalId);
                 showActivityText(currSlide);
             }
         },
@@ -71,15 +73,18 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
-    });
+});
+
     sliderActivity.on('slideChange', function () {
         const currSlide = this.slides[this.activeIndex];
+        const modalId = $(currSlide).attr('data-modal-id');
+        $('#help-modal-btn').data('modal', modalId);
+
         showActivityText(currSlide);
     });
 
 
     function showActivityText(currSlide) {
-        const contentId = $(this).data('content-id');
         const textHolder = $('#slideText');
         if (textHolder && textHolder.length > 0) {
             const text = $(currSlide).find('.text-template').html();
@@ -94,6 +99,7 @@ $(document).ready(function () {
         $(this).addClass('active');
 
     });
+
     const tabContentItem = $('.modal-tab');
     tabLink.click(function (e) {
         e.preventDefault();

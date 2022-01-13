@@ -90,4 +90,35 @@
 }
 
 
+@include respond-to($laptop-large) {
+  .section-video{
+   &__wrap{
+     padding-top: 50.25%;
+   }
+  }
+}
+
+@include respond-to($md) {
+  .section-video{
+    background-position: center right -30px;
+    background-size: 250%;
+  }
+
+  .btn-play{
+    width: 64px;
+    height: 64px;
+    &__icon{
+      width: 23px;
+      height: 26px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-video{
+    padding-bottom: 200px;
+  }
+}
+
+
 

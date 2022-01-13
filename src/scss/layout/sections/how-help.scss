@@ -5,7 +5,6 @@
   font-size: 22px;
   line-height: 1.4;
   margin-bottom: 16%;
-
   &:after {
     position: absolute;
     content: '';
@@ -26,6 +25,7 @@
   .section__text {
     max-width: 560px;
     width: 100%;
+    margin-bottom: 60px;
   }
 
   .btn {
@@ -40,6 +40,8 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 1.4;
+    padding-bottom: 100px;
+
   }
 
   .part {
@@ -116,4 +118,20 @@
       }
     }
   }
+}
+
+@include respond-to($laptop-md){
+  .slider-activity {
+    &__slide {
+      width: 450px;
+    }
+    }
+}
+@include respond-to($laptop){
+  .how-help{
+    &:after{
+      height: 160px;
+    }
+  }
+
 }

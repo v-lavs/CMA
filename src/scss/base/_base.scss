@@ -178,13 +178,16 @@ body {
    background-size: 58px 48px;
  }
 }
+@include respond-to($lg) {
+  .section__title{
+    font-size: 50px;
+  }
+}
 
-@include respond-to($md) {
+@include respond-to($xs) {
   .section {
-
-
     &__title {
-
+      font-size: 30px;
     }
   }
 }

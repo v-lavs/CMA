@@ -102,7 +102,12 @@
         <section class="section-intro">
             <div class="container">
                 <div class="part part_left">
-                    <div class="wrap-img"><img src="assets/img/logo-CMA-big.svg" alt=""></div>
+                    <div class="wrap-img">
+                        <picture>
+                            <source srcset="assets/img/hashtag.svg" media="(max-width: 1240px)">
+                            <img src="assets/img/logo-CMA-big.svg" alt="Врятуємо разом">
+                        </picture>
+                    </div>
                     <div class="section__text">
                         Давно ви рятували життя людині?<br>
                         А зовсім крихітці? Яка кожну хвилину бореться
@@ -111,7 +116,7 @@
                     <a href="#children" class="btn btn_main">Допомогти дитині</a>
                 </div>
                 <div class="part part_right">
-                    <div class="section-intro__thumb" style="background-image: url(assets/img/img-banner-2.jpg);"></div>
+                    <div class="section-intro__thumb" style="background-image: url(assets/img/baby-1.jpg);" ></div>
                 </div>
             </div>
         </section>
@@ -196,15 +201,15 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 22.11.2019
-                                Діагноз: СМА 1 типу
+                                <div class="date-birth">Дата народження: 22.11.2019</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1 типу</div>
                             </div>
                         </div>
                     </li>
 
                     <li class="children-card">
                         <div class="children-card__thumb">
-                            <img src="assets/img/children/image%208.jpg" alt="" class="children-card__img">
+                            <img src="assets/img/children/image%207.jpg" alt="" class="children-card__img">
                         </div>
                         <div class="children-card__body">
                             <h3 class="children-card__title part">Павло Мотичка</h3>
@@ -216,8 +221,8 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 22.11.2019
-                                Діагноз: СМА 1 типу
+                                <div class="date-birth">Дата народження: 22.11.2019</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1 типу</div>
                             </div>
                         </div>
                     </li>
@@ -236,8 +241,8 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 12.09.2020
-                                Діагноз: СМА 1 типу
+                                <div class="date-birth">Дата народження: 12.09.2020</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1 типу</div>
                             </div>
                         </div>
                     </li>
@@ -256,8 +261,8 @@
                                 вартістю 2,052 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 13.01.2020
-                                Діагноз: СМА 1 типу
+                                <div class="date-birth">Дата народження: 13.01.2020</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1 типу</div>
                             </div>
                         </div>
                     </li>
@@ -276,8 +281,8 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 13.01.2019
-                                Діагноз: СМА 1 типу
+                                <div class="date-birth">Дата народження: 13.01.2019</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1 типу</div>
                             </div>
                         </div>
                     </li>
@@ -296,6 +301,8 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
+                                <div class="date-birth">Дата народження: 13.01.2020</div>
+                                <div class="diagnosis-child">Діагноз: СМА 2 типу</div>
                                 Дата народження: 13.01.2020
                                 Діагноз: СМА 2 типу
                             </div>
@@ -316,8 +323,9 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 13.01.2020
-                                Діагноз: СМА 2 типу
+                                <div class="date-birth">Дата народження: 13.01.2020</div>
+                                <div class="diagnosis-child">Діагноз: СМА 2 типу</div>
+
                             </div>
                         </div>
                     </li>
@@ -336,8 +344,8 @@
                                 вартістю 2,3 млн USD
                             </div>
                             <div class="children-card__info part part_small">
-                                Дата народження: 13.01.2019
-                                Діагноз: СМА 1-2 типу
+                                <div class="date-birth">Дата народження: 13.01.2019</div>
+                                <div class="diagnosis-child">Діагноз: СМА 1-2 типу</div>
                             </div>
                         </div>
                     </li>
@@ -419,14 +427,14 @@
                         <div class="slide__text" id="slideText">
 
                         </div>
-                        <button type="button" class="btn btn_border modal-toggle" data-modal="">Приєднатись</button>
+                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle" data-modal="">Приєднатись</button>
                     </div>
                     <div class="part part_right">
                         <div class="slider-wrap">
                             <!-- Swiper -->
                             <div class="swiper slider-activity">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide slider-activity__slide">
+                                    <div data-modal-id="modal_add_child" class="swiper-slide slider-activity__slide">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-1.jpg);">
                                             <h4 class="slider-activity__heading">Пацієнт</h4>
@@ -439,7 +447,7 @@
                                             </p>
                                         </template>
                                     </div>
-                                    <div class="swiper-slide slider-activity__slide">
+                                    <div data-modal-id="modal_add_doctor" class="swiper-slide slider-activity__slide">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-2.jpg);">
                                             <h4 class="slider-activity__heading">Лікар</h4>
@@ -821,8 +829,8 @@
                             <input type="text" class="input" placeholder="Cпеціалізація">
                         </div>
                         <div class="form-group">
-                            <label class="hide">Моб </label>
-                            <input type="text" class="input" placeholder="Моб ">
+                            <label class="hide">Мобільний телефон(для зв‘язку з пацієнтом)</label>
+                            <input type="text" class="input" placeholder="Моб (для зв‘язку з пацієнтом) ">
                         </div>
                         <div class="form-group">
                             <label class="hide">Email</label>
@@ -833,7 +841,7 @@
                 <div class="row d-flex">
                     <div class="fieldbox">
                         <div class="form-group">
-                            <label for="fileUpload" class="file-upload">Прикріпіть квитанцію
+                            <label for="fileUpload" class="file-upload">Фотографія для сайту
                                 <span class="icon-upload">
                                 <svg class="img-upload" width="25" height="20" viewBox="0 0 25 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">

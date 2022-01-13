@@ -1,10 +1,11 @@
 .how-works {
   position: relative;
   padding-top: 50px;
-padding-bottom: 158px;
+  padding-bottom: 158px;
   color: #ffffff;
   z-index: 2;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
@@ -17,10 +18,12 @@ padding-bottom: 158px;
     z-index: -1;
     top: -18%;
   }
-  .bold{
+
+  .bold {
     font-weight: 700;
   }
-  .section__title{
+
+  .section__title {
     margin-bottom: 109px;
   }
 }
@@ -34,23 +37,28 @@ padding-bottom: 158px;
   max-width: 380px;
   width: 30%;
   font-feature-settings: 'pnum' on, 'lnum' on;
-  &__title{
+
+  &__title {
     font-weight: 600;
     font-size: 27px;
     line-height: 1;
     margin-bottom: 13px;
   }
-  &__text{
+
+  &__text {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    p{
+
+    p {
       margin-bottom: 25px;
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
   &__thumb {
     width: 142px;
     height: 142px;
@@ -70,11 +78,54 @@ padding-bottom: 158px;
   }
 }
 
-@include respond-to($laptop){
-  .step-content{
-    &__thumb{
+@include respond-to($laptop) {
+  .how-works {
+    .section__title {
+      margin-bottom: 70px;
+    }
+  }
+  .step-content {
+    &__thumb {
       width: 125px;
       height: 125px;
     }
+  }
+}
+
+@include respond-to($lg) {
+  .list-step {
+    flex-wrap: wrap;
+  }
+  .step-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    margin-bottom: 109px;
+
+    &__thumb {
+      max-width: 100px;
+      width: 30%;
+      height: 100px;
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+
+    &__icon {
+      background-size: 50px;
+    }
+
+    &__title {
+      width: 50%;
+      margin-bottom: 0;
+      order: -1;
+    }
+
+    &__text {
+      padding-top: 30px;
+      width: 100%;
+    }
+
   }
 }

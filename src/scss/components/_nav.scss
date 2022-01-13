@@ -20,8 +20,16 @@
     }
   }
 }
-
 @include respond-to($laptop-md){
+  .menu {
+    &__item {
+      font-size: 15px;
+      margin: 0 18px;
+    }
+  }
+}
+
+@include respond-to($laptop){
   .menu {
     flex-direction: column;
     justify-content: flex-start;
