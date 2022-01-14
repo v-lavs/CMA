@@ -788,16 +788,13 @@ body.modal-open {
   width: 100%;
   font-size: 20px;
   padding: 17px  17px 18px;
+  background-color: #019bdd;
   color: #ffffff;
 }
 
-.form .btn-submit:hover,
-.form .btn-submit:focus {
-  background-color: #019bdd;
-}
-
-.form .btn-submit.is-valid {
-  background-color: #019bdd;
+.form .btn-submit.disabled {
+  background: #b1b1b1;
+  border: 1px solid #b1b1b1;
 }
 
 .form .fieldbox {
