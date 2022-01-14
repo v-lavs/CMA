@@ -21,3 +21,18 @@
 .swiper-pagination-bullet-active {
   background-color: #ffffff;
 }
+
+@include respond-to($lg){
+  .swiper-pagination-bullet {
+    border: 1px solid #019bdd;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #019bdd;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: auto;
+    bottom: 35px;
+  }
+}

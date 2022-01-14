@@ -16,7 +16,7 @@
     background-position: center;
     background-size: 2825px 1014px;
     z-index: -1;
-    top:-456px;
+    top: -456px;
     left: 50%;
     transform: translateX(-50%);
     margin-left: -1%;
@@ -90,39 +90,39 @@
   }
   .step-content {
     &__thumb {
-      width: 125px;
-      height: 125px;
+      width: 100px;
+      height: 100px;
+      flex-grow: 1;
+    }
+
+    &__icon {
+      background-size: 50px;
     }
   }
 }
 
 @include respond-to($lg) {
-  .how-works{
-    .section__header{
-      //background-color: #ffffff;
-    }
+  .how-works {
+    padding-bottom: 30px;
   }
   .list-step {
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
   }
   .step-content {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 40%;
+    width: 40%;
     display: flex;
     margin-bottom: 109px;
 
     &__thumb {
-      max-width: 100px;
       width: 30%;
-      height: 100px;
-      flex-grow: 1;
+      max-width: 100px;
       margin-bottom: 0;
-    }
-
-    &__icon {
-      background-size: 50px;
     }
 
     &__title {
@@ -136,5 +136,59 @@
       width: 100%;
     }
 
+  }
+}
+
+@include respond-to($md) {
+  .list-step {
+    justify-content: center;
+  }
+  .step-content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@include respond-to($sm) {
+  .how-works {
+    padding-top: 0;
+    padding-bottom: 120px;
+
+    .section__title {
+      color: #000000;
+      margin-bottom: 0;
+    }
+
+    .section__header {
+      position: relative;
+      margin-bottom: 78px;
+      padding-bottom: 60px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        background-color: #ffffff;
+        z-index: -1;
+      }
+    }
+  }
+  .step-content {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .how-works {
+    .section__header {
+      padding-bottom: 24px;
+    }
   }
 }

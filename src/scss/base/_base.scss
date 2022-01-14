@@ -187,7 +187,7 @@ body {
 @include respond-to($xs) {
   .section {
     &__title {
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 }

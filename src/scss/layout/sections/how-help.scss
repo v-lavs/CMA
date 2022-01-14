@@ -5,6 +5,7 @@
   font-size: 22px;
   line-height: 1.4;
   margin-bottom: 16%;
+
   &:after {
     position: absolute;
     content: '';
@@ -20,6 +21,9 @@
 
   .section__title {
     margin-bottom: 90px;
+    &_mob{
+      display: none;
+    }
   }
 
   .section__text {
@@ -120,18 +124,67 @@
   }
 }
 
-@include respond-to($laptop-md){
+@include respond-to($laptop-md) {
   .slider-activity {
     &__slide {
       width: 450px;
     }
-    }
+  }
 }
-@include respond-to($laptop){
-  .how-help{
-    &:after{
+
+@include respond-to($laptop) {
+  .how-help {
+    &:after {
       height: 160px;
     }
   }
-
 }
+
+@include respond-to($lg) {
+  .how-help {
+    padding-top: 200px;
+    background-color: #ffffff;
+    color: #000000;
+
+    .slider-wrap {
+      width: calc(100% + (100vw - 100%) / 2);
+    }
+
+    .slider-activity {
+      padding-bottom: 55px;
+    }
+
+    .slide__text{
+      max-width: 80%;
+    }
+    .section__title{
+      display: none;
+    }
+    .section__title_mob {
+      display: inline-block;
+      color: #000000;
+      font-size: 50px;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    .d-flex {
+      flex-wrap: wrap;
+    }
+
+    .part {
+      width: 100%;
+
+      &_right {
+        order: -1;
+      }
+    }
+  }
+
+  .slider-activity__slide {
+    width: 532px;
+  }
+}
+

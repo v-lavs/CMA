@@ -107,6 +107,12 @@
   .section-video {
     background-position: center right -30px;
     background-size: 250%;
+
+    &__slogan {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto 132px;
+    }
   }
 
   .btn-play {
@@ -129,6 +135,14 @@
 @include respond-to($xs) {
   .section-video {
     padding-bottom: 200px;
+    background-position: bottom 35% right -8px;
+    background-size: 214% 56%;
+
+    &__slogan {
+      margin-bottom: 55px;
+      font-size: 13px;
+      padding: 20px 0;
+    }
   }
 }
 

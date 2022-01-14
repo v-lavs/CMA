@@ -51,37 +51,7 @@
   }
 }
 
-.modal-info {
-  max-width: 903px;
-  max-height: 906px;
-  padding: 70px 93px 90px;
-  font-size: 17px;
-  line-height: 1.47;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #616161;
 
-  &__content {
-    padding-bottom: 56px;
-
-    p {
-      margin-bottom: 25px;
-    }
-  }
-
-  &__header {
-    margin-bottom: 65px;
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 70px;
-    line-height: 1.07;
-  }
-
-  .btn_main {
-    width: 100%;
-  }
-}
 
 .modal-add-child {
   padding: 50px 84px 58px;
@@ -89,11 +59,6 @@
   .modal__title {
     margin-bottom: 30px;
   }
-  //
-  //.modal__body {
-  //  max-height: 540px;
-  //  overflow-y: auto;
-  //}
 }
 
 .modal-add-doctor {
@@ -159,6 +124,37 @@
   }
   .btn-submit {
     margin-bottom: 28px;
+  }
+}
+
+.modal-info {
+  max-width: 903px;
+  max-height: 906px;
+  padding: 70px 93px 90px;
+  font-size: 17px;
+  line-height: 1.47;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #616161;
+
+  &__content {
+    padding-bottom: 56px;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+.modal__close{
+  top: 28px;
+}
+  &__title {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.07;
+    margin-bottom: 65px;
+  }
+
+  .btn_main {
+    width: 100%;
   }
 }
 

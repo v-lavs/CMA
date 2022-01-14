@@ -433,38 +433,6 @@ body.modal-open {
   height: auto;
 }
 
-.modal-info {
-  max-width: 903px;
-  max-height: 906px;
-  padding: 70px 93px 90px;
-  font-size: 17px;
-  line-height: 1.47;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #616161;
-}
-
-.modal-info__content {
-  padding-bottom: 56px;
-}
-
-.modal-info__content p {
-  margin-bottom: 25px;
-}
-
-.modal-info__header {
-  margin-bottom: 65px;
-}
-
-.modal-info__title {
-  font-weight: 500;
-  font-size: 70px;
-  line-height: 1.07;
-}
-
-.modal-info .btn_main {
-  width: 100%;
-}
-
 .modal-add-child {
   padding: 50px 84px 58px;
 }
@@ -538,6 +506,39 @@ body.modal-open {
 
 .modal-appointment .btn-submit {
   margin-bottom: 28px;
+}
+
+.modal-info {
+  max-width: 903px;
+  max-height: 906px;
+  padding: 70px 93px 90px;
+  font-size: 17px;
+  line-height: 1.47;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #616161;
+}
+
+.modal-info__content {
+  padding-bottom: 56px;
+}
+
+.modal-info__content p {
+  margin-bottom: 25px;
+}
+
+.modal-info .modal__close {
+  top: 28px;
+}
+
+.modal-info__title {
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1.07;
+  margin-bottom: 65px;
+}
+
+.modal-info .btn_main {
+  width: 100%;
 }
 
 .thank-you {
@@ -1126,6 +1127,13 @@ body.modal-open {
   margin-top: 32px;
 }
 
+.about-disease_mob {
+  display: none;
+  font-size: 18px;
+  line-height: 1.38;
+  color: #7E7E7E;
+}
+
 .about-disease__item {
   position: relative;
   display: flex;
@@ -1515,6 +1523,10 @@ body.modal-open {
 
 .how-help .section__title {
   margin-bottom: 90px;
+}
+
+.how-help .section__title_mob {
+  display: none;
 }
 
 .how-help .section__text {
@@ -2081,8 +2093,13 @@ body.modal-open {
   }
 
   .step-content__thumb {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
+    flex-grow: 1;
+  }
+
+  .step-content__icon {
+    background-size: 50px;
   }
 
   .how-help:after {
@@ -2149,6 +2166,20 @@ body.modal-open {
     font-size: 50px;
   }
 
+  .swiper-pagination-bullet {
+    border: 1px solid #019bdd;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #019bdd;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: auto;
+    bottom: 35px;
+  }
+
   .container {
     max-width: 820px;
   }
@@ -2207,29 +2238,30 @@ body.modal-open {
     padding-left: 30px;
   }
 
+  .how-works {
+    padding-bottom: 30px;
+  }
+
   .list-step {
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
   }
 
   .step-content {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 40%;
+    width: 40%;
     display: flex;
     margin-bottom: 109px;
   }
 
   .step-content__thumb {
-    max-width: 100px;
     width: 30%;
-    height: 100px;
-    flex-grow: 1;
+    max-width: 100px;
     margin-bottom: 0;
-  }
-
-  .step-content__icon {
-    background-size: 50px;
   }
 
   .step-content__title {
@@ -2241,6 +2273,58 @@ body.modal-open {
   .step-content__text {
     padding-top: 30px;
     width: 100%;
+  }
+
+  .how-help {
+    padding-top: 200px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .how-help .slider-wrap {
+    width: calc(100% + (100vw - 100%) / 2);
+  }
+
+  .how-help .slider-activity {
+    padding-bottom: 55px;
+  }
+
+  .how-help .slide__text {
+    max-width: 80%;
+  }
+
+  .how-help .section__title {
+    display: none;
+  }
+
+  .how-help .section__title_mob {
+    display: inline-block;
+    color: #000000;
+    font-size: 50px;
+  }
+
+  .how-help:after {
+    display: none;
+  }
+
+  .how-help .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .how-help .part {
+    width: 100%;
+  }
+
+  .how-help .part_right {
+    order: -1;
+  }
+
+  .slider-activity__slide {
+    width: 532px;
+  }
+
+  .achievements__value {
+    font-size: 75px;
   }
 }
 
@@ -2262,6 +2346,12 @@ body.modal-open {
     background-size: 250%;
   }
 
+  .section-video__slogan {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 132px;
+  }
+
   .btn-play {
     width: 64px;
     height: 64px;
@@ -2270,6 +2360,10 @@ body.modal-open {
   .btn-play__icon {
     width: 23px;
     height: 26px;
+  }
+
+  .section-children {
+    padding-bottom: 100px;
   }
 
   .children-card {
@@ -2311,6 +2405,15 @@ body.modal-open {
   .children-add__body {
     padding-left: 0;
   }
+
+  .list-step {
+    justify-content: center;
+  }
+
+  .step-content {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -2318,29 +2421,116 @@ body.modal-open {
     max-width: 540px;
   }
 
+  .about-disease {
+    display: none;
+  }
+
+  .about-disease_mob {
+    display: block;
+  }
+
+  .section-about {
+    position: relative;
+  }
+
+  .section-about .section__text_desk {
+    display: none;
+  }
+
+  .section-about .section__content {
+    margin-bottom: 0;
+  }
+
+  .section-about .btn_border {
+    position: absolute;
+    bottom: 96px;
+  }
+
+  .section-about__bg {
+    margin-bottom: 33px;
+  }
+
   .section-video__wrap {
     padding-top: 75.25%;
+  }
+
+  .section-children {
+    padding-bottom: 75px;
   }
 
   .section-children .section__title {
     margin-bottom: 35px;
   }
+
+  .how-works {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+
+  .how-works .section__title {
+    color: #000000;
+    margin-bottom: 0;
+  }
+
+  .how-works .section__header {
+    position: relative;
+    margin-bottom: 78px;
+    padding-bottom: 60px;
+  }
+
+  .how-works .section__header:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: #ffffff;
+    z-index: -1;
+  }
+
+  .step-content:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 420px) {
   .section__title {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .container {
+    padding: 0 30px;
     max-width: 100%;
+  }
+
+  .section-about .section__title {
+    font-size: 40px;
   }
 
   .section-video {
     padding-bottom: 200px;
+    background-position: bottom 35% right -8px;
+    background-size: 214% 56%;
+  }
+
+  .section-video__slogan {
+    margin-bottom: 55px;
+    font-size: 13px;
+    padding: 20px 0;
+  }
+
+  .section-children .section__title {
+    font-size: 30px;
   }
 
   .section-children .text_blue {
     font-size: 50px;
+  }
+
+  .how-works .section__header {
+    padding-bottom: 24px;
   }
 }
