@@ -113,36 +113,31 @@
     }
   }
   .list-step {
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
   }
   .step-content {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 40%;
-    width: 40%;
-    display: flex;
+    max-width: 50%;
+    width: 45%;
     margin-bottom: 109px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
 
     &__thumb {
       width: 30%;
       max-width: 100px;
-      margin-bottom: 0;
-    }
-
-    &__title {
-      width: 50%;
-      margin-bottom: 0;
-      order: -1;
     }
 
     &__text {
       padding-top: 30px;
       width: 100%;
     }
-
   }
 }
 

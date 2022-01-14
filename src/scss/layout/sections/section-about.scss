@@ -108,6 +108,10 @@
 
 @include respond-to($md) {
   .section-about {
+    .section__title {
+      font-size: 52px;
+    }
+
     .d-flex {
       flex-wrap: wrap;
     }

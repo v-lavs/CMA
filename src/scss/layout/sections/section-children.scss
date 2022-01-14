@@ -8,7 +8,7 @@
   }
 
   .text_blue {
-    font-size: 100px;
+    font-size: 1.43em;
     line-height: .8;
   }
 }
@@ -153,16 +153,7 @@
 }
 
 @include respond-to($laptop) {
-  .section-children {
-    .text_blue {
-      font-size: 83px;
-    }
-  }
   .children-card {
-    &__thumb {
-      width: 35%;
-      padding-top: 19.5%;
-    }
 
     &__body {
       font-size: 13px;
@@ -175,60 +166,31 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
-  .children-card {
-    .wrap-btn {
-      order: 1;
-    }
-
-    .wrap-btn,
-    &__title {
-      width: 100%;
-    }
-
-    &__text,
-    &__info {
-      width: 50%;
-    }
-
-    &__thumb {
-      width: 50%;
-      padding-top: 23%;
-    }
-
-    .part {
-      margin-top: 0;
-      padding-left: 60px;
-      flex-grow: 1;
-
-      &:nth-child(3),
-      &:nth-child(4) {
-        padding-bottom: 0;
-        margin-bottom: auto;
-        margin-top: 0;
-      }
-    }
-  }
-  .children-add__text {
-    width: 100%;
-  }
-}
 
 @include respond-to($lg) {
-  .section-children{
+  .section-children {
     padding-bottom: 150px;
   }
   .children-card {
+    &__thumb {
+      width: 28%;
+    }
+
+    .part {
+      padding-left: 30px;
+      width: 55%;
+    }
+
+    .part_small {
+      width: 45%;
+    }
+
     &__title {
       margin-bottom: 10px;
     }
 
     .wrap-btn {
       padding-top: 10px;
-    }
-
-    .part {
-      padding-left: 30px;
     }
   }
   .children-add__body {
@@ -237,7 +199,7 @@
 }
 
 @include respond-to($md) {
-  .section-children{
+  .section-children {
     padding-bottom: 100px;
   }
   .children-card {
@@ -284,6 +246,7 @@
 @include respond-to($sm) {
   .section-children {
     padding-bottom: 75px;
+
     .section__title {
       margin-bottom: 35px;
     }
@@ -292,11 +255,8 @@
 
 @include respond-to($xs) {
   .section-children {
-    .section__title{
+    .section__title {
       font-size: 30px;
-    }
-    .text_blue {
-      font-size: 50px;
     }
   }
 }

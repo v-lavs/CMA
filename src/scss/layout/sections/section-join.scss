@@ -35,8 +35,17 @@
 
 @include respond-to($lg){
   .section-join {
+    padding: 30px 0;
     .section__title{
-      font-size: 56px;
+      font-size: 42px;
+    }
+
+    .container {
+      align-items: center;
+    }
+
+    .part_left {
+      width: 70%;
     }
   }
 }
@@ -48,9 +57,7 @@
     .d-flex {
       flex-wrap: wrap;
     }
-    .section__title{
 
-    }
     .section__text{
       margin-bottom: 0;
     }

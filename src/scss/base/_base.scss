@@ -205,6 +205,9 @@ body {
 }
 
 @include respond-to($md) {
+  .section__title {
+    font-size: 44px;
+  }
   .btn-consultation {
     width: 131px;
     height: 131px;

@@ -1429,7 +1429,7 @@ body.modal-open {
 }
 
 .section-children .text_blue {
-  font-size: 100px;
+  font-size: 1.43em;
   line-height: .8;
 }
 
@@ -2212,15 +2212,6 @@ body.modal-open {
     width: 490px;
   }
 
-  .section-children .text_blue {
-    font-size: 83px;
-  }
-
-  .children-card__thumb {
-    width: 35%;
-    padding-top: 19.5%;
-  }
-
   .children-card__body {
     font-size: 13px;
     flex-grow: 1;
@@ -2270,45 +2261,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 1080px) {
-  .children-card .wrap-btn {
-    order: 1;
-  }
-
-  .children-card .wrap-btn,
-  .children-card__title {
-    width: 100%;
-  }
-
-  .children-card__text,
-  .children-card__info {
-    width: 50%;
-  }
-
-  .children-card__thumb {
-    width: 50%;
-    padding-top: 23%;
-  }
-
-  .children-card .part {
-    margin-top: 0;
-    padding-left: 60px;
-    flex-grow: 1;
-  }
-
-  .children-card .part:nth-child(3),
-  .children-card .part:nth-child(4) {
-    padding-bottom: 0;
-    margin-bottom: auto;
-    margin-top: 0;
-  }
-
-  .children-add__text {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1080px) {
   .section__title {
     font-size: 50px;
   }
@@ -2342,7 +2295,7 @@ body.modal-open {
   }
 
   .container {
-    max-width: 820px;
+    max-width: 800px;
   }
 
   .section-intro .container {
@@ -2387,16 +2340,25 @@ body.modal-open {
     padding-bottom: 150px;
   }
 
+  .children-card__thumb {
+    width: 28%;
+  }
+
+  .children-card .part {
+    padding-left: 30px;
+    width: 55%;
+  }
+
+  .children-card .part_small {
+    width: 45%;
+  }
+
   .children-card__title {
     margin-bottom: 10px;
   }
 
   .children-card .wrap-btn {
     padding-top: 10px;
-  }
-
-  .children-card .part {
-    padding-left: 30px;
   }
 
   .children-add__body {
@@ -2412,31 +2374,27 @@ body.modal-open {
   }
 
   .list-step {
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
   }
 
   .step-content {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 40%;
-    width: 40%;
-    display: flex;
+    max-width: 50%;
+    width: 45%;
     margin-bottom: 109px;
+  }
+
+  .step-content:last-child {
+    margin-bottom: 50px;
+  }
+
+  .step-content__title {
+    margin-bottom: 0;
   }
 
   .step-content__thumb {
     width: 30%;
     max-width: 100px;
-    margin-bottom: 0;
-  }
-
-  .step-content__title {
-    width: 50%;
-    margin-bottom: 0;
-    order: -1;
   }
 
   .step-content__text {
@@ -2522,24 +2480,14 @@ body.modal-open {
     padding-bottom: 200px;
   }
 
-  .card-doctor__title {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .card-doctor {
+    width: 100%;
   }
 
   .card-doctor__thumb {
-    padding-top: 52%;
-    width: 32%;
-  }
-
-  .card-doctor__body {
-    padding-left: 20px;
-  }
-
-  .card-doctor .btn_border {
-    text-align: left;
-    padding: 7px 20px;
-    min-width: 130px;
+    padding-top: 25%;
+    max-width: 234px;
+    width: 19%;
   }
 
   .help-children {
@@ -2583,12 +2531,28 @@ body.modal-open {
     margin-right: 57px;
   }
 
+  .section-join {
+    padding: 30px 0;
+  }
+
   .section-join .section__title {
-    font-size: 56px;
+    font-size: 42px;
+  }
+
+  .section-join .container {
+    align-items: center;
+  }
+
+  .section-join .part_left {
+    width: 70%;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 840px) {
+  .section__title {
+    font-size: 44px;
+  }
+
   .btn-consultation {
     width: 131px;
     height: 131px;
@@ -2597,7 +2561,7 @@ body.modal-open {
   }
 
   .container {
-    max-width: 640px;
+    max-width: 560px;
   }
 
   .footer {
@@ -2644,6 +2608,10 @@ body.modal-open {
   .description {
     order: 1;
     font-size: 12px;
+  }
+
+  .section-about .section__title {
+    font-size: 52px;
   }
 
   .section-about .d-flex {
@@ -2756,12 +2724,15 @@ body.modal-open {
     width: 100%;
   }
 
-  .card-doctor__title {
-    font-size: 23px;
+  .card-doctor__thumb {
+    width: 125px;
+    height: 194px;
+    padding: 0;
+    flex-shrink: 0;
   }
 
-  .card-doctor__thumb {
-    padding-top: 44%;
+  .card-doctor__title {
+    font-size: 23px;
   }
 
   .card-doctor__body {
@@ -2828,13 +2799,14 @@ body.modal-open {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 620px) {
   .btn-consultation {
     top: -24px;
   }
 
   .container {
-    max-width: 540px;
+    padding: 0 30px;
+    max-width: 480px;
   }
 
   .about-disease {
@@ -2920,17 +2892,14 @@ body.modal-open {
     top: -224px;
   }
 
-  .card-doctor__title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
   .card-doctor__thumb {
-    padding-top: 52%;
-    width: 32%;
+    width: 117px;
+    height: 194px;
+    padding: 0;
   }
 
   .card-doctor__body {
+    padding-right: 0;
     padding-left: 20px;
   }
 
@@ -2938,6 +2907,11 @@ body.modal-open {
     text-align: left;
     padding: 7px 20px;
     min-width: 130px;
+  }
+
+  .card-doctor__title {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .help-children {
@@ -2971,7 +2945,6 @@ body.modal-open {
   }
 
   .container {
-    padding: 0 30px;
     max-width: 100%;
   }
 
@@ -2993,10 +2966,6 @@ body.modal-open {
 
   .section-children .section__title {
     font-size: 30px;
-  }
-
-  .section-children .text_blue {
-    font-size: 50px;
   }
 
   .how-works .section__header {
