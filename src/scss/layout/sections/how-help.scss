@@ -191,19 +191,92 @@
   }
 }
 
-@include respond-to($sm) {
-  .how-help {
-    .slide__text {
-      width: 100%;
-      max-width: 100%;
-      font-size: 19px;
-    }
 
-    .slider-activity {
-      padding-bottom: 32px;
+@include respond-to($md) {
+
+  .slider-activity{
+    height: 515px;
+    padding-bottom: 68px;
+    &__heading{
+      top: auto;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    &__slide {
+      width: 324px;
+      height: 300px;
+      padding: 0;
+      transition: .35s;
+    }
+    &__thumb{
+      padding-top: 0;
+      height: 100%;
+    }
+    .swiper-slide-active {
+      width: 380px;
+      height: 447px;
+      .slider-activity__thumb {
+        box-shadow: none;
+
+        &:before {
+          opacity: 1;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0.02%, rgba(0, 0, 0, 0) 60.71%);
+        }
+      }
     }
   }
 }
+
+//@include respond-to($sm) {
+//  .how-help {
+//    .slide__text {
+//      width: 100%;
+//      max-width: 100%;
+//      font-size: 19px;
+//    }
+//
+//    .slider-activity {
+//      padding-bottom: 32px;
+//    }
+//  }
+//
+//  .slider-activity{
+//    height: 350px;
+//    padding-bottom: 68px;
+//    &__heading{
+//      top: auto;
+//      bottom: 32px;
+//      left: 50%;
+//      transform: translateX(-50%);
+//      font-size: 28px;
+//      z-index: 2;
+//    }
+//    &__slide {
+//      width: 256px;
+//      height: 218px;
+//      padding: 0;
+//      transition: .35s;
+//    }
+//    &__thumb{
+//      padding-top: 0;
+//      height: 100%;
+//    }
+//    .swiper-slide-active {
+//      width: 237px;
+//      height: 280px;
+//      .slider-activity__thumb {
+//        box-shadow: none;
+//
+//        &:before {
+//          opacity: 1;
+//          background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0.02%, rgba(0, 0, 0, 0) 60.71%);
+//        }
+//      }
+//    }
+//  }
+//}
 
 @include respond-to($xs) {
   .how-help {
@@ -220,8 +293,17 @@
     }
   }
   .slider-activity{
-    height: 342px;
+    height: 348px;
+    padding-bottom: 68px;
     padding-top: 0;
+    &__heading{
+      top: auto;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 28px;
+      z-index: 2;
+    }
     &__slide {
       width: 256px;
       height: 218px;
@@ -234,7 +316,7 @@
     }
     .swiper-slide-active {
       width: 237px;
-      height: 279px;
+      height: 280px;
       .slider-activity__thumb {
         box-shadow: none;
 

@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     //SWIPER-SLIDER
     const sliderActivity = new Swiper(".slider-activity", {
-        spaceBetween: 5,
+        spaceBetween: 35,
         slidesPerView: "auto",
         loop: true,
         speed: 1500,
@@ -108,6 +108,11 @@ $(document).ready(function () {
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 35,
+            },
         },
     });
 
@@ -127,6 +132,7 @@ $(document).ready(function () {
             textHolder.html(text);
         }
     }
+
 
     //TABS
     const tabLink = $('.modal-tabs__link');
