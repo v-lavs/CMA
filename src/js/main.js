@@ -110,7 +110,7 @@ $(document).ready(function () {
             clickable: true,
         },
         breakpoints: {
-            768: {
+           576: {
                 spaceBetween: 35,
             },
         },
