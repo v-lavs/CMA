@@ -210,8 +210,9 @@
     margin-bottom: 0;
     padding-bottom: 100px;
 
-    .section__title {
+    .section__title_mob {
       font-size: 40px;
+      margin-bottom: 34px;
     }
 
     .slide__text {
@@ -219,7 +220,8 @@
     }
   }
   .slider-activity{
-    height: 280px;
+    height: 342px;
+    padding-top: 0;
     &__slide {
       width: 256px;
       height: 218px;

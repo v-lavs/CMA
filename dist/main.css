@@ -326,7 +326,7 @@ body.modal-open {
 
 .section_anim {
   opacity: 0;
-  -webkit-transition: opacity ease-in .8s;
+  -webkit-transition: opacity ease-in .5s;
 }
 
 .section_in-view {
@@ -2868,8 +2868,9 @@ body.modal-open {
     padding-bottom: 100px;
   }
 
-  .how-help .section__title {
+  .how-help .section__title_mob {
     font-size: 40px;
+    margin-bottom: 34px;
   }
 
   .how-help .slide__text {
@@ -2877,7 +2878,8 @@ body.modal-open {
   }
 
   .slider-activity {
-    height: 280px;
+    height: 342px;
+    padding-top: 0;
   }
 
   .slider-activity__slide {
