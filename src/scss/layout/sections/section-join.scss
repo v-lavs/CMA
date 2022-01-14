@@ -32,6 +32,45 @@
     }
   }
 }
+
+@include respond-to($lg){
+  .section-join {
+    .section__title{
+      font-size: 56px;
+    }
+  }
+}
+
+@include respond-to($md){
+  .section-join {
+    position: relative;
+    padding-bottom: 17%;
+    .d-flex {
+      flex-wrap: wrap;
+    }
+    .section__title{
+
+    }
+    .section__text{
+      margin-bottom: 0;
+    }
+    .part{
+      width: 100%;
+      &_right{
+        background-position: center;
+      }
+      &_left{
+        padding-bottom: 43px;
+      }
+    }
+    .btn_glass{
+      position: absolute;
+      bottom: 34px;
+
+    }
+  }
+}
+
 @include respond-to($sm){
   .section-join {
     .section__title{
@@ -43,6 +82,16 @@
   .section-join {
     .section__title{
       font-size: 35px;
+    }
+    .section__text{
+      font-size: 18px;
+    }
+
+    .part_left{
+      padding-bottom: 0;
+    }
+    .part_right{
+      min-height: 420px;
     }
   }
 }
