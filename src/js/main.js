@@ -72,7 +72,7 @@ $(document).ready(function () {
     // SMOOTH SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
-            let anchor = $.attr(this, 'href')
+            let anchor = $.attr(this, 'href');
 
             if (anchor.match(/^#/) && anchor !== '#') {
                 event.preventDefault();
