@@ -84,6 +84,10 @@
 
 @include respond-to($laptop) {
   .how-works {
+    &:before{
+      background-size: 2825px 766px;
+      top: -470px;
+    }
     .section__title {
       margin-bottom: 70px;
     }
@@ -104,6 +108,9 @@
 @include respond-to($lg) {
   .how-works {
     padding-bottom: 30px;
+    &:before{
+      background-image: none;
+    }
   }
   .list-step {
     flex-wrap: wrap;

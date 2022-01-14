@@ -215,6 +215,9 @@
 }
 
 @include respond-to($lg) {
+  .section-children{
+    padding-bottom: 150px;
+  }
   .children-card {
     &__title {
       margin-bottom: 10px;

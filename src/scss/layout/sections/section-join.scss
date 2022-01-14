@@ -32,3 +32,17 @@
     }
   }
 }
+@include respond-to($sm){
+  .section-join {
+    .section__title{
+      font-size: 40px;
+    }
+  }
+}
+@include respond-to($xs){
+  .section-join {
+    .section__title{
+      font-size: 35px;
+    }
+  }
+}

@@ -42,3 +42,37 @@
     }
   }
 }
+@include respond-to($lg) {
+  .help-children{
+    padding-top: 0;
+    padding-bottom: 270px;
+    .d-flex{
+      flex-wrap: wrap;
+    }
+    .section__content {
+      padding-left: 0;
+      width: 100%;
+    }
+    //.section__title {
+    //  font-size: 52px;
+    //}
+    .wrap-btn{
+      order: 1;
+    }
+  }
+}
+@include respond-to($sm){
+  .help-children{
+    .section__title{
+      font-size: 40px;
+    }
+  }
+}
+
+@include respond-to($xs){
+  .help-children{
+    .section__title{
+      font-size: 35px;
+    }
+  }
+}

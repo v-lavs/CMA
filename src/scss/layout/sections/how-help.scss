@@ -188,3 +188,11 @@
   }
 }
 
+@include respond-to($xs){
+  .how-help {
+    .section__title{
+      font-size: 40px;
+    }
+  }
+}
+

@@ -39,3 +39,10 @@
       }
   }
 }
+
+@include respond-to($md) {
+ .consultation  .section__content {
+    padding-right: 20%;
+
+  }
+}

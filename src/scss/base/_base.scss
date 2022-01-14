@@ -182,8 +182,18 @@ body {
   .section__title{
     font-size: 50px;
   }
+  .bg-gray{
+    padding-top: 200px;
+  }
 }
-
+@include respond-to($md) {
+  .btn-consultation {
+    width: 131px;
+    height: 131px;
+    background-size: 45px 38px;
+    right: -60px;
+  }
+}
 @include respond-to($xs) {
   .section {
     &__title {
