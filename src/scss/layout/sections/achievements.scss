@@ -57,4 +57,30 @@
   .achievements__value {
     font-size: 75px;
   }
+  .wrap-value .sup{
+    color: #019bdd;
+    right: -58px;
+    top: -9px;
+  }
+  .achievements{
+    padding-bottom: 200px;
+  }
+}
+@include respond-to($md){
+  .achievements{
+  &__item {
+    width: 100%;
+    margin-bottom: 46px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+    &__value{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include respond-to($sm){
+
 }

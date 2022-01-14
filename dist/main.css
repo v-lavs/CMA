@@ -2217,6 +2217,12 @@ body.modal-open {
     bottom: 35px;
   }
 
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: auto;
+    bottom: 22px;
+  }
+
   .container {
     max-width: 820px;
   }
@@ -2370,6 +2376,16 @@ body.modal-open {
 
   .achievements__value {
     font-size: 75px;
+  }
+
+  .wrap-value .sup {
+    color: #019bdd;
+    right: -58px;
+    top: -9px;
+  }
+
+  .achievements {
+    padding-bottom: 200px;
   }
 
   .card-doctor__title {
@@ -2578,6 +2594,19 @@ body.modal-open {
     max-width: 100%;
   }
 
+  .achievements__item {
+    width: 100%;
+    margin-bottom: 46px;
+  }
+
+  .achievements__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .achievements__value {
+    margin-bottom: 10px;
+  }
+
   .section-doctors {
     padding-bottom: 60px;
   }
@@ -2622,6 +2651,9 @@ body.modal-open {
 
   .conditions__item {
     margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 21px;
+    color: #000000;
   }
 
   .section-join {
@@ -2738,6 +2770,16 @@ body.modal-open {
     margin-bottom: 0;
   }
 
+  .how-help .slide__text {
+    width: 100%;
+    max-width: 100%;
+    font-size: 19px;
+  }
+
+  .how-help .slider-activity {
+    padding-bottom: 32px;
+  }
+
   .card-doctor__title {
     font-size: 18px;
     margin-bottom: 10px;
@@ -2821,8 +2863,17 @@ body.modal-open {
     padding-bottom: 24px;
   }
 
+  .how-help {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+  }
+
   .how-help .section__title {
     font-size: 40px;
+  }
+
+  .how-help .slide__text {
+    padding-bottom: 40px;
   }
 
   .section-doctors .heading {

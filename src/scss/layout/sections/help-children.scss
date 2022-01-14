@@ -99,6 +99,7 @@
 
 @include respond-to($xs) {
   .help-children {
+
     .section__title {
       font-size: 35px;
     }

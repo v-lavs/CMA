@@ -21,7 +21,8 @@
 
   .section__title {
     margin-bottom: 90px;
-    &_mob{
+
+    &_mob {
       display: none;
     }
   }
@@ -154,12 +155,14 @@
       padding-bottom: 55px;
     }
 
-    .slide__text{
+    .slide__text {
       max-width: 80%;
     }
-    .section__title{
+
+    .section__title {
       display: none;
     }
+
     .section__title_mob {
       display: inline-block;
       color: #000000;
@@ -188,10 +191,31 @@
   }
 }
 
-@include respond-to($xs){
+@include respond-to($sm) {
   .how-help {
-    .section__title{
+    .slide__text {
+      width: 100%;
+      max-width: 100%;
+      font-size: 19px;
+    }
+
+    .slider-activity {
+      padding-bottom: 32px;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .how-help {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+
+    .section__title {
       font-size: 40px;
+    }
+
+    .slide__text {
+      padding-bottom: 40px;
     }
   }
 }
