@@ -49,7 +49,8 @@
       padding-top: 11px;
     }
 
-    .icon {
+    &__icon {
+      display: inline-block;
       width: 24px;
       height: 24px;
 
@@ -71,6 +72,45 @@
     font-size: 15px;
     text-transform: uppercase;
     font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+}
+
+@include respond-to($md){
+  .footer{
+    padding-top: 32px;
+    .social-bar__link{
+      margin-left: 26px;
+      &:last-child{
+        margin-left: 0;
+      }
+    }
+    .social-bar__icon{
+      width: 33px;
+      height: 33px;
+    }
+    .social-bar__text{
+      padding-top: 24px;
+    }
+  }
+  .footer_top {
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+  }
+  .footer__copyright{
+    width: 100%;
+    text-align: center;
+    order: -1;
+    margin-bottom: 35px;
+  }
+  .footer_bottom{
+    flex-wrap: wrap;
+  }
+  .link-mail{
+    margin-bottom: 6px;
+  }
+  .description {
+    order: 1;
+    font-size: 12px;
   }
 }
 

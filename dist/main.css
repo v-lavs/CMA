@@ -1037,12 +1037,13 @@ body.modal-open {
   padding-top: 11px;
 }
 
-.footer .social-bar .icon {
+.footer .social-bar__icon {
+  display: inline-block;
   width: 24px;
   height: 24px;
 }
 
-.footer .social-bar .icon svg {
+.footer .social-bar__icon svg {
   width: 100%;
   height: auto;
 }
@@ -2416,6 +2417,52 @@ body.modal-open {
 
   .container {
     max-width: 640px;
+  }
+
+  .footer {
+    padding-top: 32px;
+  }
+
+  .footer .social-bar__link {
+    margin-left: 26px;
+  }
+
+  .footer .social-bar__link:last-child {
+    margin-left: 0;
+  }
+
+  .footer .social-bar__icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .footer .social-bar__text {
+    padding-top: 24px;
+  }
+
+  .footer_top {
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+  }
+
+  .footer__copyright {
+    width: 100%;
+    text-align: center;
+    order: -1;
+    margin-bottom: 35px;
+  }
+
+  .footer_bottom {
+    flex-wrap: wrap;
+  }
+
+  .link-mail {
+    margin-bottom: 6px;
+  }
+
+  .description {
+    order: 1;
+    font-size: 12px;
   }
 
   .section-about .d-flex {
