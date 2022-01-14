@@ -16,14 +16,16 @@ body {
 .d-flex {
   display: flex;
 }
-.text_blue{
+
+.text_blue {
   color: #019bdd;
 }
 
 
-.text_uppercase{
+.text_uppercase {
   text-transform: uppercase;
 }
+
 .hide {
   position: absolute;
   width: 1px;
@@ -34,22 +36,24 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.bg-blue{
+
+.bg-blue {
   background: linear-gradient(180deg, #42BDFF 0%, #0695F3 100%);
 }
 
-.bg-gray{
+.bg-gray {
   position: relative;
   background-color: rgba(200, 200, 200, 0.12);
   padding-top: 252px;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
     background-image: url(../assets/img/line.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     width: 100%;
     min-height: 530px;
     top: 0;
@@ -57,16 +61,18 @@ body {
     transform: translate(-50%, -50%);
     z-index: 0;
   }
+
   @media screen and (min-width: 1920px) {
-    &:before{
+    &:before {
       min-height: 615px;
     }
   }
 }
 
-.main{
+.main {
   padding-top: 108px;
 }
+
 .section {
   &__title {
     font-weight: 500;
@@ -76,15 +82,15 @@ body {
   }
 }
 
-.text_white{
+.text_white {
   color: #ffffff;
 }
 
-.text_black{
+.text_black {
   color: #000000;
 }
 
-.btn-help{
+.btn-help {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,19 +113,21 @@ body {
       fill: #ffffff;
     }
   }
-  &__icon{
+
+  &__icon {
     display: inline-block;
     margin-bottom: 45px;
     width: 60px;
     height: 60px;
-    svg{
+
+    svg {
       width: 100%;
       height: auto;
     }
   }
 }
 
-.btn-consultation{
+.btn-consultation {
   position: absolute;
   right: 0;
   top: 0;
@@ -130,8 +138,9 @@ body {
   background-position: center;
   background-size: 86px 71px;
   background-color: transparent;
-  border:none;
-  .wrap-img{
+  border: none;
+
+  .wrap-img {
     position: absolute;
     left: 0;
     right: 0;
@@ -139,16 +148,19 @@ body {
     bottom: 0;
     z-index: 1;
   }
-  .img{
+
+  .img {
     animation: spin 5s linear infinite;
     width: 100%;
     height: auto;
   }
+
   &:hover,
   &:focus {
     background-color: transparent;
   }
 }
+
 .img_written {
   vertical-align: middle;
   -webkit-animation: spin 4s linear infinite;
@@ -158,6 +170,7 @@ body {
   height: auto;
 
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -165,41 +178,58 @@ body {
   }
 }
 
-@include respond-to($laptop-md){
-  .section__title{
+@include respond-to($laptop-md) {
+  .section__title {
     font-size: 60px;
   }
 }
 
 @include respond-to($laptop) {
- .btn-consultation{
-   width: 200px;
-   height: 200px;
-   background-size: 58px 48px;
- }
+  .btn-consultation {
+    width: 200px;
+    height: 200px;
+    background-size: 58px 48px;
+  }
 }
+
 @include respond-to($lg) {
-  .section__title{
+  .section__title {
     font-size: 50px;
   }
-  .bg-gray{
+  .bg-gray {
     padding-top: 200px;
+    &:before{
+      background-image: url(../assets/img/line-blue.svg);
+    }
   }
 }
+
 @include respond-to($md) {
   .btn-consultation {
     width: 131px;
     height: 131px;
     background-size: 45px 38px;
-    right: -60px;
+    right: -10px;
+  }
+
+}
+
+@include respond-to($sm) {
+  .btn-consultation {
+    top: -24px;
   }
 }
+
 @include respond-to($xs) {
   .section {
     &__title {
       font-size: 40px;
     }
   }
+
+  .bg-gray {
+    padding-top: 85px;
+    }
 }
 
 @media screen and (max-width: 380px) {

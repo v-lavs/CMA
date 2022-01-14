@@ -73,6 +73,7 @@
 
 @include respond-to($sm){
   .section-join {
+    padding-top: 10px;
     .section__title{
       font-size: 40px;
     }

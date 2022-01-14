@@ -40,9 +40,36 @@
   }
 }
 
-@include respond-to($md) {
- .consultation  .section__content {
-    padding-right: 20%;
+@include respond-to($lg) {
+ .conditions__item{
+   margin-right: 57px;
+ }
+}
 
+@include respond-to($md) {
+   .consultation  {
+     padding-bottom: 118px;
+     .section__content {
+       padding-right: 20%;
+     }
+     .section__text {
+       margin-bottom: 76px;
+     }
+   }
+   .conditions {
+     flex-wrap: wrap;
+     &__item{
+       margin-bottom: 30px;
+     }
+   }
+ }
+
+@include respond-to($sm) {
+  .consultation  {
+
+    .section__text {
+      margin-bottom: 40px;
+    }
   }
+
 }
