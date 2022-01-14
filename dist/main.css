@@ -2876,6 +2876,36 @@ body.modal-open {
     padding-bottom: 40px;
   }
 
+  .slider-activity {
+    height: 280px;
+  }
+
+  .slider-activity__slide {
+    width: 256px;
+    height: 218px;
+    padding: 0;
+    transition: .35s;
+  }
+
+  .slider-activity__thumb {
+    padding-top: 0;
+    height: 100%;
+  }
+
+  .slider-activity .swiper-slide-active {
+    width: 237px;
+    height: 279px;
+  }
+
+  .slider-activity .swiper-slide-active .slider-activity__thumb {
+    box-shadow: none;
+  }
+
+  .slider-activity .swiper-slide-active .slider-activity__thumb:before {
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0.02%, rgba(0, 0, 0, 0) 60.71%);
+  }
+
   .section-doctors .heading {
     font-size: 25px;
   }
