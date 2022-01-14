@@ -3,7 +3,11 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../../lib/jquery-ui.js ;
+//= include ../../lib/localization-uk.js ;
 //= include ../../node_modules/waypoints/lib/jquery.waypoints.min.js ;
+
+
 
 
 // CUSTOM SCRIPTS
@@ -237,6 +241,16 @@ $(document).ready(function () {
         offset: '80%'
     });
 
+
+    const date = new Date();
+    date.setDate(date.getDate());
+
+    $("#datepicker").datepicker({
+        minDate: date,
+        onSelect: function(date){
+            $('#datepicker_value').val(date)
+        }
+    });
 });
 
 
