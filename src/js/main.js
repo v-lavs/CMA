@@ -206,12 +206,17 @@ $(document).ready(function () {
 
     //ANIMATION
 
-        var waypoints = $('.section_anim').waypoint(function (direction) {
-            $(this.element).addClass('section_in-view')
-        }, {
-            offset: '75%'
-        });
+    $('.section_anim').waypoint(function (direction) {
+        $(this.element).addClass('section_in-view')
+    }, {
+        offset: '50%'
+    });
 
+    $('.anim_block').waypoint(function (direction) {
+        $(this.element).addClass('fade-in')
+    }, {
+        offset: '75%'
+    });
 
 
     // COUNTER

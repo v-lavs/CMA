@@ -1,10 +1,23 @@
-.sl-left{
-  animation: slideInLeft ease-in 0.5s forwards;
+
+.anim_block{
+  opacity: 0;
+}
+.fade-in{
+  animation: fadeIn ease-in 0.5s forwards;
 
   @for $i from 1 through 4 {
     &:nth-of-type(#{$i}) {
       animation-delay: #{$i * 1000}s;
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
