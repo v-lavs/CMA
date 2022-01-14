@@ -108,8 +108,8 @@
 @include respond-to($lg) {
   .how-works {
     padding-bottom: 30px;
-    &:before{
-      background-image: none;
+    &:before {
+      display: none;
     }
   }
   .list-step {

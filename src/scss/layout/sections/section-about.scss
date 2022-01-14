@@ -2,6 +2,7 @@
   padding-bottom: 290px;
 
   &__bg {
+    background-image: url(../assets/img/wave.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -139,6 +140,8 @@
     }
     &__bg{
       margin-bottom: 33px;
+      background-size: 100% 100%;
+      background-image: url(../assets/img/about-bg-mob.svg);
     }
   }
 }

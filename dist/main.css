@@ -1119,6 +1119,7 @@ body.modal-open {
 }
 
 .section-about__bg {
+  background-image: url(../assets/img/wave.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2290,7 +2291,7 @@ body.modal-open {
   }
 
   .how-works:before {
-    background-image: none;
+    display: none;
   }
 
   .list-step {
@@ -2330,6 +2331,22 @@ body.modal-open {
     padding-top: 200px;
     background-color: #ffffff;
     color: #000000;
+  }
+
+  .how-help:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1000px;
+    height: 780px;
+    background-image: url(../assets/img/line-mob.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px 780px;
+    z-index: 1;
+    top: -407px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .how-help .slider-wrap {
@@ -2594,6 +2611,13 @@ body.modal-open {
     max-width: 100%;
   }
 
+  .slider-activity__slide {
+    width: 324px;
+    height: 300px;
+    padding: 0;
+    transition: .35s;
+  }
+
   .achievements__item {
     width: 100%;
     margin-bottom: 46px;
@@ -2723,6 +2747,8 @@ body.modal-open {
 
   .section-about__bg {
     margin-bottom: 33px;
+    background-size: 100% 100%;
+    background-image: url(../assets/img/about-bg-mob.svg);
   }
 
   .section-video__wrap {
@@ -2768,6 +2794,13 @@ body.modal-open {
 
   .step-content:last-child {
     margin-bottom: 0;
+  }
+
+  .how-help:before {
+    width: 570px;
+    height: 429px;
+    background-size: 570px 430px;
+    top: -224px;
   }
 
   .card-doctor__title {
