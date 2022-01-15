@@ -561,3 +561,15 @@
     }
   }
 }
+
+@media screen and (max-width: 350px){
+ .modal-info {
+   .modal__header-logo{
+     max-width: 190px;
+   }
+
+   .modal__close {
+     top: 0;
+   }
+ }
+}
