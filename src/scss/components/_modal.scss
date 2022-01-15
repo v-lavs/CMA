@@ -181,7 +181,7 @@
       border-bottom: 1px solid #B8B8B8;
       display: flex;
       align-items: center;
-      padding: 0 0 16px;
+      padding: 8px 0 9px;
 
       .ui-icon {
         display: block;
@@ -229,6 +229,7 @@
     .ui-state-active {
       background: #019BDD;
       color: #ffffff;
+
     }
 
     .ui-datepicker-prev,
@@ -387,6 +388,7 @@
 
 @include respond-to($sm) {
   .modal {
+    max-height: 100%;
 
     .modal__close {
       right: auto;
@@ -446,7 +448,7 @@
     .file-upload {
       margin-bottom: 0;
       margin-top: 0;
-      padding-bottom: 0;
+      padding-bottom: 9px;
     }
 
     .form-group:nth-child(4) {
@@ -480,6 +482,30 @@
     }
 
   }
+
+  .link-list {
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .name-item,
+    .url-item {
+      width: 100%;
+
+    }
+
+    .url-item {
+      padding-left: 38px;
+      padding-top: 7px;
+    }
+  }
+  .add-link {
+    font-size: 16px;
+  }
+  .add-link__icon {
+    margin-right: 28px;
+  }
 }
 
 @include respond-to($xs) {
@@ -496,12 +522,42 @@
     padding-bottom: 0;
   }
   .modal-add-child {
+    .modal__body {
+      height: 100%;
+    }
 
+   .form .fieldbox {
+      margin-bottom: 16px;
+    }
+
+    .form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-footer {
+      margin-top: auto;
+    }
   }
-  .modal-add-child,
   .modal-add-doctor {
     .form .fieldbox {
       margin-bottom: 0;
+    }
+  }
+  .modal-info {
+    font-size: 16px;
+
+    .modal__header {
+      margin-bottom: 54px;
+    }
+
+    .modal-info__content {
+      padding-bottom: 28px;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

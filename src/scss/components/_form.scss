@@ -14,7 +14,8 @@
     background-color: #f6f6f6;
     border-radius: 4px;
     line-height: 1;
-    padding: 10px 18px 11px;
+    padding: 8px 18px 9px;
+    font-size: 17px;
   }
   ::placeholder {
     color: #ababab;
@@ -130,14 +131,18 @@
     .form-group{
       margin-bottom: 16px;
     }
+    .input{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
   .label-checkmark{
     font-size: 13px;
     padding-left: 30px;
     padding-top: 3px;
   }
-  .input{
+
+  .file-upload{
     padding-left: 12px;
-    padding-right: 12px;
   }
 }
