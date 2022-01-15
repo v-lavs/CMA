@@ -86,7 +86,8 @@
 
       &_right {
         width: 100%;
-        padding-top: 86%;
+        padding-top: 100%;
+        margin-bottom: 40px;
       }
     }
 
@@ -94,6 +95,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 100vw;
+
     }
     .wrap-img{
       max-width: 314px;

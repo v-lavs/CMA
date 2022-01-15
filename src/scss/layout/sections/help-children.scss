@@ -14,6 +14,10 @@
   .section__text {
     max-width: 610px;
     width: 100%;
+
+    &_mob {
+      display: none;
+    }
   }
 
   .section__content {
@@ -49,22 +53,31 @@
 @include respond-to($lg) {
   .help-children {
     padding-top: 0;
-    padding-bottom: 270px;
+    padding-bottom: 100px;
 
     .d-flex {
       flex-wrap: wrap;
     }
 
+    .section__text.section__text_desk {
+      display: none;
+    }
+
+    .section__text_mob {
+      display: block;
+    }
+
     .section__content {
       padding-left: 0;
       width: 100%;
+      order: -1;
     }
 
     .wrap-btn {
       width: 100%;
-
-      order: 1;
+      margin-bottom: 40px;
     }
+
     .btn-help {
       flex-direction: row;
       width: 100%;
@@ -72,17 +85,12 @@
       height: 136px;
       padding: 30px 40px;
       text-align: left;
-      &__icon{
+
+      &__icon {
         margin-bottom: 0;
         margin-right: 40px;
       }
     }
-  }
-}
-
-@include respond-to($lg) {
-  .help-children {
-    padding-bottom: 100px;
   }
 }
 

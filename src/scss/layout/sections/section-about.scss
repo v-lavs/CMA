@@ -37,12 +37,13 @@
 }
 
 .about-disease {
-  &_mob{
+  &_mob {
     display: none;
     font-size: 18px;
     line-height: 1.38;
     color: #7E7E7E;
   }
+
   &__item {
     position: relative;
     display: flex;
@@ -112,37 +113,46 @@
       font-size: 52px;
     }
 
+    &__bg {
+      margin-top: 40px;
+    }
+
     .d-flex {
       flex-wrap: wrap;
     }
 
     &__content {
       max-width: 100%;
-
+      margin-bottom: 40px;
     }
   }
 }
 
-@include respond-to($sm){
-  .about-disease{
+@include respond-to($sm) {
+  .about-disease {
     display: none;
-    &_mob{
+
+    &_mob {
       display: block;
     }
   }
-  .section-about{
+  .section-about {
     position: relative;
-    .section__text_desk{
+
+    .section__text_desk {
       display: none;
     }
-    .section__content{
+
+    .section__content {
       margin-bottom: 0;
     }
-    .btn_border{
+
+    .btn_border {
       position: absolute;
       bottom: 96px;
     }
-    &__bg{
+
+    &__bg {
       margin-bottom: 33px;
       background-size: 100% 100%;
       background-image: url(../assets/img/about-bg-mob.svg);
