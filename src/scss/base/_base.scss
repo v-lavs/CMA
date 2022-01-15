@@ -221,6 +221,9 @@ body {
   .btn-consultation {
     top: -24px;
   }
+  .section__title{
+    line-height: 1.175;
+  }
 }
 
 @include respond-to($xs) {

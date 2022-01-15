@@ -2446,6 +2446,7 @@ body.modal-open {
     display: inline-block;
     color: #000000;
     font-size: 50px;
+    line-height: 1.175;
   }
 
   .how-help:after {
@@ -2822,6 +2823,10 @@ body.modal-open {
 @media only screen and (max-width: 620px) {
   .btn-consultation {
     top: -24px;
+  }
+
+  .section__title {
+    line-height: 1.175;
   }
 
   .container {
