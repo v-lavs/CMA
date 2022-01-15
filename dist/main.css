@@ -2998,12 +2998,41 @@ body.modal-open {
     font-size: 40px;
   }
 
+  .section__text {
+    font-size: 18px;
+  }
+
   .bg-gray {
     padding-top: 85px;
   }
 
   .container {
     max-width: 100%;
+  }
+
+  .section-intro {
+    padding-bottom: 130px;
+  }
+
+  .section-intro .section__text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .section-intro .part_right {
+    margin-bottom: 0;
+  }
+
+  .section-intro .wrap-img {
+    margin-bottom: 85px;
+  }
+
+  .section-about__bg {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-position: 0 0;
+    background-size: cover;
+    min-height: 243px;
   }
 
   .section-about .section__title {

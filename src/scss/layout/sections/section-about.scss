@@ -162,6 +162,15 @@
 
 @include respond-to($xs) {
   .section-about {
+    padding-bottom: 172px;
+    &__bg {
+      margin-top: 0;
+      margin-bottom: 0;
+      background-position: 0 0;
+      background-size: cover;
+      min-height: 243px;
+    }
+
     .section__title {
       font-size: 40px;
     }
