@@ -285,6 +285,7 @@
 
       &__heading {
         font-size: 28px;
+        z-index: 1;
       }
 
       &__slide {
@@ -301,7 +302,9 @@
       .swiper-slide-active {
         width: 237px;
         height: 280px;
-
+        .slider-activity__heading{
+          z-index: 2;
+        }
         .slider-activity__thumb {
           box-shadow: none;
 
