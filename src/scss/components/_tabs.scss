@@ -1,11 +1,13 @@
-.modal-tabs{
+.modal-tabs {
   padding-bottom: 24px;
+
   &__content {
     position: relative;
     overflow: hidden;
     min-height: 356px;
-     }
-  &__link{
+  }
+
+  &__link {
     display: inline-block;
     min-width: 121px;
     padding: 6px 10px 7px;
@@ -17,21 +19,25 @@
     border: 1px solid #c2c2c2;
     border-radius: 6px;
     margin-right: 42px;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
-    &.active{
+
+    &.active {
       border-color: #019dbb;
       color: #019dbb;
     }
+
     &:hover,
-    &:focus{
+    &:focus {
       border-color: #019dbb;
       color: #019dbb;
     }
   }
 
 }
+
 .modal-tab {
   position: absolute;
   top: 0;
@@ -49,10 +55,11 @@
   }
 }
 
-.link-list{
+.link-list {
   padding-top: 25px;
   font-size: 17px;
   counter-reset: list;
+
   li:before {
     counter-increment: list;
     content: counter(list) ". ";
@@ -61,22 +68,24 @@
     top: 6px;
   }
 
-  &__item{
+  &__item {
     position: relative;
     display: flex;
     margin-bottom: 22px;
   }
-  .name-item{
+
+  .name-item {
     padding-left: 38px;
     width: 25.25%;
   }
-  .url-item{
+
+  .url-item {
     padding-left: 34px;
     flex-grow: 1;
   }
 }
 
-.add-link{
+.add-link {
   display: inline-block;
   background-color: transparent;
   border: none;
@@ -84,14 +93,27 @@
   font-size: 14px;
   color: #019bdd;
   padding: 0;
-  &__icon{
+
+  &__icon {
     display: inline-block;
     width: 18px;
     height: 18px;
     margin-right: 40px;
   }
-  img{
+
+  img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+@include respond-to($xs) {
+  .modal-tabs {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+      margin-right: 0;
+    }
   }
 }

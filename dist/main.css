@@ -411,7 +411,7 @@ body.modal-open {
   transform: translate(-50%, -50%);
   z-index: 1100;
   background-color: #ffffff;
-  width: 100%;
+  width: 90%;
   max-width: 860px;
   max-height: 730px;
   height: 100%;
@@ -429,6 +429,20 @@ body.modal-open {
 
 .modal__header {
   position: relative;
+}
+
+.modal__header-logo {
+  display: none;
+  max-width: 164px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.modal__header-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .modal__title {
@@ -460,6 +474,10 @@ body.modal-open {
   padding: 50px 84px 58px;
 }
 
+.modal-add-child .fieldbox {
+  margin-bottom: 28px;
+}
+
 .modal-add-child .modal__title {
   margin-bottom: 30px;
 }
@@ -477,14 +495,11 @@ body.modal-open {
   justify-content: space-between;
   align-items: flex-end;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .modal-add-doctor .form__body {
   padding-bottom: 0;
-}
-
-.modal-add-doctor .btn-submit {
-  margin-bottom: 28px;
 }
 
 .modal-appointment {
@@ -636,6 +651,10 @@ body.modal-open {
 
 .modal-appointment .datepicker .ui-datepicker-inline {
   width: 100%;
+}
+
+.modal-appointment .datepicker-description {
+  display: none;
 }
 
 .modal-appointment .part_right {
@@ -822,6 +841,7 @@ body.modal-open {
   border-radius: 50%;
   border: 1px solid #ababab;
   background-color: transparent;
+  margin-left: 15px;
 }
 
 .has-file .file-upload {
@@ -2275,6 +2295,19 @@ body.modal-open {
     background-image: url(../assets/img/line-blue.svg);
   }
 
+  .modal {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .modal .form .fieldbox {
+    max-width: 340px;
+  }
+
+  .modal-appointment .form .fieldbox {
+    width: 90%;
+  }
+
   .swiper-pagination-bullet {
     border: 1px solid #019bdd;
   }
@@ -2572,6 +2605,12 @@ body.modal-open {
     right: -10px;
   }
 
+  .modal {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
   .container {
     max-width: 560px;
   }
@@ -2837,6 +2876,93 @@ body.modal-open {
     line-height: 1.175;
   }
 
+  .modal .modal__close {
+    right: auto;
+    top: 0;
+  }
+
+  .modal .form .btn-submit {
+    margin-top: 25px;
+  }
+
+  .modal .form .fieldbox {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .modal .form__body {
+    padding-top: 0;
+  }
+
+  .modal .modal__header {
+    margin-bottom: 38px;
+    padding-bottom: 0;
+  }
+
+  .modal__header-logo {
+    display: block;
+  }
+
+  .modal .modal__title {
+    display: none;
+  }
+
+  .modal-info__title {
+    display: none;
+  }
+
+  .modal-info .modal__close {
+    top: 2px;
+  }
+
+  .modal-info__content {
+    padding-bottom: 24px;
+  }
+
+  .modal-info .modal__header-logo {
+    max-width: 213px;
+  }
+
+  .modal-appointment .part {
+    width: 100%;
+  }
+
+  .modal-appointment .file-upload {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .modal-appointment .form-group:nth-child(4) {
+    order: 1;
+  }
+
+  .modal-appointment .modal__header .part {
+    display: none;
+  }
+
+  .modal-appointment .form .fieldbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .modal-appointment .datepicker {
+    margin-bottom: 20px;
+  }
+
+  .modal-appointment .datepicker-description {
+    display: block;
+    font-size: 16px;
+    color: #afafaf;
+    margin-bottom: 28px;
+  }
+
+  .modal-add-doctor .fieldbox:last-child {
+    margin-bottom: 0;
+  }
+
   .container {
     padding: 0 30px;
     max-width: 480px;
@@ -2977,7 +3103,6 @@ body.modal-open {
 
   .card-doctor .btn_border {
     text-align: left;
-    padding: 7px 20px;
     min-width: 130px;
   }
 
@@ -3019,6 +3144,52 @@ body.modal-open {
 
   .bg-gray {
     padding-top: 85px;
+  }
+
+  .modal {
+    padding: 34px 30px;
+  }
+
+  .modal .form .btn-submit {
+    margin-top: 31px;
+    margin-bottom: 0;
+  }
+
+  .form .form__body {
+    padding-bottom: 0;
+  }
+
+  .modal-add-child .form .fieldbox,
+  .modal-add-doctor .form .fieldbox {
+    margin-bottom: 0;
+  }
+
+  .form {
+    font-size: 16px;
+  }
+
+  .form .form-group {
+    margin-bottom: 16px;
+  }
+
+  .label-checkmark {
+    font-size: 13px;
+    padding-left: 30px;
+    padding-top: 3px;
+  }
+
+  .input {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .modal-tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-tabs__link {
+    margin-right: 0;
   }
 
   .container {
@@ -3206,8 +3377,7 @@ body.modal-open {
 
   .card-doctor .btn_border {
     font-weight: 500;
-    padding-left: 11px;
-    padding-right: 10px;
+    padding: 7px 10px 7px 11px;
     max-width: 130px;
     min-width: 0;
   }

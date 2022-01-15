@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   z-index: 1100;
   background-color: #ffffff;
-  width: 100%;
+  width: 90%;
   max-width: 860px;
   max-height: 730px;
   height: 100%;
@@ -22,6 +22,20 @@
 
   &__header {
     position: relative;
+  }
+
+  &__header-logo {
+    display: none;
+    max-width: 164px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    margin-left: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__title {
@@ -55,6 +69,10 @@
 .modal-add-child {
   padding: 50px 84px 58px;
 
+  .fieldbox {
+    margin-bottom: 28px;
+  }
+
   .modal__title {
     margin-bottom: 30px;
   }
@@ -72,14 +90,11 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-grow: 1;
+    flex-wrap: wrap;
   }
 
   .form__body {
     padding-bottom: 0;
-  }
-
-  .btn-submit {
-    margin-bottom: 28px;
   }
 }
 
@@ -138,7 +153,7 @@
       text-align: center;
     }
 
-    .ui-datepicker-unselectable .ui-state-default{
+    .ui-datepicker-unselectable .ui-state-default {
       color: #B0B0B0;
     }
 
@@ -234,6 +249,10 @@
     .ui-datepicker-inline {
       width: 100%;
     }
+  }
+
+  .datepicker-description {
+    display: none;
   }
 
   .part_right {
@@ -338,6 +357,151 @@
     &:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .modal {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .form .fieldbox {
+      max-width: 340px;
+    }
+  }
+  .modal-appointment {
+    .form .fieldbox {
+      width: 90%;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .modal {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+
+@include respond-to($sm) {
+  .modal {
+
+    .modal__close {
+      right: auto;
+      top: 0;
+    }
+
+    .form .btn-submit {
+      margin-top: 25px;
+    }
+
+    .form .fieldbox {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 28px;
+
+    }
+
+    .form__body {
+      padding-top: 0;
+    }
+
+    .modal__header {
+      margin-bottom: 38px;
+      padding-bottom: 0;
+    }
+
+    &__header-logo {
+      display: block;
+    }
+
+    .modal__title {
+      display: none;
+    }
+  }
+  .modal-info {
+    &__title {
+      display: none;
+    }
+
+    .modal__close {
+      top: 2px;
+    }
+
+    &__content {
+      padding-bottom: 24px;
+    }
+
+    .modal__header-logo {
+      max-width: 213px;
+    }
+  }
+  .modal-appointment {
+    .part {
+      width: 100%;
+    }
+
+    .file-upload {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    .form-group:nth-child(4) {
+      order: 1;
+    }
+
+    .modal__header .part {
+      display: none;
+    }
+
+    .form .fieldbox {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    .datepicker {
+      margin-bottom: 20px;
+    }
+
+    .datepicker-description {
+      display: block;
+      font-size: 16px;
+      color: #afafaf;
+      margin-bottom: 28px;
+    }
+  }
+  .modal-add-doctor {
+    .fieldbox:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+@include respond-to($xs) {
+  .modal {
+    padding: 34px 30px;
+
+    .form .btn-submit {
+      margin-top: 31px;
+      margin-bottom: 0;
+    }
+
+  }
+  .form .form__body {
+    padding-bottom: 0;
+  }
+  .modal-add-child {
+
+  }
+  .modal-add-child,
+  .modal-add-doctor {
+    .form .fieldbox {
+      margin-bottom: 0;
     }
   }
 }
