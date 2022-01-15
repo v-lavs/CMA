@@ -1,9 +1,10 @@
-.section-doctors{
-  .section__title{
+.section-doctors {
+  .section__title {
     margin-bottom: 58px;
     max-width: 740px;
   }
-  .heading{
+
+  .heading {
     font-weight: 500;
     font-size: 35px;
     line-height: 1.2;
@@ -12,37 +13,39 @@
   }
 }
 
-.doctors-list{
+.doctors-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  &_adult{
+
+  &_adult {
     position: relative;
     padding-bottom: 60px;
     margin-bottom: 110px;
 
-    &:after{
+    &:after {
       position: absolute;
       content: '';
       display: block;
       width: 100vw;
       height: 1px;
       bottom: 0;
-      left: 50%; 
-      transform:translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
       background-color: #bdbdbd;
     }
   }
 }
 
-.card-doctor{
+.card-doctor {
   position: relative;
   width: 45%;
   margin-bottom: 90px;
   display: flex;
   z-index: 1;
-  &__thumb{
+
+  &__thumb {
     position: relative;
     padding-top: 45%;
     max-width: 234px;
@@ -51,7 +54,8 @@
     border-radius: 15px;
     overflow: hidden;
     flex-shrink: 0;
-    img{
+
+    img {
       position: absolute;
       right: 0;
       left: 0;
@@ -63,7 +67,8 @@
       z-index: 1;
     }
   }
-  &__body{
+
+  &__body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -72,126 +77,140 @@
     padding-left: 70px;
     padding-right: 20px;
   }
-  &__title{
+
+  &__title {
     font-size: 25px;
     line-height: 1.28;
     color: #000000;
     margin-bottom: 18px;
   }
-  .specialization{
+
+  .specialization {
     font-weight: 500;
     font-size: 17px;
     line-height: 1.18;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #019bdd;
   }
-  .btn_border{
+
+  .btn_border {
     margin-top: auto;
   }
 }
 
-@include respond-to($laptop-md){
-  .card-doctor{
+@include respond-to($laptop-md) {
+  .card-doctor {
     width: 48%;
-    &__body{
+
+    &__body {
       padding-left: 50px;
     }
   }
 }
-@include respond-to($laptop){
-  .card-doctor{
-   &__title{
-     font-size: 23px;
-   }
+
+@include respond-to($laptop) {
+  .card-doctor {
+    &__title {
+      font-size: 23px;
+    }
   }
 }
 
-@include respond-to($lg){
+@include respond-to($lg) {
   .card-doctor {
     width: 100%;
+
     &__thumb {
       padding-top: 25%;
       max-width: 234px;
       width: 19%;
     }
   }
- }
+}
 
-@include respond-to($md){
-  .section-doctors{
-      padding-bottom: 60px;
+@include respond-to($md) {
+  .section-doctors {
+    padding-bottom: 60px;
   }
-  .card-doctor{
+  .card-doctor {
     width: 100%;
-    &__thumb{
+
+    &__thumb {
       width: 125px;
       height: 194px;
       padding: 0;
       flex-shrink: 0;
     }
-    &__title{
+
+    &__title {
       font-size: 23px;
     }
 
     &__body {
       padding-left: 50px;
     }
-    .btn_border{
+
+    .btn_border {
       text-align: center;
       padding: 15px 20px;
       min-width: 220px;
     }
   }
 }
-@include respond-to($sm){
-  .card-doctor{
-    &__thumb{
+
+@include respond-to($sm) {
+  .card-doctor {
+    &__thumb {
       width: 117px;
       height: 194px;
       padding: 0;
     }
+
     &__body {
       padding-right: 0;
       padding-left: 20px;
     }
-    .btn_border{
+
+    .btn_border {
       text-align: left;
       padding: 7px 20px;
       min-width: 130px;
     }
-    &__title{
+
+    &__title {
       font-size: 18px;
       margin-bottom: 10px;
     }
   }
 }
 
-@include respond-to($xs){
-  .section-doctors{
-    .heading{
+@include respond-to($xs) {
+  .section-doctors {
+    .heading {
       font-size: 25px;
+      margin-bottom: 76px;
     }
-    .section__title{
+
+    .section__title {
       font-size: 38px;
+      margin-bottom: 30px;
     }
   }
-  .card-doctor{
+  .card-doctor {
     margin-bottom: 55px;
 
-    &__title{
+    &__title {
       font-size: 18px;
       margin-bottom: 10px;
 
     }
-    &__thumb{
-      padding-top: 65%;
-      width: 39.25%;
-    }
+
     &__body {
       padding-right: 0;
-      padding-left: 16px;
+      padding-left: 20px;
     }
-    .btn_border{
+
+    .btn_border {
       font-weight: 500;
       padding-left: 11px;
       padding-right: 10px;
@@ -205,14 +224,17 @@
   }
 }
 
-@media screen and  (max-width: 380px) {
-  .card-doctor{
-    &__title{
+@media screen and (max-width: 350px) {
+  .card-doctor {
+    &__title {
       font-size: 16px;
-      margin-bottom: 10px;
     }
 
-    .specialization{
+    &__body {
+      padding-left: 10px;
+    }
+
+    .specialization {
       font-size: 13px;
     }
   }

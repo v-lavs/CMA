@@ -2992,6 +2992,7 @@ body.modal-open {
 
   .help-children .section__title {
     font-size: 40px;
+    margin-bottom: 35px;
   }
 
   .consultation .section__text {
@@ -3181,10 +3182,12 @@ body.modal-open {
 
   .section-doctors .heading {
     font-size: 25px;
+    margin-bottom: 76px;
   }
 
   .section-doctors .section__title {
     font-size: 38px;
+    margin-bottom: 30px;
   }
 
   .card-doctor {
@@ -3196,14 +3199,9 @@ body.modal-open {
     margin-bottom: 10px;
   }
 
-  .card-doctor__thumb {
-    padding-top: 65%;
-    width: 39.25%;
-  }
-
   .card-doctor__body {
     padding-right: 0;
-    padding-left: 16px;
+    padding-left: 20px;
   }
 
   .card-doctor .btn_border {
@@ -3240,17 +3238,6 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 380px) {
-  .card-doctor__title {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .card-doctor .specialization {
-    font-size: 13px;
-  }
-}
-
 @media screen and (max-width: 350px) {
   .children-card .part {
     width: 100%;
@@ -3271,5 +3258,17 @@ body.modal-open {
 
   .achievements__value {
     font-size: 60px;
+  }
+
+  .card-doctor__title {
+    font-size: 16px;
+  }
+
+  .card-doctor__body {
+    padding-left: 10px;
+  }
+
+  .card-doctor .specialization {
+    font-size: 13px;
   }
 }
