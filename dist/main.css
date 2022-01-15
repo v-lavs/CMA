@@ -471,7 +471,7 @@ body.modal-open {
 }
 
 .modal-add-child {
-  padding: 50px 84px 58px;
+  padding: 50px 84px;
 }
 
 .modal-add-child .fieldbox {
@@ -1525,6 +1525,11 @@ body.modal-open {
 
 .children-card .part_small {
   width: 40%;
+}
+
+.children-add {
+  position: relative;
+  z-index: 2;
 }
 
 .children-add__thumb {

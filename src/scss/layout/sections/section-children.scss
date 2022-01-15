@@ -91,12 +91,13 @@
 }
 
 .children-add {
+  position: relative;
+  z-index: 2;
   &__thumb {
     position: relative;
     border: 1px solid #019bdd;
     background-color: transparent;
     transition: background .35s;
-
     &:hover,
     &:focus {
       background-color: #019bdd;
