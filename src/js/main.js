@@ -22,40 +22,82 @@ function youtubeVideo() {
 
 
 $(document).ready(function () {
-    //JQUERY COUNTER UP
-    (function (e) {
-        "use strict";
-        e.fn.counterUp = function (t) {
-            var n = e.extend({time: 400, delay: 10}, t);
-            return this.each(function () {
-                var t = e(this), r = n, i = function () {
-                    var e = [], n = r.time / r.delay, i = t.text(), s = /[0-9]+,[0-9]+/.test(i);
-                    i = i.replace(/,/g, "");
-                    var o = /^[0-9]+$/.test(i), u = /^[0-9]+\.[0-9]+$/.test(i),
-                        a = u ? (i.split(".")[1] || []).length : 0;
-                    for (var f = n; f >= 1; f--) {
-                        var l = parseInt(i / n * f);
-                        u && (l = parseFloat(i / n * f).toFixed(a));
-                        if (s) while (/(\d+)(\d{3})/.test(l.toString())) l = l.toString().replace(/(\d+)(\d{3})/, "$1,$2");
-                        e.unshift(l)
+    //COUNTER UP
+    (function ($) {
+        $.fn.countTo = function (options) {
+            options = options || {};
+
+            return $(this).each(function () {
+                // set options for current element
+                var settings = $.extend({}, $.fn.countTo.defaults, {
+                    from:            $(this).data('from'),
+                    to:              $(this).data('to'),
+                    speed:           $(this).data('speed'),
+                    refreshInterval: $(this).data('refresh-interval'),
+                    decimals:        $(this).data('decimals')
+                }, options);
+
+                var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                    increment = (settings.to - settings.from) / loops;
+
+                var self = this,
+                    $self = $(this),
+                    loopCount = 0,
+                    value = settings.from,
+                    data = $self.data('countTo') || {};
+
+                $self.data('countTo', data);
+
+                if (data.interval) {
+                    clearInterval(data.interval);
+                }
+                data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+                render(value);
+
+                function updateTimer() {
+                    value += increment;
+                    loopCount++;
+
+                    render(value);
+
+                    if (typeof(settings.onUpdate) == 'function') {
+                        settings.onUpdate.call(self, value);
                     }
-                    t.data("counterup-nums", e);
-                    t.text("0");
-                    var c = function () {
-                        t.text(t.data("counterup-nums").shift());
-                        if (t.data("counterup-nums").length) setTimeout(t.data("counterup-func"), r.delay); else {
-                            delete t.data("counterup-nums");
-                            t.data("counterup-nums", null);
-                            t.data("counterup-func", null)
+
+                    if (loopCount >= loops) {
+                        $self.removeData('countTo');
+                        clearInterval(data.interval);
+                        value = settings.to;
+
+                        if (typeof(settings.onComplete) == 'function') {
+                            settings.onComplete.call(self, value);
                         }
-                    };
-                    t.data("counterup-func", c);
-                    setTimeout(t.data("counterup-func"), r.delay)
-                };
-                t.waypoint(i, {offset: "100%", triggerOnce: !0})
-            })
+                    }
+                }
+
+                function render(value) {
+                    var formattedValue = settings.formatter.call(self, value, settings);
+                    $self.html(formattedValue);
+                }
+            });
+        };
+
+        $.fn.countTo.defaults = {
+            from: 0,
+            to: 0,
+            speed: 1000,
+            refreshInterval: 100,
+            decimals: 0,
+            formatter: formatter,
+            onUpdate: null,
+            onComplete: null
+        };
+
+        function formatter(value, settings) {
+            return value.toFixed(settings.decimals);
         }
-    })($);
+    }(jQuery));
 
     youtubeVideo();
     //MOBILE MENU
@@ -219,15 +261,27 @@ $(document).ready(function () {
 
 
     // COUNTER
-    $('.achievements .achievements__value').counterUp({
-        delay: 50,
-        time: 2000
-    });
 
     $('.achievements').waypoint(function (direction) {
+        jQuery(function ($) {
+            // custom formatting example
+            $('.count-number').data('countToOptions', {
+                formatter: function (value, options) {
+                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                }
+            });
 
+            // start all the timers
+            $('.timer').each(count);
+
+            function count(options) {
+                var $this = $(this);
+                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                $this.countTo(options);
+            }
+        });
     }, {
-        offset: '80%'
+        offset: '100%'
     });
 
     //DATEPICKER
