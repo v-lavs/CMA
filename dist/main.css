@@ -2171,6 +2171,8 @@ body.modal-open {
     width: 100%;
     height: 100vh;
     padding: 34px 30px 45px;
+    display: flex;
+    flex-direction: column;
   }
 
   .header__nav.open {
@@ -2182,6 +2184,7 @@ body.modal-open {
     font-size: 12px;
     line-height: 1.08;
     color: #898989;
+    margin-top: auto;
   }
 
   .header__info-bar .d-flex {

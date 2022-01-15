@@ -130,7 +130,8 @@
       width: 100%;
       height: 100vh;
       padding: 34px 30px 45px;
-
+      display: flex;
+      flex-direction: column;
       &.open {
         transform: translateX(0);
       }
@@ -142,6 +143,7 @@
       font-size: 12px;
       line-height: 1.08;
       color: #898989;
+      margin-top: auto;
 
       .d-flex {
         justify-content: center;
