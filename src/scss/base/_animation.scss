@@ -1,20 +1,4 @@
-.section-intro {
-  opacity: 0;
-  transition: opacity ease-in .5s;
-}
 
-.in-view {
-  opacity: 1;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .section_anim {
   opacity: 0;

@@ -40723,14 +40723,10 @@ $(document).ready(function () {
 
     //ANIMATION
 
-    setTimeout(function () {
-        $('.section-intro').addClass('in_view');
-    }, 400);
-
     $('.section_anim').waypoint(function (direction) {
         $(this.element).addClass('section_in-view')
     }, {
-        offset: '50%'
+        offset: '65%'
     });
 
 
