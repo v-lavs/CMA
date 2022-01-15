@@ -2997,6 +2997,11 @@ body.modal-open {
     max-width: 480px;
   }
 
+  .section-intro__thumb {
+    background-position: center;
+    background-size: 100%;
+  }
+
   .about-disease {
     display: none;
   }

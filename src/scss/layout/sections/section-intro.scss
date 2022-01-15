@@ -105,7 +105,12 @@
     }
   }
 }
-
+@include respond-to($sm) {
+  .section-intro__thumb{
+    background-position: center;
+    background-size: 100%;
+  }
+}
 @include respond-to($xs) {
   .section-intro {
     padding-bottom: 130px;
