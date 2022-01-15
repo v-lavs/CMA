@@ -1,15 +1,10 @@
-
-.anim_block{
+.section-intro {
   opacity: 0;
+  transition: opacity ease-in .5s;
 }
-.fade-in{
-  animation: fadeIn ease-in 0.5s forwards;
 
-  @for $i from 1 through 4 {
-    &:nth-of-type(#{$i}) {
-      animation-delay: #{$i * 1000}s;
-    }
-  }
+.in-view {
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -23,7 +18,7 @@
 
 .section_anim {
   opacity: 0;
-  -webkit-transition: opacity ease-in .5s;
+  transition: opacity ease-in .5s;
 
 }
 
