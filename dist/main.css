@@ -1527,16 +1527,12 @@ body.modal-open {
   width: 40%;
 }
 
-.children-add {
-  position: relative;
-  z-index: 2;
-}
-
 .children-add__thumb {
   position: relative;
   border: 1px solid #019bdd;
   background-color: transparent;
   transition: background .35s;
+  z-index: 3;
 }
 
 .children-add__thumb:hover,
