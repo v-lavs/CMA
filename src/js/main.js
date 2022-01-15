@@ -217,12 +217,6 @@ $(document).ready(function () {
         offset: '50%'
     });
 
-    $('.anim_block').waypoint(function (direction) {
-        $(this.element).addClass('fade-in')
-    }, {
-        offset: '75%'
-    });
-
 
     // COUNTER
     $('.achievements .achievements__value').counterUp({
