@@ -2483,6 +2483,10 @@ body.modal-open {
     padding-bottom: 200px;
   }
 
+  .achievements__text {
+    font-size: 22px;
+  }
+
   .card-doctor {
     width: 100%;
   }
@@ -2731,6 +2735,10 @@ body.modal-open {
 
   .achievements__item:last-child {
     margin-bottom: 0;
+  }
+
+  .achievements__text {
+    font-size: 19px;
   }
 
   .achievements__value {
@@ -3167,6 +3175,10 @@ body.modal-open {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0.02%, rgba(0, 0, 0, 0) 60.71%);
   }
 
+  .achievements .section__title {
+    margin-bottom: 60px;
+  }
+
   .section-doctors .heading {
     font-size: 25px;
   }
@@ -3255,5 +3267,9 @@ body.modal-open {
 
   .step-content__icon {
     background-size: 50px 40px;
+  }
+
+  .achievements__value {
+    font-size: 60px;
   }
 }
