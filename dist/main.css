@@ -2861,7 +2861,8 @@ body.modal-open {
   }
 
   .section-video__wrap {
-    padding-top: 75.25%;
+    padding-top: 80.5%;
+    width: 100%;
   }
 
   .section-children {
@@ -3027,6 +3028,10 @@ body.modal-open {
     margin-bottom: 85px;
   }
 
+  .section-about {
+    padding-bottom: 172px;
+  }
+
   .section-about__bg {
     margin-top: 0;
     margin-bottom: 0;
@@ -3046,7 +3051,7 @@ body.modal-open {
   }
 
   .section-video__slogan {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     font-size: 13px;
     padding: 20px 0;
   }

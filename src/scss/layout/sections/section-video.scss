@@ -128,7 +128,8 @@
 
 @include respond-to($sm) {
   .section-video__wrap {
-    padding-top: 75.25%;
+    padding-top: 80.5%;
+    width: 100%;
   }
 }
 
@@ -139,7 +140,7 @@
     background-size: 214% 56%;
 
     &__slogan {
-      margin-bottom: 55px;
+      margin-bottom: 35px;
       font-size: 13px;
       padding: 20px 0;
     }
