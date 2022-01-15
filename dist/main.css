@@ -2238,7 +2238,7 @@ body.modal-open {
   }
 
   .step-content__icon {
-    background-size: 50px;
+    background-size: 50px 50px;
   }
 
   .how-help:after {
@@ -3086,9 +3086,35 @@ body.modal-open {
     padding-bottom: 24px;
   }
 
+  .step-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 84px;
+  }
+
+  .step-content__thumb {
+    max-width: 83px;
+    height: 83px;
+    margin-bottom: 0;
+  }
+
+  .step-content__title {
+    width: 70%;
+    padding-right: 15px;
+    order: -1;
+  }
+
+  .step-content__text {
+    width: 100%;
+    font-size: 19px;
+  }
+
   .how-help {
     margin-bottom: 0;
     padding-bottom: 100px;
+    padding-top: 156px;
   }
 
   .how-help .section__title_mob {
@@ -3211,5 +3237,18 @@ body.modal-open {
 @media screen and (max-width: 350px) {
   .children-card .part {
     width: 100%;
+  }
+
+  .step-content__thumb {
+    max-width: 73px;
+    height: 73px;
+  }
+
+  .step-content__title {
+    font-size: 22px;
+  }
+
+  .step-content__icon {
+    background-size: 50px 40px;
   }
 }
