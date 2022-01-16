@@ -8,8 +8,6 @@
 //= include ../../node_modules/waypoints/lib/jquery.waypoints.min.js ;
 
 
-
-
 // CUSTOM SCRIPTS
 function youtubeVideo() {
     $('#customPlaybtn').click(function (e) {
@@ -30,11 +28,11 @@ $(document).ready(function () {
             return $(this).each(function () {
                 // set options for current element
                 var settings = $.extend({}, $.fn.countTo.defaults, {
-                    from:            $(this).data('from'),
-                    to:              $(this).data('to'),
-                    speed:           $(this).data('speed'),
+                    from: $(this).data('from'),
+                    to: $(this).data('to'),
+                    speed: $(this).data('speed'),
                     refreshInterval: $(this).data('refresh-interval'),
-                    decimals:        $(this).data('decimals')
+                    decimals: $(this).data('decimals')
                 }, options);
 
                 var loops = Math.ceil(settings.speed / settings.refreshInterval),
@@ -61,7 +59,7 @@ $(document).ready(function () {
 
                     render(value);
 
-                    if (typeof(settings.onUpdate) == 'function') {
+                    if (typeof (settings.onUpdate) == 'function') {
                         settings.onUpdate.call(self, value);
                     }
 
@@ -70,7 +68,7 @@ $(document).ready(function () {
                         clearInterval(data.interval);
                         value = settings.to;
 
-                        if (typeof(settings.onComplete) == 'function') {
+                        if (typeof (settings.onComplete) == 'function') {
                             settings.onComplete.call(self, value);
                         }
                     }
@@ -100,6 +98,8 @@ $(document).ready(function () {
     }(jQuery));
 
     youtubeVideo();
+
+
     //MOBILE MENU
     const nav = $('.header__nav');
 
@@ -232,15 +232,14 @@ $(document).ready(function () {
 
     //CHANGE BG-COLOR INPUT FILE
 
-    $('input[type="file"]').on('change', function (e) {
-        const file = e.target.value;
-        if (file) {
-            console.log($(this).parents('.form-group'))
-            $(this).parent('.form-group').addClass('has-file');
-        } else {
-            $(this).parent('.form-group').removeClass('has-file');
-        }
-    });
+    // $('input[type="file"]').on('change', function (e) {
+    //     const file = e.target.value;
+    //     if (file) {
+    //         $(this).parent('.form-group').addClass('has-file');
+    //     } else {
+    //         $(this).parent('.form-group').removeClass('has-file');
+    //     }
+    // });
 
     // ADD LINK IN BLOCK
 
@@ -290,11 +289,36 @@ $(document).ready(function () {
 
     $("#datepicker").datepicker({
         minDate: date,
-        onSelect: function(date){
+        onSelect: function (date) {
             $('#datepicker_value').val(date)
         }
     });
+
+    // INPUT TYPE FILE
+    let inputImg = document.getElementById('fileImg');
+    let inputImgLabel = document.querySelector('.label-upload');
+    let infoImg = document.querySelector('#infoImg');
+    let imgInfoText = document.querySelector('#infoImg .text');
+    let resetImg = document.getElementById('resetImg');
+
+        inputImg.addEventListener('change', function (e) {
+            let data = e.target.value;
+            if (data.trim()) {
+                imgInfoText.innerHTML = data;
+                inputImgLabel.style.display = 'none';
+                infoImg.style.display = 'block';
+            }
+        });
+        resetImg.addEventListener('click', function (e) {
+            e.preventDefault();
+            inputImg.value = '';
+            imgInfoText.innerHTML = '';
+            inputImgLabel.style.display = 'flex';
+            infoImg.style.display = 'none';
+        });
 });
+
+
 
 
 

@@ -1,14 +1,15 @@
 .form {
   font-size: 17px;
   color: #000000;
-  &__body{
+
+  &__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 27px;
   }
 
-  .input{
+  .input {
     width: 100%;
     border: none;
     background-color: #f6f6f6;
@@ -17,32 +18,37 @@
     padding: 8px 18px 9px;
     font-size: 17px;
   }
+
   ::placeholder {
     color: #ababab;
   }
 
-.filled-background{
-  background-color: #effbff;
-}
-  .textarea{
+  .filled-background {
+    background-color: #effbff;
+  }
+
+  .textarea {
     width: 100%;
     max-width: 100%;
   }
-  .form-group{
+
+  .form-group {
     margin-bottom: 28px;
+
     &:last-child {
       margin: 0;
     }
   }
+
   .btn-submit {
     border: none;
     width: 100%;
     font-size: 20px;
-    padding: 17px  17px 18px;
+    padding: 17px 17px 18px;
     background-color: #019bdd;
     color: #ffffff;
 
-    &.disabled{
+    &.disabled {
       background: #b1b1b1;
       border: 1px solid #b1b1b1;
     }
@@ -54,7 +60,7 @@
   }
 }
 
-.file-upload{
+.label-upload {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -63,7 +69,8 @@
   margin-bottom: 12px;
   margin-top: 20px;
   color: #ababab;
-  .icon-upload{
+
+  .icon-upload {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -76,21 +83,36 @@
   }
 }
 
-.has-file{
-  .file-upload{
-    color: #000;
-  }
-  .icon-upload {
-    border: 1px solid #019bdd;
-  }
-  path {
-    fill: #019bdd;
+.upload-info {
+  display: none;
+  width: 100%;
+  padding-bottom: 15px;
+
+  .text {
+    word-wrap: break-word;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 35px;
   }
 }
 
+//.has-file {
+//  .label-upload {
+//    color: #000000;
+//  }
+//
+//  .icon-upload {
+//    border: 1px solid #019bdd;
+//  }
+//
+//  path {
+//    fill: #019bdd;
+//  }
+//}
+
 //custom checkbox
 
-.label-checkmark{
+.label-checkmark {
   position: relative;
   color: #ababab;
   font-size: 17px;
@@ -98,13 +120,13 @@
   padding-left: 48px;
 }
 
-.checkmark{
+.checkmark {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
 }
 
-.check-mark{
+.check-mark {
   position: absolute;
   width: 21px;
   height: 21px;
@@ -115,7 +137,7 @@
   border-radius: 3px;
 }
 
-.checkmark:checked +.check-mark{
+.checkmark:checked + .check-mark {
   background-color: #019bdd;
   background-image: url(../assets/img/svg/check.svg);
   background-position: center center;
@@ -125,24 +147,26 @@
 
 }
 
-@include respond-to($xs){
-  .form{
+@include respond-to($xs) {
+  .form {
     font-size: 16px;
-    .form-group{
+
+    .form-group {
       margin-bottom: 16px;
     }
-    .input{
+
+    .input {
       padding-left: 12px;
       padding-right: 12px;
     }
   }
-  .label-checkmark{
+  .label-checkmark {
     font-size: 13px;
     padding-left: 30px;
     padding-top: 3px;
   }
 
-  .file-upload{
+  .label-upload {
     padding-left: 12px;
   }
 }

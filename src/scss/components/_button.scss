@@ -36,6 +36,7 @@
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
+
     &:hover,
     &:focus {
       color: #019bdd;
@@ -43,7 +44,18 @@
     }
   }
 
+  &_reset {
+    color: #b1b1b1;
+    border: 1px solid #b1b1b1;
+    padding: 5px;
+    min-width: 104px;
 
+    &:hover,
+    &:focus {
+      background-color: #019bdd;
+      border-color: #019bdd;
+    }
+  }
 }
 
 

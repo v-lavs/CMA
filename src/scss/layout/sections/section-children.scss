@@ -31,6 +31,15 @@
     z-index: 1;
   }
 
+  &__link {
+    color: #019bdd;
+    font-size: 16px;
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+    }
+  }
+
   &__thumb {
     position: relative;
     max-width: 450px;
@@ -98,6 +107,7 @@
     background-color: transparent;
     transition: background .35s;
     z-index: 3;
+
     &:hover,
     &:focus {
       background-color: #019bdd;
@@ -177,6 +187,10 @@
       width: 28%;
     }
 
+    &__link {
+      font-size: 14px;
+    }
+
     .part {
       padding-left: 30px;
       width: 55%;
@@ -186,7 +200,7 @@
       width: 45%;
     }
 
-    &__title {
+    &__header {
       margin-bottom: 10px;
     }
 
@@ -220,10 +234,6 @@
       max-width: 100%;
       padding-top: 54.25%;
       margin-bottom: 28px;
-    }
-
-    &__title {
-      margin-bottom: 20px;
     }
 
     &__text {
@@ -263,7 +273,7 @@
 
   .children-card {
 
-    &__title {
+    &__header {
       width: 100%;
       flex-grow: 1;
     }
@@ -288,7 +298,8 @@
   }
   .children-card {
     margin-bottom: 95px;
-    &__title {
+
+    &__header {
       margin-bottom: 12px;
     }
 
@@ -304,9 +315,9 @@
   }
 }
 
-@media screen and  (max-width: 350px){
+@media screen and (max-width: 350px) {
   .children-card {
-    .part{
+    .part {
       width: 100%;
     }
   }
