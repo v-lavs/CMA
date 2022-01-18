@@ -68,9 +68,24 @@
 
 .modal-add-child {
   padding: 50px 84px;
+  display: flex;
+  flex-direction: column;
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .modal-tabs__content {
+    height: 100%;
+  }
 
   .fieldbox {
     margin-bottom: 28px;
+  }
+
+  .modal__body {
+    height: 100%;
   }
 
   .modal__title {
@@ -117,7 +132,7 @@
   }
 
   .sub-title {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.17;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #afafaf;

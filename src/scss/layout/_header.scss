@@ -1,10 +1,34 @@
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  padding-top: 68px;
+  padding: 34px 0;
+  transition: .35s;
   z-index: 999;
+
+  &_active {
+    top: -100%;
+  }
+
+  &.scroll {
+    border-radius: 15px;
+    border: 1px solid #FFFFFF;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
 
   &__logo {
     display: block;
@@ -105,6 +129,7 @@
 @include respond-to($laptop) {
   .header {
     padding-top: 40px;
+
     &__logo {
       max-width: 213px;
       margin-left: auto;
@@ -132,6 +157,7 @@
       padding: 34px 30px 45px;
       display: flex;
       flex-direction: column;
+
       &.open {
         transform: translateX(0);
       }
@@ -191,11 +217,11 @@
   }
 }
 
-@media screen and (max-width: 350px){
-  .header__logo{
+@media screen and (max-width: 350px) {
+  .header__logo {
     max-width: 190px;
   }
-  .header__nav-header .header__logo{
+  .header__nav-header .header__logo {
     max-width: 190px;
   }
 }

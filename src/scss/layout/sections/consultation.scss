@@ -22,6 +22,8 @@
   &__item{
     position: relative;
     max-width: 300px;
+    color: #000000;
+    font-weight: 600;
     margin-right: 178px;
     padding-bottom: 17px;
       &:after{
@@ -60,9 +62,7 @@
      flex-wrap: wrap;
      &__item{
        margin-bottom: 30px;
-       font-weight: 600;
        font-size: 21px;
-       color: #000000;
      }
    }
  }

@@ -40612,6 +40612,36 @@ $(document).ready(function () {
     youtubeVideo();
 
 
+
+   let header = $('.header'),
+        scrollPrev = 0;
+
+    $(window).scroll(function () {
+        let scrolled = $(window).scrollTop();
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
+            header.addClass('header_active');
+        } else {
+            header.removeClass('header_active').addClass('header_scroll-top');
+        }
+        scrollPrev = scrolled;
+
+        addScrollClass();
+    });
+
+
+    let scrolled;
+    function addScrollClass () {
+        scrolled = window.scrollTop || document.documentElement.scrollTop;
+        if (scrolled > 40) {
+            $('.header').addClass('scroll');
+        } else {
+            $('.header').removeClass('scroll');
+        }
+    }
+
+
+
     //MOBILE MENU
     const nav = $('.header__nav');
 

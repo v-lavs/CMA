@@ -13,7 +13,6 @@
     padding: 6px 10px 7px;
     text-align: center;
     color: #c2c2c2;
-    font-weight: 500;
     font-size: 17px;
     line-height: 1;
     border: 1px solid #c2c2c2;
@@ -25,14 +24,16 @@
     }
 
     &.active {
-      border-color: #019dbb;
-      color: #019dbb;
+      border-color: #019bdd;
+      color: #019bdd;
+       font-weight: 500;
     }
 
     &:hover,
     &:focus {
       border-color: #019dbb;
-      color: #019dbb;
+      color: #019bdd;
+       font-weight: 500;
     }
   }
 
@@ -57,7 +58,7 @@
 
 .link-list {
   padding-top: 25px;
-  font-size: 17px;
+  font-size: 15px;
   counter-reset: list;
 
   li:before {
@@ -98,7 +99,7 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    margin-right: 40px;
+    margin-right: 34px;
   }
 
   img {
