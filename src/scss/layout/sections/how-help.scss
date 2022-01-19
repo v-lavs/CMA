@@ -27,6 +27,13 @@
     }
   }
 
+  &__btn-js {
+   display: none;
+    &.active {
+      display: block;
+    }
+  }
+
   .section__text {
     max-width: 560px;
     width: 100%;

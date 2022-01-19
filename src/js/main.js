@@ -174,9 +174,10 @@ $(document).ready(function () {
         speed: 1500,
         on: {
             afterInit: function () {
+                $('.how-help__btn-js').removeClass('active');
                 const currSlide = this.slides[this.activeIndex];
-                const modalId = $(currSlide).attr('data-modal-id');
-                $('#help-modal-btn').data('modal', modalId);
+                const actionBtn = $(currSlide).attr('data-active-btn');
+                $('.' + actionBtn).addClass('active');
                 showActivityText(currSlide);
             }
         },
@@ -187,10 +188,10 @@ $(document).ready(function () {
     });
 
     sliderActivity.on('slideChange', function () {
+        $('.how-help__btn-js').removeClass('active');
         const currSlide = this.slides[this.activeIndex];
-        const modalId = $(currSlide).attr('data-modal-id');
-        $('#help-modal-btn').data('modal', modalId);
-
+        const actionBtn = $(currSlide).attr('data-active-btn');
+        $('.' + actionBtn).addClass('active');
         showActivityText(currSlide);
     });
 

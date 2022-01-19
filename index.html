@@ -463,17 +463,21 @@
                         <div class="slide__text" id="slideText">
 
                         </div>
-                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle" data-modal="">
+                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle how-help__btn-js how-help__btn-doc" data-modal="modal_add_doctor">
                             Приєднатись
                         </button>
+                        <a class="btn btn_border how-help__btn-js how-help__btn-child" href="#children">
+                            Приєднатись
+                        </a>
                     </div>
+
                     <div class="part part_right">
                         <h2 class="section__title_mob">Допомогти <span class="text_blue">дитині</span> просто</h2>
                         <div class="slider-wrap">
                             <!-- Swiper -->
                             <div class="swiper slider-activity">
                                 <div class="swiper-wrapper">
-                                    <div data-modal-id="modal_add_child" class="swiper-slide slider-activity__slide">
+                                    <div class="swiper-slide slider-activity__slide" data-active-btn="how-help__btn-child">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-1.jpg);">
                                             <h4 class="slider-activity__heading">Пацієнт</h4>
@@ -486,7 +490,7 @@
                                             </p>
                                         </template>
                                     </div>
-                                    <div data-modal-id="modal_add_doctor" class="swiper-slide slider-activity__slide">
+                                    <div class="swiper-slide slider-activity__slide" data-active-btn="how-help__btn-doc">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-2.jpg);">
                                             <h4 class="slider-activity__heading">Лікар</h4>
@@ -838,6 +842,7 @@
                 </div>
             </section>
         </div>
+
         <section class="section-join text_white bg-blue">
             <div class="container d-flex section_anim">
                 <div class="part part_left">
