@@ -70,10 +70,22 @@
   padding: 50px 84px;
   display: flex;
   flex-direction: column;
+
   .form {
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+
+  .modal__header {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
+
+  .modal-tabs,
+  .form-footer {
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   .modal-tabs__content {
@@ -380,6 +392,11 @@
     }
   }
 
+}
+
+.scroll {
+  overflow: auto;
+  max-height: 305px;
 }
 
 @include respond-to($lg) {

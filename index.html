@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./dist/main.css">
 
@@ -587,7 +588,7 @@
                             <img src="assets/img/doctors/image7.jpg" alt="">
                         </div>
                         <div class="card-doctor__body">
-                            <h4 class="card-doctor__title">Божко Роман  В'ячеславович</h4>
+                            <h4 class="card-doctor__title">Божко Роман В'ячеславович</h4>
                             <div class="specialization">Терапевт</div>
                             <button type="button" class="btn btn_border modal-toggle" data-modal="modal_appointment">
                                 Запис на консультацію
@@ -599,7 +600,7 @@
                             <img src="assets/img/doctors/image9.jpg" alt="">
                         </div>
                         <div class="card-doctor__body">
-                            <h4 class="card-doctor__title">Лисак  Юлія</h4>
+                            <h4 class="card-doctor__title">Лисак Юлія</h4>
                             <div class="specialization">Терапевт</div>
                             <button type="button" class="btn btn_border modal-toggle" data-modal="modal_appointment">
                                 Запис на консультацію
@@ -1137,8 +1138,10 @@
                                 <input type="text" class="input" placeholder="Вік встановленння діагнозу">
                             </div>
                             <div class="form-group">
-                                <label class="hide">Кінцева сума лікування</label>
-                                <input type="text" class="input" placeholder="Кінцева сума лікування">
+                                <div class="total">
+                                    <label class="hide">Кінцева сума лікування</label>
+                                    <input type="text" class="input" placeholder="Кінцева сума лікування">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label class="hide">ПІБ ( одного із батьків)</label>
@@ -1159,7 +1162,11 @@
                     </div>
                 </div>
                 <div class="modal-tab" id="tab2">
-                    <ul class="link-list" id="linkList">
+                    <div class="modal-tab__description">
+                        На благодійну організацію, або ж соц. мережу
+                    </div>
+                    <div class="scroll" data-simplebar data-simplebar-auto-hide="false">
+                    <ul class="link-list" id="linkList"  >
                         <li class="link-list__item" id="linkListItem">
                             <div class="name-item">
                                 <input type="text" class="input" placeholder="Назва">
@@ -1167,8 +1174,10 @@
                             <div class="url-item">
                                 <input type="text" class="input" placeholder="URL">
                             </div>
+                            <button type="button" class="btn-reset"></button>
                         </li>
                     </ul>
+                    </div>
                     <button type="button" id="addLink" class="add-link">
                     <span class="add-link__icon">
                         <img src="assets/img/svg/plus.svg" alt="">
@@ -1184,6 +1193,7 @@
                         <div class="url-item">
                             <input type="text" class="input" placeholder="URL">
                         </div>
+                        <button type="button" class="btn-reset"></button>
                     </li>
                 </template>
             </div>
@@ -1250,6 +1260,7 @@
 
 
 <script src="lib/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>

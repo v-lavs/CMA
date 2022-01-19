@@ -100,8 +100,7 @@ $(document).ready(function () {
     youtubeVideo();
 
 
-
-   let header = $('.header'),
+    let header = $('.header'),
         scrollPrev = 0;
 
     $(window).scroll(function () {
@@ -119,7 +118,8 @@ $(document).ready(function () {
 
 
     let scrolled;
-    function addScrollClass () {
+
+    function addScrollClass() {
         scrolled = window.scrollTop || document.documentElement.scrollTop;
         if (scrolled > 40) {
             $('.header').addClass('scroll');
@@ -127,7 +127,6 @@ $(document).ready(function () {
             $('.header').removeClass('scroll');
         }
     }
-
 
 
     //MOBILE MENU
@@ -279,6 +278,10 @@ $(document).ready(function () {
         $('#linkList').append(row);
     });
 
+    $('#linkList').on('click', '.btn-reset', function () {
+        $(this).parent().remove();
+    });
+
 
     //ANIMATION
 
@@ -331,21 +334,26 @@ $(document).ready(function () {
     let imgInfoText = document.querySelector('#infoImg .text');
     let resetImg = document.getElementById('resetImg');
 
-        inputImg.addEventListener('change', function (e) {
-            let data = e.target.value;
-            if (data.trim()) {
-                imgInfoText.innerHTML = data;
-                inputImgLabel.style.display = 'none';
-                infoImg.style.display = 'block';
-            }
-        });
-        resetImg.addEventListener('click', function (e) {
-            e.preventDefault();
-            inputImg.value = '';
-            imgInfoText.innerHTML = '';
-            inputImgLabel.style.display = 'flex';
-            infoImg.style.display = 'none';
-        });
+    inputImg.addEventListener('change', function (e) {
+        let data = e.target.value;
+        if (data.trim()) {
+            imgInfoText.innerHTML = data;
+            inputImgLabel.style.display = 'none';
+            infoImg.style.display = 'block';
+        }
+    });
+    resetImg.addEventListener('click', function (e) {
+        e.preventDefault();
+        inputImg.value = '';
+        imgInfoText.innerHTML = '';
+        inputImgLabel.style.display = 'flex';
+        infoImg.style.display = 'none';
+    });
+
+
+    const simpleBar = new SimpleBar(document.getElementById('linkList'));
+    simpleBar.getContentElement();
+
 });
 
 

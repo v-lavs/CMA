@@ -1,39 +1,52 @@
 .modal-tabs {
-  padding-bottom: 24px;
+  padding-bottom: 21px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 21px;
+    z-index: 0;
+    background-color: #c2c2c2;
+    width: calc(100% + 168px);
+    height: .6px;
+  }
 
   &__content {
     position: relative;
-    overflow: hidden;
-    min-height: 356px;
+    //overflow: hidden;
+    //min-height: 356px;
   }
 
   &__link {
     display: inline-block;
-    min-width: 121px;
-    padding: 6px 10px 7px;
+    padding: 0 0 17px;
     text-align: center;
     color: #c2c2c2;
     font-size: 17px;
-    line-height: 1;
-    border: 1px solid #c2c2c2;
-    border-radius: 6px;
-    margin-right: 42px;
+    line-height: .9;
+    border-bottom: 3px solid transparent;
+    margin-right: 63px;
 
     &:last-child {
       margin-right: 0;
     }
 
     &.active {
-      border-color: #019bdd;
+      border-color: #00a2e0;
       color: #019bdd;
-       font-weight: 500;
+      font-weight: 600;
+      z-index: 0;
     }
 
     &:hover,
     &:focus {
-      border-color: #019dbb;
+      border-color: #00a2e0;
       color: #019bdd;
-       font-weight: 500;
+      font-weight: 500;
     }
   }
 
@@ -48,18 +61,52 @@
   opacity: 0;
   z-index: 1;
 
+  &:first-child {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
   &.active {
     position: relative;
     opacity: 1;
     transition: opacity .5s ease-in;
     z-index: 2;
   }
+
+  .modal-tab__description {
+    position: relative;
+    font-size: 13px;
+    line-height: 1.5;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #7e7e7e;
+    padding-left: 28px;
+    margin-left: 36px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url(../assets/img/info-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      width: 18px;
+      height: 18px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+
 }
 
 .link-list {
-  padding-top: 25px;
   font-size: 15px;
   counter-reset: list;
+  padding-top: 25px;
+  padding-right: 35px;
+  //max-height: 305px;
 
   li:before {
     counter-increment: list;
@@ -73,6 +120,8 @@
     position: relative;
     display: flex;
     margin-bottom: 22px;
+
+    flex-grow: 1;
   }
 
   .name-item {
@@ -81,8 +130,31 @@
   }
 
   .url-item {
-    padding-left: 34px;
+    padding-left: 42px;
     flex-grow: 1;
+  }
+
+  .btn-reset {
+    position: relative;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    margin-left: 36px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 15px;
+      height: 2px;
+      background-color: #7e7e7e;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
   }
 }
 
@@ -108,13 +180,75 @@
   }
 }
 
+@include respond-to($lg) {
+  .modal-tabs:after {
+    width: calc(100% + 100px);
+  }
+}
+
+@include respond-to($sm) {
+  .link-list {
+    li:before {
+      top: 36%;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+
+    .btn-reset {
+      width: 24px;
+      height: 24px;
+      order: -1;
+      margin-left: auto;
+      margin-bottom: 7px;
+
+      &:before {
+        width: 8px;
+      }
+    }
+  }
+  .add-link {
+    padding-top: 12px;
+  }
+
+  .modal-add-child {
+    .modal__header{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .modal-tab__description {
+      margin-left: 0;
+    }
+
+    .modal-tab:first-child,
+    .modal-tabs,
+    .form-footer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 @include respond-to($xs) {
   .modal-tabs {
     display: flex;
     justify-content: space-between;
+    &:after {
+      width: calc(100% + 60px);
+    }
 
     &__link {
       margin-right: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .link-list{
+    padding-right: 30px;
+    .name-item,
+    .url-item {
+      padding-left: 30px;
     }
   }
 }
