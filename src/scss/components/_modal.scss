@@ -521,12 +521,7 @@
     }
 
   }
-  .modal-add-child {
-    .form {
-      height: initial;
-      min-height: 800px;
-    }
-  }
+
   .link-list {
     &__item {
       display: flex;
@@ -538,7 +533,6 @@
       width: 100%;
 
     }
-
     .url-item {
       padding-left: 38px;
       padding-top: 7px;
@@ -566,12 +560,14 @@
     padding-bottom: 0;
   }
   .modal-add-child {
+    height: auto;
     .form .fieldbox {
       margin-bottom: 16px;
     }
 
     .form {
-      height: 100%;
+      height: initial;
+      min-height: 690px;
       display: flex;
       flex-direction: column;
     }
