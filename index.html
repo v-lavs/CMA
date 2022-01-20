@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./dist/main.css">
 
@@ -463,7 +463,9 @@
                         <div class="slide__text" id="slideText">
 
                         </div>
-                        <button id="help-modal-btn" type="button" class="btn btn_border modal-toggle how-help__btn-js how-help__btn-doc" data-modal="modal_add_doctor">
+                        <button id="help-modal-btn" type="button"
+                                class="btn btn_border modal-toggle how-help__btn-js how-help__btn-doc"
+                                data-modal="modal_add_doctor">
                             Приєднатись
                         </button>
                         <a class="btn btn_border how-help__btn-js how-help__btn-child" href="#children">
@@ -477,7 +479,8 @@
                             <!-- Swiper -->
                             <div class="swiper slider-activity">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide slider-activity__slide" data-active-btn="how-help__btn-child">
+                                    <div class="swiper-slide slider-activity__slide"
+                                         data-active-btn="how-help__btn-child">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-1.jpg);">
                                             <h4 class="slider-activity__heading">Пацієнт</h4>
@@ -490,7 +493,8 @@
                                             </p>
                                         </template>
                                     </div>
-                                    <div class="swiper-slide slider-activity__slide" data-active-btn="how-help__btn-doc">
+                                    <div class="swiper-slide slider-activity__slide"
+                                         data-active-btn="how-help__btn-doc">
                                         <div class="slider-activity__thumb"
                                              style="background-image: url(assets/img/slide-thumb-2.jpg);">
                                             <h4 class="slider-activity__heading">Лікар</h4>
@@ -929,28 +933,27 @@
             </svg>
         </button>
     </div>
-    <div class="modal__body">
-        <form action="#" class="form form_contact">
+    <form action="#" class="form form_contact">
 
-            <div class="form__body d-flex">
-                <div class="part part_left">
-                    <div class="fieldbox">
-                        <div class="form-group">
-                            <label class="hide">Прізвище</label>
-                            <input type="text" class="input" placeholder="Прізвище">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">Ім’я</label>
-                            <input type="text" class="input" placeholder="Ім’я">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">Email</label>
-                            <input type="email" class="input" placeholder="Email">
-                        </div>
+        <div class="form__body d-flex">
+            <div class="part part_left">
+                <div class="fieldbox">
+                    <div class="form-group">
+                        <label class="hide">Прізвище</label>
+                        <input type="text" class="input" placeholder="Прізвище">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">Ім’я</label>
+                        <input type="text" class="input" placeholder="Ім’я">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">Email</label>
+                        <input type="email" class="input" placeholder="Email">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="fileImg" class="label-upload" tabindex="0">Прикріпіть квитанцію
-                                <span class="icon-upload">
+                    <div class="form-group">
+                        <label for="fileImg" class="label-upload" tabindex="0">Прикріпіть квитанцію
+                            <span class="icon-upload">
                                 <svg class="img-upload" width="25" height="20" viewBox="0 0 25 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="12.5" cy="10.5" r="23" stroke="#ABABAB"/>
@@ -958,36 +961,35 @@
                                           fill="#b1b1b1"/>
                                 </svg>
                             </span>
-                            </label>
-                            <input type="file" id="fileImg" name="file" class="hide">
+                        </label>
+                        <input type="file" id="fileImg" name="file" class="hide">
 
-                            <div id="infoImg" class="upload-info">
-                                <div class="text"></div>
-                                <button id="resetImg" class="btn btn_border btn_reset">Видалити</button>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="label hide">Коментар</div>
-                            <textarea class="textarea input" cols="120" rows="7" placeholder="Коментар"></textarea>
+                        <div id="infoImg" class="upload-info">
+                            <div class="text"></div>
+                            <button id="resetImg" class="btn btn_border btn_reset">Видалити</button>
                         </div>
                     </div>
-                </div>
-                <div class="datepicker-description">
-                    Виберіть орієнтовну дату консультації
-                </div>
-                <div class="part part_right">
 
-                    <div id="datepicker" class="datepicker"></div>
-                    <input type="hidden" id="datepicker_value">
-
-                    <div class="form-footer">
-                        <button type="submit" class="btn btn-submit  disabled">Відправити</button>
+                    <div class="form-group">
+                        <div class="label hide">Коментар</div>
+                        <textarea class="textarea input" cols="120" rows="7" placeholder="Коментар"></textarea>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+            <div class="datepicker-description">
+                Виберіть орієнтовну дату консультації
+            </div>
+            <div class="part part_right">
+
+                <div id="datepicker" class="datepicker"></div>
+                <input type="hidden" id="datepicker_value">
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-submit  disabled">Відправити</button>
+                </div>
+            </div>
+        </div>
+    </form>
     <div class="thank-you">
         <div class="wrap-img">
             <img src="assets/img/thenks-heart.svg" alt="" class="thank-you__img">
@@ -1001,6 +1003,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal modal-add-doctor" id="modal_add_doctor">
     <div class="modal__header">
         <div class="modal__header-logo">
@@ -1015,45 +1018,44 @@
             </svg>
         </button>
     </div>
-    <div class="modal__body">
-        <form action="#" class="form form_contact">
+    <form action="#" class="form form_contact">
 
-            <div class="form__body">
-                <div class="row d-flex">
-                    <div class="fieldbox">
-                        <div class="form-group">
-                            <label class="hide">Прізвище</label>
-                            <input type="text" class="input" placeholder="Прізвище">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">Ім’я</label>
-                            <input type="text" class="input" placeholder="Ім’я">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">По-батькові</label>
-                            <input type="text" class="input" placeholder="По-батькові">
-                        </div>
+        <div class="form__body">
+            <div class="row d-flex">
+                <div class="fieldbox">
+                    <div class="form-group">
+                        <label class="hide">Прізвище</label>
+                        <input type="text" class="input" placeholder="Прізвище">
                     </div>
-                    <div class="fieldbox">
-                        <div class="form-group">
-                            <label class="hide">Cпеціалізація</label>
-                            <input type="text" class="input" placeholder="Cпеціалізація">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">Мобільний телефон(для зв‘язку з пацієнтом)</label>
-                            <input type="text" class="input" placeholder="Моб (для зв‘язку з пацієнтом) ">
-                        </div>
-                        <div class="form-group">
-                            <label class="hide">Email</label>
-                            <input type="email" class="input" placeholder="Email">
-                        </div>
+                    <div class="form-group">
+                        <label class="hide">Ім’я</label>
+                        <input type="text" class="input" placeholder="Ім’я">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">По-батькові</label>
+                        <input type="text" class="input" placeholder="По-батькові">
                     </div>
                 </div>
-                <div class="row d-flex">
-                    <div class="fieldbox">
-                        <div class="form-group">
-                            <label for="fileUpload" class="label-upload">Фотографія для сайту
-                                <span class="icon-upload">
+                <div class="fieldbox">
+                    <div class="form-group">
+                        <label class="hide">Cпеціалізація</label>
+                        <input type="text" class="input" placeholder="Cпеціалізація">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">Мобільний телефон(для зв‘язку з пацієнтом)</label>
+                        <input type="text" class="input" placeholder="Моб (для зв‘язку з пацієнтом) ">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">Email</label>
+                        <input type="email" class="input" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="fieldbox">
+                    <div class="form-group">
+                        <label for="fileUpload" class="label-upload">Фотографія для сайту
+                            <span class="icon-upload">
                                 <svg class="img-upload" width="25" height="20" viewBox="0 0 25 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="12.5" cy="10.5" r="23" stroke="#ABABAB"/>
@@ -1061,22 +1063,21 @@
                                           fill="#b1b1b1"/>
                                 </svg>
                             </span>
-                            </label>
-                            <input type="file" id="fileUpload" name="file" class="hide">
-                        </div>
-                        <div class="form-group">
-                            <div class="label hide">Коментар</div>
-                            <textarea class="textarea input" cols="120" rows="7" placeholder="Коментар"></textarea>
-                        </div>
+                        </label>
+                        <input type="file" id="fileUpload" name="file" class="hide">
                     </div>
-
-                    <div class="fieldbox">
-                        <button type="submit" class="btn btn-submit disabled">Відправити</button>
+                    <div class="form-group">
+                        <div class="label hide">Коментар</div>
+                        <textarea class="textarea input" cols="120" rows="7" placeholder="Коментар"></textarea>
                     </div>
                 </div>
+
+                <div class="fieldbox">
+                    <button type="submit" class="btn btn-submit disabled">Відправити</button>
+                </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
     <div class="thank-you">
         <div class="wrap-img">
             <img src="assets/img/thenks-heart.svg" alt="" class="thank-you__img">
@@ -1090,6 +1091,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal modal-add-child" id="modal_add_child">
     <div class="modal__header">
         <div class="modal__header-logo">
@@ -1104,74 +1106,74 @@
             </svg>
         </button>
     </div>
-    <div class="modal__body">
-        <form action="#" class="form form_contact">
-            <div class="modal-tabs ">
-                <a href="#tab1" class="modal-tabs__link active">Інформація</a>
-                <a href="#tab2" class="modal-tabs__link">Посилання</a>
-            </div>
+    <!--    <div class="modal__body">-->
+    <form action="#" class="form form_contact">
+        <div class="modal-tabs ">
+            <a href="#tab1" class="modal-tabs__link active">Інформація</a>
+            <a href="#tab2" class="modal-tabs__link">Посилання</a>
+        </div>
 
-            <div class="modal-tabs__content">
-                <div class="modal-tab active" id="tab1">
-                    <div class="form__body">
-                        <div class="fieldbox">
-                            <div class="form-group">
-                                <label class="hide">Прізвище дитини</label>
-                                <input type="text" class="input" placeholder="Прізвище дитини">
-                            </div>
-                            <div class="form-group">
-                                <label class="hide">Ім’я дитини</label>
-                                <input type="text" class="input" placeholder="Ім’я дитини">
-                            </div>
-                            <div class="form-group">
-                                <label class="hide">Дата народження</label>
-                                <input type="text" class="input" placeholder="Дата народження">
-                            </div>
-                            <div class="form-group">
-                                <label class="hide">Вік</label>
-                                <input type="text" class="input" placeholder="Вік">
-                            </div>
-                        </div>
-
-                        <div class="fieldbox">
-                            <div class="form-group">
-                                <label class="hide">Діагноз</label>
-                                <input type="text" class="input" placeholder="Діагноз">
-                            </div>
-                            <div class="form-group">
-                                <label class="hide">Вік встановленння діагнозу</label>
-                                <input type="text" class="input" placeholder="Вік встановленння діагнозу">
-                            </div>
-                            <div class="form-group">
-                                <div class="total">
-                                    <label class="hide">Кінцева сума лікування</label>
-                                    <input type="text" class="input" placeholder="Кінцева сума лікування">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="hide">ПІБ ( одного із батьків)</label>
-                                <input type="text" class="input" placeholder="ПІБ ( одного із батьків)">
-                            </div>
-                        </div>
-
+        <div class="modal-tabs__content">
+            <div class="modal-tab active" id="tab1">
+                <div class="form__body">
+                    <div class="fieldbox">
                         <div class="form-group">
-                            <div class="label hide">Коментар</div>
-                            <textarea class="textarea input" cols="120" rows="5" placeholder="Коментар"></textarea>
+                            <label class="hide">Прізвище дитини</label>
+                            <input type="text" class="input" placeholder="Прізвище дитини">
                         </div>
-
-
-                        <label for="agree" class="label-checkmark">
-                            <input type="checkbox" class="checkmark" id="agree">
-                            <span class="check-mark"></span>
-                            Даю згоду на обробку персональних даних моєї дитини</label>
+                        <div class="form-group">
+                            <label class="hide">Ім’я дитини</label>
+                            <input type="text" class="input" placeholder="Ім’я дитини">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">Дата народження</label>
+                            <input type="text" class="input" placeholder="Дата народження">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">Вік</label>
+                            <input type="text" class="input" placeholder="Вік">
+                        </div>
                     </div>
+
+                    <div class="fieldbox">
+                        <div class="form-group">
+                            <label class="hide">Діагноз</label>
+                            <input type="text" class="input" placeholder="Діагноз">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">Вік встановленння діагнозу</label>
+                            <input type="text" class="input" placeholder="Вік встановленння діагнозу">
+                        </div>
+                        <div class="form-group">
+                            <div class="total">
+                                <label class="hide">Кінцева сума лікування</label>
+                                <input type="text" class="input" placeholder="Кінцева сума лікування">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">ПІБ ( одного із батьків)</label>
+                            <input type="text" class="input" placeholder="ПІБ ( одного із батьків)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label hide">Коментар</div>
+                        <textarea class="textarea input" cols="120" rows="5" placeholder="Коментар"></textarea>
+                    </div>
+
+
+                    <label for="agree" class="label-checkmark">
+                        <input type="checkbox" class="checkmark" id="agree">
+                        <span class="check-mark"></span>
+                        Даю згоду на обробку персональних даних моєї дитини</label>
                 </div>
-                <div class="modal-tab" id="tab2">
-                    <div class="modal-tab__description">
-                        На благодійну організацію, або ж соц. мережу
-                    </div>
-                    <div class="scroll" data-simplebar data-simplebar-auto-hide="false">
-                    <ul class="link-list" id="linkList"  >
+            </div>
+            <div class="modal-tab" id="tab2">
+                <div class="modal-tab__description">
+                    На благодійну організацію, або ж соц. мережу
+                </div>
+                <div class="scroll" data-simplebar data-simplebar-auto-hide="false">
+                    <ul class="link-list" id="linkList">
                         <li class="link-list__item" id="linkListItem">
                             <div class="name-item">
                                 <input type="text" class="input" placeholder="Назва">
@@ -1182,33 +1184,33 @@
                             <button type="button" class="btn-reset"></button>
                         </li>
                     </ul>
-                    </div>
-                    <button type="button" id="addLink" class="add-link">
+                </div>
+                <button type="button" id="addLink" class="add-link">
                     <span class="add-link__icon">
                         <img src="assets/img/svg/plus.svg" alt="">
                     </span>
-                        Добавити
-                    </button>
-                </div>
-                <template id="rowTemplate">
-                    <li class="link-list__item">
-                        <div class="name-item">
-                            <input type="text" class="input" placeholder="Назва">
-                        </div>
-                        <div class="url-item">
-                            <input type="text" class="input" placeholder="URL">
-                        </div>
-                        <button type="button" class="btn-reset"></button>
-                    </li>
-                </template>
+                    Добавити
+                </button>
             </div>
-            <div class="form-footer">
-                <div class="wrap-btn-submit">
-                    <button type="submit" class="btn btn-submit disabled">Відправити</button>
-                </div>
+            <template id="rowTemplate">
+                <li class="link-list__item">
+                    <div class="name-item">
+                        <input type="text" class="input" placeholder="Назва">
+                    </div>
+                    <div class="url-item">
+                        <input type="text" class="input" placeholder="URL">
+                    </div>
+                    <button type="button" class="btn-reset"></button>
+                </li>
+            </template>
+        </div>
+        <div class="form-footer">
+            <div class="wrap-btn-submit">
+                <button type="submit" class="btn btn-submit disabled">Відправити</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+    <!--    </div>-->
     <div class="thank-you">
         <div class="modal__body">
             <div class="wrap-img">

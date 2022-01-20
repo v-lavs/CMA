@@ -96,9 +96,9 @@
     margin-bottom: 28px;
   }
 
-  .modal__body {
-    height: 100%;
-  }
+  //.modal__body {
+  //  height: 100%;
+  //}
 
   .modal__title {
     margin-bottom: 30px;
@@ -521,7 +521,12 @@
     }
 
   }
-
+  .modal-add-child {
+    .form {
+      height: initial;
+      min-height: 800px;
+    }
+  }
   .link-list {
     &__item {
       display: flex;
@@ -561,10 +566,6 @@
     padding-bottom: 0;
   }
   .modal-add-child {
-    .modal__body {
-      height: 100%;
-    }
-
     .form .fieldbox {
       margin-bottom: 16px;
     }
@@ -582,6 +583,9 @@
   .modal-add-doctor {
     .form .fieldbox {
       margin-bottom: 0;
+    }
+    .form .form-group {
+      margin-bottom: 16px;
     }
   }
   .modal-info {
