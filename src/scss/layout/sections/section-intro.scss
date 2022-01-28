@@ -1,7 +1,11 @@
 .section-intro {
   padding-top: 35px;
   padding-bottom: 35px;
-
+  transition: opacity ease-in .5s;
+  opacity: 0;
+  &.section_in-view {
+    opacity: 1;
+  }
   &__thumb {
     position: absolute;
     left: 0;

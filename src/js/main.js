@@ -285,11 +285,14 @@ $(document).ready(function () {
 
 
     //ANIMATION
+    setTimeout(function () {
+            $('.section-intro').addClass('section_in-view')
+    }, 300);
 
     $('.section_anim').waypoint(function (direction) {
         $(this.element).addClass('section_in-view')
     }, {
-        offset: '65%'
+        offset: '100%'
     });
 
 
