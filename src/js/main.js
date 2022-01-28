@@ -287,7 +287,7 @@ $(document).ready(function () {
     //ANIMATION
     setTimeout(function () {
             $('.section-intro').addClass('section_in-view')
-    }, 300);
+    }, 100);
 
     $('.section_anim').waypoint(function (direction) {
         $(this.element).addClass('section_in-view')
