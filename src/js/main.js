@@ -286,7 +286,7 @@ $(document).ready(function () {
 
     //ANIMATION
     setTimeout(function () {
-            $('.section-intro').addClass('section_in-view')
+        $('.section-intro').addClass('section_in-view')
     }, 100);
 
     $('.section_anim').waypoint(function (direction) {
@@ -328,6 +328,22 @@ $(document).ready(function () {
         minDate: date,
         onSelect: function (date) {
             $('#datepicker_value').val(date)
+        },
+
+    });
+
+    $(".input-datepicker").datepicker({
+        changeYear: true,
+        yearRange: "-21:+0",
+        beforeShow: function(input, inst) {
+            console.log(inst)
+            setTimeout(function(){
+                $('.ui-datepicker').css('z-index', 9999);
+                $('.ui-datepicker').addClass('datepicker-fixed');
+            }, 50);
+        },
+        onClose: function () {
+            $('.ui-datepicker').removeClass('datepicker-fixed');
         }
     });
 
