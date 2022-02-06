@@ -332,11 +332,21 @@ $(document).ready(function () {
 
     });
 
+    function setDatepickerPos(input, inst) {
+        var rect = input.getBoundingClientRect();
+        // use 'setTimeout' to prevent effect overridden by other scripts
+        setTimeout(function () {
+            var scrollTop = $("body").scrollTop();
+            inst.dpDiv.css({ top: rect.top + input.offsetHeight + scrollTop });
+        }, 0);
+    }
+
     $(".input-datepicker").datepicker({
         changeYear: true,
         yearRange: "-21:+0",
         beforeShow: function(input, inst) {
             console.log(inst)
+            setDatepickerPos(input, inst),
             setTimeout(function(){
                 $('.ui-datepicker').css('z-index', 9999);
                 $('.ui-datepicker').addClass('datepicker-fixed');
