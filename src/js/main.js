@@ -345,7 +345,7 @@ $(document).ready(function () {
         changeYear: true,
         yearRange: "-21:+0",
         beforeShow: function(input, inst) {
-            console.log(inst)
+
             // setDatepickerPos(input, inst),
             setTimeout(function(){
                 $('.ui-datepicker').css('z-index', 9999);
